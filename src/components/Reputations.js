@@ -18,6 +18,7 @@ class Reputation extends Component {
         //this.realmSelection = this.realmSelection.bind(this);
         this.isMaxRep = this.isMaxRep.bind(this);
         this.resetRep = this.resetRep.bind(this);
+        this.isCompletedRep = this.isCompletedRep.bind(this);
     }
 
     componentDidMount() {
@@ -49,9 +50,22 @@ class Reputation extends Component {
         this.setState({max: false});
     }
 
+    isCompletedRep(rep) {
+        return false;
+      if(bestFriends.includes(rep.id) && rep.standing === 5) {
+          console.log("Completed Reps");
+        return true; // I dont think false is a valid return for filter?
+      } else if (rep.standing === 7) {
+        return false;
+      } else {
+        return true;
+    }
+    }
+
     render() {
         const { error, isLoaded, reps } = this.state;
         //console.log(this.props.name);
+        {reps = reps.filter(rep => bestFriends.includes(rep.id) && rep.standing === 5)}
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
