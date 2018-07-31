@@ -2,7 +2,7 @@
   "name": "wowreputationcalculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https:\\allygator.github.io/wowreputationcalculator",
+  "homepage": "https://allygator.github.io/wowreputationcalculator",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
