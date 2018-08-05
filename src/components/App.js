@@ -4,7 +4,7 @@ import '../App.css';
 import RealmsList from './Realms';
 import Reputation from './Reputations';
 
-//import {blizzardKey} from '../API_Keys';
+import {blizzardKey} from '../API_Keys';
 
 class App extends Component {
     constructor(props) {
@@ -12,7 +12,12 @@ class App extends Component {
         this.setRealmState = this.setRealmState.bind(this);
         this.showReputations = this.showReputations.bind(this);
         this.state = {
-            reputationsHidden: false
+            isChecked: false,
+            submit: false,
+            error: null,
+            isLoaded: false,
+            reps: [],
+            max: false
         }
     }
 
@@ -21,17 +26,41 @@ class App extends Component {
         this.setState({realm: a})
     }
 
+    getReputations() {
+        fetch('https://us.api.battle.net/wow/character/' + this.state.realm + '/' + this.state.name + '?fields=reputation&locale=en_US' + blizzardKey)
+            .then(response => response.json())
+            .then((repList) => {
+                this.setState({
+                    isLoaded: true,
+                });
+                if(this.state.isChecked) {
+                    console.log("Is Checked!")
+                    this.setState({reps:repList.reputation.filter(this.isCompletedRep)});
+                } else {
+                    console.log("Not Checked!")
+                    this.setState({
+                        reps: repList.reputation
+                    })
+                }
+            },
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                });
+            }
+            )
+    }
 
     showReputations(e) {
-        this.setState({reputationsHidden: true});
-        //return <Reputation realm="realmName" name="characterName" />;
+        this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked});
     }
 
   render() {
       const reputationsHidden = this.state.reputationsHidden;
       let repPanel;
-      if(reputationsHidden) {
-          repPanel = <Reputation name={this.state.name} realm={this.state.realm} />;
+      if(this.state.submittedName && this.state.submittedRealm ) {
+          repPanel = <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked}/>;
       }
       return (
           <div className="App">
@@ -48,6 +77,7 @@ class App extends Component {
                 Character Name:
                 <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
             </div>
+            Hide Completed Reputations <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked}, console.log(e.target.checked)) } />
             <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
           </div>
           {repPanel}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {blizzardKey} from '../API_Keys';
-var bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
-var friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
-var repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
+const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
+const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
+const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
 
 class Reputation extends Component {
     constructor(props) {
@@ -11,32 +11,53 @@ class Reputation extends Component {
             error: null,
             isLoaded: false,
             reps: [],
-            max: false,
-            //selectedRealm: "",
-            //selectedOption: null
-        };
-        //this.realmSelection = this.realmSelection.bind(this);
+            max: false
+        }
         this.isMaxRep = this.isMaxRep.bind(this);
         this.resetRep = this.resetRep.bind(this);
         this.isCompletedRep = this.isCompletedRep.bind(this);
+        this.repLevel = this.repLevel.bind(this);
+        //this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
     }
 
     componentDidMount() {
-        fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + blizzardKey)
+        this.getReputations();
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.name !== this.props.name || prevProps.realm !== this.props.realm || prevProps.isChecked !== this.props.isChecked) {
+            this.getReputations();
+        }
+    }
+
+    getReputations = () => {
+        if(this.props.realm && this.props.name) {
+            fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + blizzardKey)
             .then(response => response.json())
             .then((repList) => {
                 this.setState({
                     isLoaded: true,
-                    reps: repList.reputation
                 });
+                if(this.props.isChecked) {
+                    //console.log("Is Checked!")
+                    this.setState({reps:repList.reputation.filter(this.isCompletedRep)});
+                } else {
+                    //console.log("Not Checked!")
+                    this.setState({
+                        reps: repList.reputation
+                    })
+                }
             },
             (error) => {
                 this.setState({
                     isLoaded: true,
-                    error
+                    error: error.message
                 });
             }
             )
+        } else {
+            this.setState({error: "Please input a realm and character name"});
+        }
     }
 
     isMaxRep(rep) {
@@ -51,47 +72,40 @@ class Reputation extends Component {
     }
 
     isCompletedRep(rep) {
-        return false;
-      if(bestFriends.includes(rep.id) && rep.standing === 5) {
-          console.log("Completed Reps");
-        return true; // I dont think false is a valid return for filter?
-      } else if (rep.standing === 7) {
-        return false;
-      } else {
-        return true;
+        if(bestFriends.includes(rep.id) && rep.standing === 5) {
+          return false;
+        } else if (rep.standing === 7) {
+          return false;
+        } else {
+          return true;
+        }
     }
+
+    repLevel(rep) {
+        if(bestFriends.includes(rep.id)) {
+            return friendLevels[rep.standing];
+        } else {
+            return repTitles[rep.standing];
+        }
     }
 
     render() {
         const { error, isLoaded, reps } = this.state;
-        //console.log(this.props.name);
-        {reps = reps.filter(rep => bestFriends.includes(rep.id) && rep.standing === 5)}
         if (error) {
-          return <div>Error: {error.message}</div>;
+          return <div>Error: {error}</div>;
         } else if (!isLoaded) {
           return <div>Loading...</div>;
         } else {
             return (
                 reps.map((rep) => (
-                        //console.log(rep);
-                        //{this.isMaxRep(rep)}
                         <div key={rep.name}>
                         <h3>{rep.name}</h3>
                         <p>{repTitles[rep.standing]}</p>
                         <p>{rep.value}/{rep.max}</p>
                         </div>
-                        //{this.resetRep()}
                 )
             )
             );
-            // realms.map(
-            //     function(realm) {
-            //       return {
-            //         value: realm.name,
-            //         label: realm.name
-            //       };
-            //     }
-            //   )
         }
     }
 }

@@ -18,7 +18,7 @@ class RealmList extends Component {
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
         this.props.realmSelection(selectedOption.value);
-        console.log(`Option selected:`, selectedOption.value);
+        //console.log(`Option selected:`, selectedOption.value);
     }
 
     componentDidMount() {
