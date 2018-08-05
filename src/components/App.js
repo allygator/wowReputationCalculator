@@ -10,31 +10,24 @@ class App extends Component {
         this.setRealmState = this.setRealmState.bind(this);
         this.showReputations = this.showReputations.bind(this);
         this.state = {
-            isChecked: false,
-            submit: false,
-            error: null,
-            isLoaded: false,
-            reps: [],
-            max: false
+            isChecked: false
         }
     }
 
+    componentDidMount() {
+        console.log("App Mounted");
+    }
+
     setRealmState(a) {
-        console.log(a);
         this.setState({realm: a})
     }
 
     showReputations(e) {
+        console.log("submitted");
         this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked});
     }
 
-  render() {
-      const reputationsHidden = this.state.reputationsHidden;
-      let repPanel;
-      if(this.state.submittedName && this.state.submittedRealm ) {
-          repPanel = <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked}/>;
-      }
-      return (
+    render() { return (
           <div className="App">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
@@ -52,10 +45,9 @@ class App extends Component {
             Hide Completed Reputations <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked}, console.log(e.target.checked)) } />
             <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
           </div>
-          {repPanel}
+          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked}/>}
           </div>
-      );
-  }
+      );  }
 
 
 }
