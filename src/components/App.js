@@ -4,8 +4,6 @@ import '../App.css';
 import RealmsList from './Realms';
 import Reputation from './Reputations';
 
-import {blizzardKey} from '../API_Keys';
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -24,32 +22,6 @@ class App extends Component {
     setRealmState(a) {
         console.log(a);
         this.setState({realm: a})
-    }
-
-    getReputations() {
-        fetch('https://us.api.battle.net/wow/character/' + this.state.realm + '/' + this.state.name + '?fields=reputation&locale=en_US' + blizzardKey)
-            .then(response => response.json())
-            .then((repList) => {
-                this.setState({
-                    isLoaded: true,
-                });
-                if(this.state.isChecked) {
-                    console.log("Is Checked!")
-                    this.setState({reps:repList.reputation.filter(this.isCompletedRep)});
-                } else {
-                    console.log("Not Checked!")
-                    this.setState({
-                        reps: repList.reputation
-                    })
-                }
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                });
-            }
-            )
     }
 
     showReputations(e) {
