@@ -14,16 +14,11 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log("App Mounted");
-    }
-
     setRealmState(a) {
         this.setState({realm: a})
     }
 
     showReputations(e) {
-        console.log("submitted");
         this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked});
     }
 
