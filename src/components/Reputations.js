@@ -43,6 +43,7 @@ class Reputation extends Component {
                         reps: repList.reputation
                     })
                 }
+                this.setState({faction:repList.faction})
             },
             (error) => {
                 this.setState({
@@ -75,7 +76,7 @@ class Reputation extends Component {
         } else {
             return (
                 <div>
-                {reps.length > 1 && <RepLayout reps={reps} />}
+                {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
                 </div>
                 /*reps.map((rep) => (
                         <div key={rep.name} className="rep">

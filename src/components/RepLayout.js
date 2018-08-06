@@ -79,7 +79,9 @@ class RepLayout extends Component {
         */
         for(let rep of reps) {
             var tempRep;
-            if(alli.includes(rep.id)) { // Alliance reps
+            if(rep.id === 469 || rep.id === 1733) {
+
+            } else if(alli.includes(rep.id)) { // Alliance reps
                 tempRep = this.state.alliance;
                 tempRep.push(rep);
                 this.setState({alliance: tempRep});
@@ -89,7 +91,7 @@ class RepLayout extends Component {
                 this.setState({horde: tempRep});
             } else if (rep.id === 1168) { // Guild Rep
                 this.setState({guild: rep})
-            } else if (rep.id < 929 && rep.id !== 469) { // Vanilla Reps
+            } else if (rep.id < 929) { // Vanilla Reps
                 tempRep = this.state.vanilla;
                 tempRep.push(rep);
                 this.setState({vanilla: tempRep});
@@ -97,23 +99,23 @@ class RepLayout extends Component {
                 tempRep = this.state.bc;
                 tempRep.push(rep);
                 this.setState({bc: tempRep});
-            } else if (rep.id < 1126) { // Wrath Reps
+            } else if (rep.id <= 1126) { // Wrath Reps
                 tempRep = this.state.wrath;
                 tempRep.push(rep);
                 this.setState({wrath: tempRep});
-            } else if (rep.id < 1204) { // Cata Reps
+            } else if (rep.id <= 1204) { // Cata Reps
                 tempRep = this.state.cata;
                 tempRep.push(rep);
                 this.setState({cata: tempRep});
-            } else if (rep.id < 1435) { // Mop Reps
+            } else if (rep.id <= 1435) { // Mop Reps
                 tempRep = this.state.mop;
                 tempRep.push(rep);
                 this.setState({mop: tempRep});
-            } else if (rep.id < 1731 && rep.id !== 1691) { // Wod Reps
+            } else if ((rep.id < 1731 && rep.id !== 1691) || rep.id ===  1848) { // Wod Reps
                 tempRep = this.state.wod;
                 tempRep.push(rep);
                 this.setState({wod: tempRep});
-            } else if ((rep.id < 2045 || rep.id === 2165 || 2170) && rep.id !== 2011) { // Legion Reps
+            } else if ((rep.id < 2045 || rep.id === 2165 || rep.id === 2170) && rep.id !== 2011) { // Legion Reps
                 tempRep = this.state.legion;
                 tempRep.push(rep);
                 this.setState({legion: tempRep});
@@ -128,15 +130,15 @@ class RepLayout extends Component {
     render() {
         const {vanilla,bc,wrath,cata,mop,wod,legion,alliance,horde} = this.state;
         return [
-            <Expac name="Alliance" reps={alliance} key={"one"} />,
-            <Expac name="Horde" reps={horde} key={"two"} />,
-            <Expac name="Vanilla" reps={vanilla} key={"three"} />,
-            <Expac name="Burning Crusade" reps={bc} key={"four"} />,
-            <Expac name="Wrath of the Lich King" reps={wrath} key={"five"} />,
-            <Expac name="Cataclysm" reps={cata} key={"six"} />,
-            <Expac name="Mists of Pandaria" reps={mop} key={"seven"} />,
-            <Expac name="Warlords of Draenor" reps={wod} key={"eight"} />,
-            <Expac name="Legion" reps={legion}  key={"nine"} />
+            (!this.props.isHorde && <Expac name="Alliance" reps={alliance} key={"one"} hideProgress={this.props.hideProgress} />),
+            (this.props.isHorde && <Expac name="Horde" reps={horde} key={"two"} hideProgress={this.props.hideProgress} />),
+            <Expac name="Vanilla" reps={vanilla} key={"three"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Burning Crusade" reps={bc} key={"four"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Wrath of the Lich King" reps={wrath} key={"five"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Cataclysm" reps={cata} key={"six"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Mists of Pandaria" reps={mop} key={"seven"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Warlords of Draenor" reps={wod} key={"eight"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Legion" reps={legion}  key={"nine"} hideProgress={this.props.hideProgress} />
         ]
     }
 }
