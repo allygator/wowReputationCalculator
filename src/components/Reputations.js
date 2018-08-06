@@ -27,6 +27,7 @@ class Reputation extends Component {
     }
 
     getReputations = () => {
+        //console.log(this.props.name + ":Get Reputations");
         if(this.props.realm && this.props.name) {
             fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + blizzardKey)
             .then(response => response.json())
@@ -75,7 +76,7 @@ class Reputation extends Component {
           return <div>Loading...</div>;
         } else {
             return (
-                <div>
+                <div className="reputations">
                 {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
                 </div>
                 /*reps.map((rep) => (

@@ -9,10 +9,86 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    margin-bottom: 10px;
 }
 
 #realmSelector {
     width: 40%;
+}
+
+.reputations {
+    width: 80%;
+    margin: auto;
+    padding: 2px 0;
+    /*background-color: #EDE3F9;*/
+    border-radius: 25px;
+}
+
+.expac {
+    /*background-color: #EDE3F9;*/
+    border-radius: 5px;
+}
+
+progress[value] {
+    border-radius: 5px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    border-radius: 5px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.alliance progress[value]::-webkit-progress-value {
+    background-color: #10276B;
+}
+
+.horde progress[value]::-webkit-progress-value {
+    background-color: #7F0302;
+}
+
+.vanilla progress[value]::-webkit-progress-value {
+    background-color: #E5B46F;
+}
+
+.bc progress[value]::-webkit-progress-value {
+    background-color: #536F44;
+}
+
+.wrath progress[value]::-webkit-progress-value {
+    background-color: #5283BD;
+}
+
+.cata progress[value]::-webkit-progress-value {
+    background-color: #F98A23;
+}
+
+.mop progress[value]::-webkit-progress-value {
+    background-color: #8ED4A2;
+}
+
+.wod progress[value]::-webkit-progress-value {
+    background-color: #761501;
+}
+
+.legion progress[value]::-webkit-progress-value {
+    background-color: #7E58AD;
+}
+
+.rep {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin:auto;
+}
+
+.rep > * {
+    width: 28%;
 }
 
 .hidden {

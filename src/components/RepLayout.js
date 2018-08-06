@@ -39,7 +39,14 @@ class RepLayout extends Component {
     }
 
     componentDidMount() {
-        this.findExpac(this.props.reps)
+        this.findExpac(this.props.reps);
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.reps !== this.props.reps || prevProps.isHorde !== this.props.isHorde || prevProps.hideProgress !== this.props.hideProgress) {
+
+            this.findExpac(this.props.reps);
+        }
     }
 
     /*isMaxRep(rep) {
@@ -130,15 +137,15 @@ class RepLayout extends Component {
     render() {
         const {vanilla,bc,wrath,cata,mop,wod,legion,alliance,horde} = this.state;
         return [
-            (!this.props.isHorde && <Expac name="Alliance" reps={alliance} key={"one"} hideProgress={this.props.hideProgress} />),
-            (this.props.isHorde && <Expac name="Horde" reps={horde} key={"two"} hideProgress={this.props.hideProgress} />),
-            <Expac name="Vanilla" reps={vanilla} key={"three"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Burning Crusade" reps={bc} key={"four"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Wrath of the Lich King" reps={wrath} key={"five"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Cataclysm" reps={cata} key={"six"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Mists of Pandaria" reps={mop} key={"seven"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Warlords of Draenor" reps={wod} key={"eight"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Legion" reps={legion}  key={"nine"} hideProgress={this.props.hideProgress} />
+            (!this.props.isHorde && <Expac name="Alliance" cName="alliance" reps={alliance} key={"one"} hideProgress={this.props.hideProgress} />),
+            (this.props.isHorde && <Expac name="Horde" cName="horde" reps={horde} key={"two"} hideProgress={this.props.hideProgress} />),
+            <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={"three"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Burning Crusade" cName="bc" reps={bc} key={"four"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Wrath of the Lich King" cName="wrath" reps={wrath} key={"five"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Cataclysm" cName="cata" reps={cata} key={"six"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"seven"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"eight"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Legion" cName="legion" reps={legion}  key={"nine"} hideProgress={this.props.hideProgress} />
         ]
     }
 }

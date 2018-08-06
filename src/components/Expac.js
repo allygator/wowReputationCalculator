@@ -32,15 +32,15 @@ class Expac extends Component {
     render() {
         const reps = this.props.reps;
         const name = this.props.name;
+        const cName = this.props.cName;
         const isHidden = this.state.isHidden;
         const totalMaxReps = reps.reduce(countMaxReps,0);
         const hideProgress = this.props.hideProgress;
         const progress=<progress value={totalMaxReps} max={reps.length}></progress>;
         return (
-            <div className={[name,"expac"].join(' ')}>
+            <div className={[cName,"expac"].join(' ')}>
             <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} {hideProgress ? null : progress}</h2>
-
-            <div className={`child ${isHidden ? "hidden" : null}`}>
+            <div className={`child ${isHidden ? "hidden" : ""}`}>
             {reps.map((rep) => (
                 <div key={rep.name} className="rep">
                 <h3>{rep.name}</h3>
