@@ -33,18 +33,22 @@ class App extends Component {
               Select your realm from the dropdown and type your character name, then submit.
             </p>
             <div className="user-input-box">
-            <RealmsList realmSelection={this.setRealmState} /*specificRealm="Quel'Dorei"*//>
-            <div id="name">
-                Character Name:
-                <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
-            </div>
-            <div>Hide Completed Reputations <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked})} />
-            </div>
-            <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
+                <div id="selectionBoxes">
+                    <RealmsList realmSelection={this.setRealmState} /*specificRealm="Quel'Dorei"*//>
+                    <div id="name">
+                        Character Name:
+                        <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
+                    </div>
+                </div>
+                <div id="hideProgress">
+                    Hide Completed Reputations:
+                    <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked})} />
+                </div>
+                <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
           </div>
           {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked}/>}
           </div>
-      );  }
+    );}
 
 
 }

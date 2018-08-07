@@ -38,8 +38,10 @@ class Expac extends Component {
         const hideProgress = this.props.hideProgress;
         const progress=<progress value={totalMaxReps} max={reps.length}></progress>;
         return (
-            <div className={[cName,"expac"].join(' ')}>
-            <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} {hideProgress ? null : progress}</h2>
+            <div className={[cName,"expac "].join(' ')}>
+            <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} {hideProgress ? null : progress}
+                <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
+            </h2>
             <div className={`child ${isHidden ? "hidden" : ""}`}>
             {reps.map((rep) => (
                 <div key={rep.name} className="rep">
