@@ -38,7 +38,7 @@ class App extends Component {
                 Character Name:
                 <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
             </div>
-            <div>Hide Completed Reputations <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked}, console.log(e.target.checked)) } />
+            <div>Hide Completed Reputations <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked})} />
             </div>
             <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
           </div>

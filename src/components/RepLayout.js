@@ -5,15 +5,6 @@ const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
 const alli = [47, 54, 69, 72, 930, 1134];
 const horde = [68, 76, 81, 530, 911, 1133];
-/*  Vanilla: 21-910
-    BC: 930-1038 except 1037
-    Wrath: 1050-1126
-    Cata: 1134-1204 except 1168 (guild)
-    Mop: 1269-1435
-    Wod: 1445-1731 except 1691 (Brawlers Guild Season 2)
-    Legion: 1828-2045,2165,2170 except 2011 (Brawlers Guild)
-    Bfa: 2103-2159 except 2135
-*/
 
 class RepLayout extends Component {
     constructor(props) {
@@ -31,7 +22,7 @@ class RepLayout extends Component {
             alliance: [],
             horde: [],
             guild: []
-        }
+        };
         //this.isMaxRep = this.isMaxRep.bind(this);
         this.isCompletedRep = this.isCompletedRep.bind(this);
         this.repLevel = this.repLevel.bind(this);
