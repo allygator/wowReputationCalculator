@@ -43,8 +43,7 @@ class RepLayout extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(prevProps.reps !== this.props.reps || prevProps.isHorde !== this.props.isHorde || prevProps.hideProgress !== this.props.hideProgress) {
-
+        if(prevProps.reps !== this.props.reps || prevProps.hideProgress !== this.props.hideProgress) {
             this.findExpac(this.props.reps);
         }
     }
@@ -86,8 +85,10 @@ class RepLayout extends Component {
         */
         for(let rep of reps) {
             var tempRep;
-            if(rep.id === 469 || rep.id === 1733) {
-
+            if(rep.id === 469 || rep.id === 1733 || rep.id === 67 || rep.id === 1691 || rep.id === 2011) {
+                //This filters out faction "containers" like Alliance and Horde which
+                // seem to only serve the purpose of holding the other factions
+                // Also a follower, and the Brawlers Guild
             } else if(alli.includes(rep.id)) { // Alliance reps
                 tempRep = this.state.alliance;
                 tempRep.push(rep);
@@ -122,7 +123,7 @@ class RepLayout extends Component {
                 tempRep = this.state.wod;
                 tempRep.push(rep);
                 this.setState({wod: tempRep});
-            } else if ((rep.id < 2045 || rep.id === 2165 || rep.id === 2170) && rep.id !== 2011) { // Legion Reps
+            } else if (rep.id < 2045 || rep.id === 2165 || rep.id === 2170) { // Legion Reps
                 tempRep = this.state.legion;
                 tempRep.push(rep);
                 this.setState({legion: tempRep});
@@ -148,23 +149,6 @@ class RepLayout extends Component {
             <Expac name="Legion" cName="legion" reps={legion}  key={"nine"} hideProgress={this.props.hideProgress} />
         ]
     }
-}
-
-/*function Expac({name,reps}) {
-    return (
-        <div className={[name,"expac"].join(' ')}>
-        <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
-        <div className={"child hidden"}>
-        {reps.map((rep) => (
-            <div key={rep.name} className="rep">
-            <h3>{rep.name}</h3>
-            <p>{repLevel(rep)}</p>
-            <p>{rep.value}/{rep.max}</p>
-            </div>
-        ))}
-        </div>
-        </div>
-    )
-}*/
+};
 
 export default RepLayout;
