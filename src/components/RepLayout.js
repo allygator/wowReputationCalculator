@@ -4,7 +4,9 @@ const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283,
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
 const alli = [47, 54, 69, 72, 930, 1134];
+const noAlli = [1052, 1067, 1172, 1375, 1388, 1445, 1681, 1708, 1848];
 const horde = [68, 76, 81, 530, 911, 1133];
+const noHorde = [946, 1126, 1376, 1387, 1682, 1710, 1731, 1847];
 
 class RepLayout extends Component {
     constructor(props) {
@@ -80,6 +82,8 @@ class RepLayout extends Component {
                 //This filters out faction "containers" like Alliance and Horde which
                 // seem to only serve the purpose of holding the other factions
                 // Also a follower, and the Brawlers Guild
+            } else if((!this.props.isHorde && noAlli.includes(rep.id)) || (this.props.isHorde && noHorde.includes(rep.id))) {
+                //This filters out reputations only available to the other faction
             } else if(alli.includes(rep.id)) { // Alliance reps
                 tempRep = this.state.alliance;
                 tempRep.push(rep);
@@ -110,7 +114,7 @@ class RepLayout extends Component {
                 tempRep = this.state.mop;
                 tempRep.push(rep);
                 this.setState({mop: tempRep});
-            } else if ((rep.id < 1731 && rep.id !== 1691) || rep.id ===  1848) { // Wod Reps
+            } else if ((rep.id <= 1850 && rep.id !== 1691 && rep.id !== 1828) || rep.id ===  1848 || rep.id === 1847) { // Wod Reps
                 tempRep = this.state.wod;
                 tempRep.push(rep);
                 this.setState({wod: tempRep});
