@@ -41,6 +41,7 @@ class Reputation extends Component {
                 this.setState({
                     isLoaded: true,
                 });
+                this.setState({faction:repList.faction});
                 if(this.props.isChecked) {
                     repList.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps:repList.reputation.filter(this.isCompletedRep)});
@@ -48,7 +49,6 @@ class Reputation extends Component {
                     repList.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps: repList.reputation})
                 }
-                this.setState({faction:repList.faction})
             },
             (error) => {
                 this.setState({
