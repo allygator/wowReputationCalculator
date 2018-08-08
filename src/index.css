@@ -11,7 +11,7 @@
         transform: scale(1.5);
     }
 
-    #hideProgress {
+    #hiddenTypes {
         margin: 5px;
     }
 }
@@ -70,6 +70,7 @@ input[type=checkbox] {
 
 .expac i {
     color: #474747;
+    margin-left: 10px;
 }
 
 progress[value] {
@@ -128,6 +129,11 @@ progress[value]::-webkit-progress-value {
     justify-content: space-around;
     width: 80%;
     margin: auto;
+    flex-wrap: wrap;
+}
+
+.rep>.rewards {
+    width: 100%;
 }
 
 .rep>* {

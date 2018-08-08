@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+//import rewardsCont from '../rewardsobj';
+import Rewards from './rewards';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
@@ -47,7 +49,7 @@ class Expac extends Component {
                 <div key={rep.name} className="rep">
                 <h3>{rep.name}</h3>
                 <p>{this.repLevel(rep)}</p>
-                <p>{rep.value}/{rep.max}</p>
+                <Rewards rep={rep.id} />
                 </div>
             ))}
             </div>

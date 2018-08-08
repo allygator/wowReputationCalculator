@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+//import Select from 'react-select';
 import '../App.css';
 import RealmsList from './Realms';
 import Reputation from './Reputations';
+//Multi Select Code: Reputation Types to Hide: <Select options={this.state.options} isMulti onChange={e=>console.log(e)}/>
 
 class App extends Component {
     constructor(props) {
@@ -23,7 +25,8 @@ class App extends Component {
         this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked});
     }
 
-    render() { return (
+    render() {
+        return (
           <div className="App">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
@@ -40,7 +43,7 @@ class App extends Component {
                         <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
                     </div>
                 </div>
-                <div id="hideProgress">
+                <div id="hiddenTypes">
                     Hide Completed Reputations:
                     <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked})} />
                 </div>
