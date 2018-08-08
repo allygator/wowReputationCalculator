@@ -41,8 +41,8 @@ class Expac extends Component {
         const progress=<progress value={totalMaxReps} max={reps.length}></progress>;
         return (
             <div className={[cName,"expac "].join(' ')}>
-            <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} {hideProgress ? null : progress}
-                <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
+            <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress}
+                <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
             </h2>
             <div className={`child ${isHidden ? "hidden" : ""}`}>
             {reps.map((rep) => (

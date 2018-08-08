@@ -16,6 +16,18 @@
     }
 }
 
+@media screen and (max-width:700px) {
+    .expac h2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .expac span.progress-carat {
+        width: 100%;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
