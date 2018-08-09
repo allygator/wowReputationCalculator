@@ -191,12 +191,17 @@ progress[value]::-webkit-progress-value {
     border: 1px solid grey;
     border-radius: 5px 5px 0 0;
     border-bottom: none;
+    margin-right: 3px;
     bottom: -1px;
     position: relative;
     list-style: none;
     padding: 6px 12px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab--selected {
+    background-color: #F0ECFF;
 }
 
 .react-tabs__tab-panel--selected .react-tabs__tab-panel--selected {
