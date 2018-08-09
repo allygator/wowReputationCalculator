@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import rewardsCont from '../rewardsobj';
-import Rewards from './rewards';
+import Faction from './Faction';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
@@ -46,11 +46,7 @@ class Expac extends Component {
             </h2>
             <div className={`child ${isHidden ? "hidden" : ""}`}>
             {reps.map((rep) => (
-                <div key={rep.name} className="rep">
-                <h3>{rep.name}</h3>
-                <p>{this.repLevel(rep)}</p>
-                <Rewards rep={rep.id} />
-                </div>
+                <Faction rep={rep} key={rep.name} />
             ))}
             </div>
             </div>
