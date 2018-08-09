@@ -39,7 +39,19 @@ class Expac extends Component {
         const totalMaxReps = reps.reduce(countMaxReps,0);
         const hideProgress = this.props.hideProgress;
         const progress=<progress value={totalMaxReps} max={reps.length}></progress>;
-        return (
+        if(reps.length === 0) {
+            return (
+                <div className={[cName,"expac "].join(' ')}>
+                <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress}
+                    <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                </h2>
+                <div className={`child ${isHidden ? "hidden" : ""}`}>
+                    <p> You are Exalted with every faction in {(name==="Alliance")||(name==="Horde") ? ["The ",name].join(' ') : name}! </p>
+                </div>
+                </div>
+            )
+        } else {
+            return (
             <div className={[cName,"expac "].join(' ')}>
             <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress}
                 <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
@@ -50,7 +62,8 @@ class Expac extends Component {
             ))}
             </div>
             </div>
-        )
+            )
+        }
     }
 }
 
