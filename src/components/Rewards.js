@@ -7,8 +7,7 @@ class Rewards extends Component {
         super(props);
         this.state = {
         }
-    }
-    
+    };
 
     render() {
         const rep = this.props.rep;
