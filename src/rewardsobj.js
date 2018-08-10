@@ -377,7 +377,7 @@ const rewards = {
             }
         ],
     },
-    "609": { //Exodar
+    "609": { //Cenarion Circle
         "Friendly":[
             {
                 name:"Pattern: Bramblewood Belt",
@@ -911,6 +911,1191 @@ const rewards = {
             }
         ]
     },
+    "935": { //The Sha'Tar
+        "Friendly":[
+            {
+                name:"Design: Insightful Earthstorm Diamond",
+                id:"25904"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Crusader's Ornamented Headguard",
+                id:"35404"
+            },
+            {
+                name:"Crusader's Scaled Shoulders",
+                id:"35416"
+            },
+            {
+                name:"Design: Ring of Arcane Shielding",
+                id:"30826"
+            },
+            {
+                name:"Dragonhide Spaulders",
+                id:"35359"
+            },
+            {
+                name:"Dreadweave Leggings",
+                id:"35330"
+            },
+            {
+                name:"Evoker's Silk Handguards",
+                id:"35345"
+            },
+            {
+                name:"Kodohide Helm",
+                id:"35362"
+            },
+            {
+                name:"Mooncloth Cowl",
+                id:"35333"
+            },
+            {
+                name:"Opportunist's Leather Legguards",
+                id:"35368"
+            },
+            {
+                name:"Satin Mantle",
+                id:"35341"
+            },
+            {
+                name:"Savage Plate Chestpiece",
+                id:"35407"
+            },
+            {
+                name:"Seer's Linked Armor",
+                id:"35381"
+            },
+            {
+                name:"Seer's Mail Helm",
+                id:"35388"
+            },
+            {
+                name:"Seer's Ringmail Shoulderpads",
+                id:"35395"
+            },
+            {
+                name:"Stalker's Chain Spaulders",
+                id:"35380"
+            },
+            {
+                name:"Wyrmhide Robe",
+                id:"35375"
+            },
+            {
+                name:"Formula: Enchant Gloves - Major Healing",
+                id:"28273"
+            },
+            {
+                name:"Design: Kailee's Rose",
+                id:"33155"
+            },
+            {
+                name:"Pattern: Drums of Battle",
+                id:"29717"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Blessed Scale Girdle",
+                id:"29180"
+            },
+            {
+                name:"Design: Talasite Owl",
+                id:"24182"
+            },
+            {
+                name:"Xi'ri's Gift",
+                id:"29179"
+            },
+            {
+                name:"Formula: Enchant Weapon - Major Healing",
+                id:"28281"
+            },
+            {
+                name:"Recipe: Transmute Primal Air to Fire",
+                id:"22915"
+            },
+            {
+                name:"Design: Blood of Amber",
+                id:"33159"
+            },
+            {
+                name:"Recipe: Alchemist Stone",
+                id:"13517"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"A'dal's Command",
+                id:"29177"
+            },
+            {
+                name:"Crest of the Sha'tar",
+                id:"29176"
+            },
+            {
+                name:"Gavel of Pure Light",
+                id:"29175"
+            },
+            {
+                name:"Formula: Enchant Gloves - Threat",
+                id:"33153"
+            },
+            {
+                name:"Recipe: Flask of the Titans",
+                id:"31354"
+            },
+            {
+                name:"Sha'tar Tabard",
+                id:"31781"
+            }
+        ]
+    },
+    "942": { //Cenarion Expedition
+        "Friendly":[
+            {
+                name:"Pattern: Heavy Clefthoof Boots",
+                id:"25737"
+            },
+            {
+                name:"Expedition Flare",
+                id:"24429"
+            },
+            {
+                name:"Schematic: Green Smoke Flare",
+                id:"23814"
+            },
+        ],
+        "Honored":[
+            {
+                name:"Crusader's Ornamented Gloves",
+                id:"35403"
+            },
+            {
+                name:"Crusader's Scaled Legguards",
+                id:"35415"
+            },
+            {
+                name:"Pattern: Heavy Clefthoof Leggings",
+                id:"25736"
+            },
+            {
+                name:"Dragonhide Legguards",
+                id:"35358"
+            },
+            {
+                name:"Dreadweave Hood",
+                id:"35329"
+            },
+            {
+                name:"Pattern: Heavy Clefthoof Vest",
+                id:"25735"
+            },
+            {
+                name:"Kodohide Shoulderpads",
+                id:"35365"
+            },
+            {
+                name:"Mooncloth Cowl",
+                id:"35336"
+            },
+            {
+                name:"Opportunist's Leather Helm",
+                id:"35367"
+            },
+            {
+                name:"Satin Robe",
+                id:"35342"
+            },
+            {
+                name:"Savage Plate Gauntlets",
+                id:"35408"
+            },
+            {
+                name:"Seer's Linked Spaulders",
+                id:"35385"
+            },
+            {
+                name:"Seer's Mail Gauntlets",
+                id:"35387"
+            },
+            {
+                name:"Seer's Ringmail Legguards",
+                id:"35394"
+            },
+            {
+                name:"Stalker's Chain Leggings",
+                id:"35379"
+            },
+            {
+                name:"Wyrmhide Spaulders",
+                id:"35374"
+            },
+            {
+                name:"Warden's Hauberk",
+                id:"25838"
+            },
+            {
+                name:"Pattern: Clefthide Leg Armor",
+                id:"29720"
+            },
+            {
+                name:"Plans: Adamantite Sharpening Stone",
+                id:"23618"
+            },
+            {
+                name:"Plans: Adamantite Weightstone",
+                id:"28632"
+            },
+            {
+                name:"Plans: Greater Rune of Warding",
+                id:"25526"
+            },
+            {
+                name:"Recipe: Earthen Elixir",
+                id:"32070"
+            },
+            {
+                name:"Recipe: Transmute Earthstorm Diamond",
+                id:"25869"
+            },
+            {
+                name:"Evoker's Silk Trousers",
+                id:"35347"
+            },
+            {
+                name:"Explorer's Walking Stick",
+                id:"25835"
+            },
+            {
+                name:"Preserver's Cudgel",
+                id:"25836"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Plans: Wildguard Helm",
+                id:"31392"
+            },
+            {
+                name:"Plans: Wildguard Leggings",
+                id:"31391"
+            },
+            {
+                name:"Design: Nightseye Panther",
+                id:"24183"
+            },
+            {
+                name:"Strength of the Untamed",
+                id:"29173"
+            },
+            {
+                name:"Watcher's Cowl",
+                id:"29174"
+            },
+            {
+                name:"Formula: Enchant Gloves - Precise Strikes",
+                id:"28271"
+            },
+            {
+                name:"Recipe: Transmute Primal Water to Air",
+                id:"22918"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Ashyen's Gift",
+                id:"29172"
+            },
+            {
+                name:"Cenarion War Hippogryph",
+                id:"33999"
+            },
+            {
+                name:"Design: The Natural Ward",
+                id:"31402"
+            },
+            {
+                name:"Earthwarden",
+                id:"29171"
+            },
+            {
+                name:"Plans: Wildguard Breastplate",
+                id:"31390"
+            },
+            {
+                name:"Windcaller's Orb",
+                id:"29170"
+            },
+            {
+                name:"Formula: Enchant Cloak - Stealth",
+                id:"33149"
+            },
+            {
+                name:"Recipe: Flask of Distilled Wisdom",
+                id:"31356"
+            },
+            {
+                name:"Pattern: Nethercleft Leg Armor",
+                id:"29721"
+            },
+            {
+                name:"Recipe: Major Nature Protection Potion",
+                id:"22922"
+            },
+            {
+                name:"Cenarion Expedition Tabard",
+                id:"31804"
+            }
+        ]
+    },
+    "946": { //Honor Hold
+        "Friendly":[
+            {
+                name:"Design: Regal Deep Peridot",
+                id:"23142"
+            },
+            {
+                name:"Dried Mushroom Rations",
+                id:"24008"
+            },
+            {
+                name:"Footman's Waterskin",
+                id:"24007"
+            },
+            {
+                name:"Formula: Enchant Bracer - Superior Healing",
+                id:"22531"
+            },
+            {
+                name:"Pattern: Felstalker Belt",
+                id:"29213"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Crusader's Ornamented Spaulders",
+                id:"35476"
+            },
+            {
+                name:"Crusader's Scaled Gauntlets",
+                id:"35477"
+            },
+            {
+                name:"Dragonhide Robe",
+                id:"35469"
+            },
+            {
+                name:"Dreadweave Robe",
+                id:"35464"
+            },
+            {
+                name:"Evoker's Silk Amice",
+                id:"35465"
+            },
+            {
+                name:"Kodohide Spaulders",
+                id:"35470"
+            },
+            {
+                name:"Mooncloth Vestments",
+                id:"35467"
+            },
+            {
+                name:"Opportunist's Leather Gloves",
+                id:"35468"
+            },
+            {
+                name:"Satin Hood",
+                id:"35466"
+            },
+            {
+                name:"Savage Plate Helm",
+                id:"35478"
+            },
+            {
+                name:"Seer's Linked Helm",
+                id:"35474"
+            },
+            {
+                name:"Seer's Mail Armor",
+                id:"35472"
+            },
+            {
+                name:"Seer's Ringmail Gloves",
+                id:"35473"
+            },
+            {
+                name:"Stalker's Chain Gauntlets",
+                id:"35475"
+            },
+            {
+                name:"Wyrmhide Gloves",
+                id:"35471"
+            },
+            {
+                name:"Footman's Longsword",
+                id:"25825"
+            },
+            {
+                name:"Pattern: Felstalker Bracers",
+                id:"29214"
+            },
+            {
+                name:"Pattern: Felstalker Breastplate",
+                id:"29215"
+            },
+            {
+                name:"Sage's Band",
+                id:"25826"
+            },
+            {
+                name:"Pattern: Cobrahide Leg Armor",
+                id:"29719"
+            },
+            {
+                name:"Recipe: Elixir of Major Agility",
+                id:"22905"
+            },
+            {
+                name:"Recipe: Transmute Skyfire Diamond",
+                id:"25870"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Design: Dawnstone Crab",
+                id:"24180"
+            },
+            {
+                name:"Hellforged Halberd",
+                id:"29166"
+            },
+            {
+                name:"Ring of Convalescence",
+                id:"29169"
+            },
+            {
+                name:"Formula: Enchant Chest - Exceptional Stats",
+                id:"22547"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Blade of the Archmage",
+                id:"29153"
+            },
+            {
+                name:"Honor's Call",
+                id:"29156"
+            },
+            {
+                name:"Veteran's Musket",
+                id:"29151"
+            },
+            {
+                name:"Formula: Enchant Cloak - Subtlety",
+                id:"33150"
+            },
+            {
+                name:"Pattern: Nethercobra Leg Armor",
+                id:"29722"
+            },
+            {
+                name:"Plans: Felsteel Shield Spike",
+                id:"23619"
+            },
+            {
+                name:"Honor Hold Tabard",
+                id:"23999"
+            }
+        ]
+    },
+    "967": { //The Violet Eye
+        "Honored":[
+            {
+                name:"Design: The Frozen Eye",
+                id:"31401"
+            },
+            {
+                name:"Plans: Iceguard Breastplate",
+                id:"31393"
+            },
+            {
+                name:"Plans: Iceguard Helm",
+                id:"31395"
+            },
+            {
+                name:"Inscription of Endurance",
+                id:"29187"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Pattern: Shadowprowler's Chestguard",
+                id:"33205"
+            },
+            {
+                name:"Plans: Iceguard Leggings",
+                id:"31394"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Pattern: Cloak of Darkness",
+                id:"33124"
+            },
+            {
+                name:"Formula: Enchant Weapon - Greater Agility",
+                id:"33165"
+            }
+        ]
+    },
+    "970": { //Sporeggar
+        "Friendly":[
+            {
+                name:"Tallstalk Mushroom",
+                id:"25548"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Muck-Covered Drape",
+                id:"25827"
+            },
+            {
+                name:"Petrified Lichen Guard",
+                id:"25828"
+            },
+            {
+                name:"Redcap Toadstool",
+                id:"25550"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Hardened Stone Shard",
+                id:"29150"
+            },
+            {
+                name:"Sporeling's Firestick",
+                id:"29149"
+            },
+            {
+                name:"Recipe: Transmute Primal Earth to Water",
+                id:"22916"
+            },
+            {
+                name:"Pattern: Mycah's Botanical Bag",
+                id:"38229"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Tiny Sporebat",
+                id:"34478"
+            },
+            {
+                name:"Recipe: Shrouding Potion",
+                id:"22906"
+            },
+            {
+                name:"Sporeggar Tabard",
+                id:"31775"
+            }
+        ]
+    },
+    "978": { //Kurenai
+        "Friendly":[
+            {
+                name:"Pattern: Netherfury Belt",
+                id:"29217"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Pattern: Netherfury Leggings",
+                id:"29219"
+            },
+            {
+                name:"Pattern: Drums of Restoration",
+                id:"34175"
+            },
+            {
+                name:"Pattern: Drums of Speed",
+                id:"34173"
+            },
+            {
+                name:"Pattern: Reinforced Mining Bag",
+                id:"30444"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Band of Elemental Spirits",
+                id:"29146"
+            },
+            {
+                name:"Blackened Leather Spaulders",
+                id:"29148"
+            },
+            {
+                name:"Kurenai Kilt",
+                id:"29142"
+            },
+            {
+                name:"Pattern: Netherfury Boots",
+                id:"29218"
+            },
+            {
+                name:"Recipe: Transmute Primal Fire to Earth",
+                id:"30443"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Reins of the Cobalt Riding Talbuk",
+                id:"31830"
+            },
+            {
+                name:"Reins of the Cobalt War Talbuk",
+                id:"29227"
+            },
+            {
+                name:"Reins of the Silver Riding Talbuk",
+                id:"31832"
+            },
+            {
+                name:"Reins of the Silver War Talbuk",
+                id:"29229"
+            },
+            {
+                name:"Reins of the Tan Riding Talbuk",
+                id:"31834"
+            },
+            {
+                name:"Reins of the Tan War Talbuk",
+                id:"29230"
+            },
+            {
+                name:"Reins of the White Riding Talbuk",
+                id:"31836"
+            },
+            {
+                name:"Reins of the White War Talbuk",
+                id:"29231"
+            },
+            {
+                name:"Arechron's Gift",
+                id:"29138"
+            },
+            {
+                name:"Cloak of the Ancient Spirits",
+                id:"29140"
+            },
+            {
+                name:"Far Seer's Helm",
+                id:"29136"
+            },
+            {
+                name:"Kurenai Tabard",
+                id:"31774"
+            },
+        ]
+    },
+    "989": { //Keepers of Time
+        "Honored":[
+            {
+                name:"Crusader's Ornamented Chestplate",
+                id:"35402"
+            },
+            {
+                name:"Crusader's Scaled Helm",
+                id:"35414"
+            },
+            {
+                name:"Dragonhide Gloves",
+                id:"35356"
+            },
+            {
+                name:"Dreadweave Gloves",
+                id:"35328"
+            },
+            {
+                name:"Evoker's Silk Raiment",
+                id:"35346"
+            },
+            {
+                name:"Kodohide Legguards",
+                id:"35363"
+            },
+            {
+                name:"Mooncloth Legguards",
+                id:"35334"
+            },
+            {
+                name:"Opportunist's Leather Spaulders",
+                id:"35369"
+            },
+            {
+                name:"Satin Gloves",
+                id:"35338"
+            },
+            {
+                name:"Savage Plate Legguards",
+                id:"35410"
+            },
+            {
+                name:"Seer's Linked Leggings",
+                id:"35384"
+            },
+            {
+                name:"Seer's Mail Spaulders",
+                id:"35390"
+            },
+            {
+                name:"Seer's Ringmail Headpiece",
+                id:"35393"
+            },
+            {
+                name:"Stalker's Chain Armor",
+                id:"35376"
+            },
+            {
+                name:"Wyrmhide Helm",
+                id:"35372"
+            },
+            {
+                name:"Formula: Enchant Gloves - Major Spellpower",
+                id:"28272"
+            },
+            {
+                name:"Design: Enigmatic Skyfire Diamond",
+                id:"25910"
+            },
+            {
+                name:"Design: Facet of Eternity",
+                id:"33160"
+            },
+            {
+                name:"Formula: Enchant Ring - Minor Intellect",
+                id:"22536"
+            },
+            {
+                name:"Pattern: Drums of Panic",
+                id:"29713"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Continuum Blade",
+                id:"29185"
+            },
+            {
+                name:"Design: Living Ruby Serpent",
+                id:"24181"
+            },
+            {
+                name:"Design: Pendant of Frozen Flame",
+                id:"24174"
+            },
+            {
+                name:"Timewarden's Leggings",
+                id:"29184"
+            },
+            {
+                name:"Design: Stone of Blades",
+                id:"33158"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Bindings of the Timewalker",
+                id:"29183"
+            },
+            {
+                name:"Riftmaker",
+                id:"29182"
+            },
+            {
+                name:"Timelapse Shard",
+                id:"29181"
+            },
+            {
+                name:"Formula: Enchant Gloves - Superior Agility",
+                id:"33152"
+            },
+            {
+                name:"Keepers of Time Tabard",
+                id:"31777"
+            },
+            {
+                name:"Recipe: Flask of Supreme Power",
+                id:"31355"
+            }
+        ]
+    },
+    "990": { //The Scale of the Sands
+        "Friendly":[
+            {
+                name:"Design: Bold Crimson Spinel",
+                id:"32274"
+            },
+            {
+                name:"Design: Brilliant Crimson Spinel",
+                id:"32282"
+            },
+            {
+                name:"Design: Delicate Crimson Spinel",
+                id:"32277"
+            },
+            {
+                name:"Design: Smooth Lionseye",
+                id:"32291"
+            },
+            {
+                name:"Design: Solid Empyrean Sapphire",
+                id:"32286"
+            },
+            {
+                name:"Design: Sparkling Empyrean Sapphire",
+                id:"32287"
+            },
+            {
+                name:"Design: Subtle Lionseye",
+                id:"32284"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Design: Forceful Seaspray Emerald",
+                id:"35765"
+            },
+            {
+                name:"Design: Jagged Seaspray Emerald",
+                id:"32312"
+            },
+            {
+                name:"Design: Steady Seaspray Emerald",
+                id:"35764"
+            },
+            {
+                name:"Design: Radiant Seaspray Emerald",
+                id:"32310"
+            },
+            {
+                name:"Design: Quick Lionseye",
+                id:"35763"
+            },
+            {
+                name:"Design: Glinting Shadowsong Amethyst",
+                id:"32306"
+            },
+            {
+                name:"Design: Purified Shadowsong Amethyst",
+                id:"32311"
+            },
+            {
+                name:"Design: Timeless Shadowsong Amethyst",
+                id:"32301"
+            },
+            {
+                name:"Design: Potent Pyrestone",
+                id:"32304"
+            },
+            {
+                name:"Design: Reckless Pyrestone",
+                id:"35762"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Design: Deadly Pyrestone",
+                id:"32308"
+            },
+            {
+                name:"Design: Regal Seaspray Emerald",
+                id:"32309"
+            },
+            {
+                name:"Design: Rigid Empyrean Sapphire",
+                id:"32292"
+            }
+        ]
+    },
+    "1011": { //Lower City
+        "Friendly":[
+            {
+                name:"Design: Potent Flame Spessarite",
+                id:"23138"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Crusader's Ornamented Leggings",
+                id:"35405"
+            },
+            {
+                name:"Crusader's Scaled Chestpiece",
+                id:"35412"
+            },
+            {
+                name:"Dragonhide Helm",
+                id:"35357"
+            },
+            {
+                name:"Dreadweave Mantle",
+                id:"35331"
+            },
+            {
+                name:"Evoker's Silk Cowl",
+                id:"35344"
+            },
+            {
+                name:"Kodohide Gloves",
+                id:"35361"
+            },
+            {
+                name:"Mooncloth Mitts",
+                id:"35335"
+            },
+            {
+                name:"Opportunist's Leather Tunic",
+                id:"35370"
+            },
+            {
+                name:"Satin Leggings",
+                id:"35340"
+            },
+            {
+                name:"Savage Plate Shoulders",
+                id:"35411"
+            },
+            {
+                name:"Seer's Linked Gauntlets",
+                id:"35382"
+            },
+            {
+                name:"Seer's Mail Leggings",
+                id:"35389"
+            },
+            {
+                name:"Seer's Ringmail Chestguard",
+                id:"35391"
+            },
+            {
+                name:"Stalker's Chain Helm",
+                id:"35378"
+            },
+            {
+                name:"Wyrmhide Legguards",
+                id:"35373"
+            },
+            {
+                name:"Formula: Enchant Ring - Stats",
+                id:"22538"
+            },
+            {
+                name:"Pattern: Cloak of Arcane Evasion",
+                id:"30833"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Design: Felsteel Boar",
+                id:"24179"
+            },
+            {
+                name:"Design: Pendant of Thawing",
+                id:"24175"
+            },
+            {
+                name:"Leggings of the Skettis Exile",
+                id:"30836"
+            },
+            {
+                name:"Lower City Prayerbook",
+                id:"30841"
+            },
+            {
+                name:"Salvager's Hauberk",
+                id:"30835"
+            },
+            {
+                name:"Recipe: Elixir of Major Shadow Power",
+                id:"22910"
+            },
+            {
+                name:"Design: Falling Star",
+                id:"33157"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Gavel of Unearthed Secrets",
+                id:"30832"
+            },
+            {
+                name:"Shapeshifter's Signet",
+                id:"30834"
+            },
+            {
+                name:"Trident of the Outcast Tribe",
+                id:"30830"
+            },
+            {
+                name:"Formula: Enchant Cloak - Dodge",
+                id:"33148"
+            },
+            {
+                name:"Lower City Tabard",
+                id:"31778"
+            }
+        ]
+    },
+    "1012": { //Ashtongue Deathsworn
+        "Friendly":[
+            {
+                name:"Pattern: Boots of Shackled Souls",
+                id:"32429"
+            },
+            {
+                name:"Pattern: Bracers of Shackled Souls",
+                id:"32430"
+            },
+            {
+                name:"Pattern: Redeemed Soul Cinch",
+                id:"32436"
+            },
+            {
+                name:"Pattern: Redeemed Soul Legguards",
+                id:"32435"
+            },
+            {
+                name:"Pattern: Soulguard Bracers",
+                id:"32438"
+            },
+            {
+                name:"Pattern: Soulguard Girdle",
+                id:"32440"
+            },
+            {
+                name:"Plans: Shadesteel Bracers",
+                id:"32442"
+            },
+            {
+                name:"Plans: Shadesteel Girdle",
+                id:"32444"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Pattern: Greaves of Shackled Souls",
+                id:"32431"
+            },
+            {
+                name:"Pattern: Night's End",
+                id:"32447"
+            },
+            {
+                name:"Pattern: Redeemed Soul Moccasins",
+                id:"32433"
+            },
+            {
+                name:"Pattern: Redeemed Soul Wristguards",
+                id:"32434"
+            },
+            {
+                name:"Pattern: Soulguard Leggings",
+                id:"32439"
+            },
+            {
+                name:"Pattern: Soulguard Slippers",
+                id:"32437"
+            },
+            {
+                name:"Pattern: Waistguard of Shackled Souls",
+                id:"32432"
+            },
+            {
+                name:"Plans: Shadesteel Greaves",
+                id:"32443"
+            },
+            {
+                name:"Plans: Shadesteel Sabots",
+                id:"32441"
+            }
+        ],
+
+        "Exalted":[
+            {
+                name:"Ashtongue Talisman of Acumen",
+                id:"32490"
+            },
+            {
+                name:"Ashtongue Talisman of Equilibrium",
+                id:"32486"
+            },
+            {
+                name:"Ashtongue Talisman of Insight",
+                id:"32488"
+            },
+            {
+                name:"Ashtongue Talisman of Lethality",
+                id:"32492"
+            },
+            {
+                name:"Ashtongue Talisman of Shadows",
+                id:"32493"
+            },
+            {
+                name:"Ashtongue Talisman of Swiftness",
+                id:"32487"
+            },
+            {
+                name:"Ashtongue Talisman of Valor",
+                id:"32485"
+            },
+            {
+                name:"Ashtongue Talisman of Vision",
+                id:"32491"
+            },
+            {
+                name:"Ashtongue Talisman of Zeal",
+                id:"32489"
+            }
+        ]
+    },
+    "1015": { //Netherwing
+        "Exalted":[
+            {
+                name:"Reins of the Onyx Netherwing Drake",
+                id:"32857"
+            },
+            {
+                name:"Reins of the Azure Netherwing Drake",
+                id:"32858"
+            },
+            {
+                name:"Reins of the Cobalt Netherwing Drake",
+                id:"32859"
+            },
+            {
+                name:"Reins of the Purple Netherwing Drake",
+                id:"32860"
+            },
+            {
+                name:"Reins of the Veridian Netherwing Drake",
+                id:"32861"
+            },
+            {
+                name:"Reins of the Violet Netherwing Drake",
+                id:"32862"
+            },
+        ],
+    },
     "1134": { //Gilneas
         "Friendly":[
             {
@@ -1038,7 +2223,623 @@ const rewards = {
                 id:"128602"
             }
         ]
-    }
+    },
+    "2159": { //7th Legion
+        "Honored":[
+            {
+                name:"Schematic: AZ3-R1-T3 Synthetic Specs",
+                id:"162323"
+            },
+            {
+                name:"Scouting Report: Grimwatt's Crash",
+                id:"163043"
+            },
+            {
+                name:"Scouting Report: Veiled Grotto",
+                id:"163048"
+            },
+            {
+                name:"7th Legionnaire's Cloak",
+                id:"160536"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Belt of the Grove Auxiliary",
+                id:"161586"
+            },
+            {
+                name:"Legguards of the Storm Battalion",
+                id:"161587"
+            },
+            {
+                name:"Royal Knight's Sabatons",
+                id:"161589"
+            },
+            {
+                name:"Warmage's Flame-Brimming Wristcords",
+                id:"161583"
+            },
+            {
+                name:"Lil' Siege Tower",
+                id:"163778"
+            },
+            {
+                name:"Design: Amberblaze Loop",
+                id:"162378"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Critical Strike",
+                id:"162302"
+            },
+            {
+                name:"Recipe: Battle Potion of Strength",
+                id:"163320"
+            },
+            {
+                name:"Recipe: Enchanter's Sorcerous Scepter",
+                id:"162306"
+            },
+            {
+                name:"Recipe: Endless Tincture of Fractional Power",
+                id:"162138"
+            },
+            {
+                name:"Recipe: Flask of the Currents",
+                id:"162132"
+            },
+            {
+                name:"Recipe: Steelskin Potion",
+                id:"162128"
+            },
+            {
+                name:"Recipe: Stormsteel Dagger",
+                id:"162275"
+            },
+            {
+                name:"Recipe: Stormsteel Saber",
+                id:"162670"
+            },
+            {
+                name:"Recipe: Stormsteel Shield",
+                id:"162261"
+            },
+            {
+                name:"Recipe: Stormsteel Spear",
+                id:"162276"
+            },
+            {
+                name:"Recipe: Surging Alchemist Stone",
+                id:"162139"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Synthetic Specs",
+                id:"162324"
+            },
+            {
+                name:"Schematic: Finely-Tuned Stormsteel Destroyer",
+                id:"162346"
+            },
+            {
+                name:"Schematic: Monelite Scope of Alacrity",
+                id:"162344"
+            },
+            {
+                name:"Schematic: Precision Attitude Adjuster",
+                id:"162345"
+            },
+            {
+                name:"Scouting Report: Mistvine Ledge",
+                id:"163044"
+            },
+            {
+                name:"Scouting Report: Mugamba Overlook",
+                id:"163047"
+            },
+            {
+                name:"Scouting Report: Verdant Hollow",
+                id:"163046"
+            },
+            {
+                name:"Scouting Report: Vulture's Nest",
+                id:"163041"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Bracers of the Allied Earthbinders",
+                id:"161588"
+            },
+            {
+                name:"Elite Footman's Legplates",
+                id:"161590"
+            },
+            {
+                name:"Gloves of the Forward Skirmisher",
+                id:"161585"
+            },
+            {
+                name:"Medical Corps Slippers",
+                id:"161584"
+            },
+            {
+                name:"Tabard of the 7th Legion",
+                id:"160539"
+            }
+        ]
+    },
+    "2160": { //Proudmoore Admiralty
+        "Friendly":[
+            {
+                name:"Contract: Proudmoore Admiralty",
+                id:"153661"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Gnoll Targetting Barrel",
+                id:"163201"
+            },
+            {
+                name:"Navy Blue Boat Cloak",
+                id:"160534"
+            },
+            {
+                name:"Recipe: Contract: Proudmoore Admiralty",
+                id:"162359"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Bionic Bifocals",
+                id:"162327"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Master-At-Arms Wristguards",
+                id:"161569"
+            },
+            {
+                name:"Proudmoore Marine's Legplates",
+                id:"161573"
+            },
+            {
+                name:"Sailing Master's Sash",
+                id:"161567"
+            },
+            {
+                name:"Yardarm Sharpshooter's Boots",
+                id:"161572"
+            },
+            {
+                name:"Admiralty Marine's Duffel",
+                id:"161976"
+            },
+            {
+                name:"Cursed Spyglass",
+                id:"163200"
+            },
+            {
+                name:"Design: Tidal Amethyst Loop",
+                id:"162380"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Mastery",
+                id:"162304"
+            },
+            {
+                name:"Formula: Enchant Weapon - Masterful Navigation",
+                id:"162317"
+            },
+            {
+                name:"Formula: Enchant Weapon - Siphoning",
+                id:"162316"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak of the Feather",
+                id:"162424"
+            },
+            {
+                name:"Recipe: Battle Potion of Intellect",
+                id:"163316"
+            },
+            {
+                name:"Recipe: Coastal Mana Potion",
+                id:"162254"
+            },
+            {
+                name:"Recipe: Flask of the Vast Horizon",
+                id:"162134"
+            },
+            {
+                name:"Recipe: Hardened Tempest Knuckles",
+                id:"162414"
+            },
+            {
+                name:"Recipe: Mistscale Knuckles",
+                id:"162413"
+            },
+            {
+                name:"Recipe: Potion of Bursting Blood",
+                id:"162130"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Bionic Bifocals",
+                id:"162328"
+            },
+            {
+                name:"Schematic: Charged Refrigeration Projectile",
+                id:"162334"
+            },
+            {
+                name:"Schematic: Fro-Grow Grenade",
+                id:"162335"
+            },
+            {
+                name:"Schematic: Neurological Immobilization Bomb",
+                id:"162336"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Boarding Action Vambraces",
+                id:"161574"
+            },
+            {
+                name:"Cordage Sliding Grips",
+                id:"161571"
+            },
+            {
+                name:"First Lieutenant's Ceremonial Belt",
+                id:"161570"
+            },
+            {
+                name:"Maritime Spellweaver's Leggings",
+                id:"161568"
+            },
+            {
+                name:"Reins of the Admiralty Stallion",
+                id:"161911"
+            },
+            {
+                name:"Reins of the Proudmoore Sea Scout",
+                id:"161879"
+            },
+            {
+                name:"Proudmoore Admiralty Tabard",
+                id:"160540"
+            }
+        ]
+    },
+    "2161": { //Order of Embers
+        "Friendly":[
+            {
+                name:"Contract: Order of Embers",
+                id:"153662"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Witch Hunter's Cape",
+                id:"160535"
+            },
+            {
+                name:"Ghostly Pet Biscuit",
+                id:"163205"
+            },
+            {
+                name:"Recipe: Contract: Order of Embers",
+                id:"162361"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Orthogonal Optics",
+                id:"162329"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Footpads of the Deft Exorcist",
+                id:"161593"
+            },
+            {
+                name:"Gauntlets of Renewed Resolution",
+                id:"161597"
+            },
+            {
+                name:"Grips of the Oathsworn",
+                id:"161595"
+            },
+            {
+                name:"Leggings of Devout Opposition",
+                id:"161592"
+            },
+            {
+                name:"Tome of Hex: Wicker Mongrel",
+                id:"162624"
+            },
+            {
+                name:"Weary Spirit Binding",
+                id:"163206"
+            },
+            {
+                name:"Pristine Falcon Feather",
+                id:"163491"
+            },
+            {
+                name:"Design: Royal Quartz Loop",
+                id:"162381"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Versatility",
+                id:"162305"
+            },
+            {
+                name:"Formula: Enchant Weapon - Gale-Force Striking",
+                id:"162318"
+            },
+            {
+                name:"Formula: Enchant Weapon - Versatile Navigation",
+                id:"162320"
+            },
+            {
+                name:"Pattern: Deep Sea Bag",
+                id:"162421"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak",
+                id:"162427"
+            },
+            {
+                name:"Recipe: Battle Potion of Agility",
+                id:"163314"
+            },
+            {
+                name:"Recipe: Coastal Rejuvenation Potion",
+                id:"162256"
+            },
+            {
+                name:"Recipe: Flask of the Undertow",
+                id:"162135"
+            },
+            {
+                name:"Recipe: Potion of Rising Death",
+                id:"162131"
+            },
+            {
+                name:"Recipe: Recurve Bow of the Strands",
+                id:"162412"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Orthogonal Optics",
+                id:"162330"
+            },
+            {
+                name:"Schematic: Catchroot Seed Spreader",
+                id:"162333"
+            },
+            {
+                name:"Schematic: Frost-Laced Ammunition",
+                id:"162322"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Boarding Action Vambraces",
+                id:"161574"
+            },
+            {
+                name:"Cordage Sliding Grips",
+                id:"161571"
+            },
+            {
+                name:"First Lieutenant's Ceremonial Belt",
+                id:"161570"
+            },
+            {
+                name:"Maritime Spellweaver's Leggings",
+                id:"161568"
+            },
+            {
+                name:"Reins of the Admiralty Stallion",
+                id:"161911"
+            },
+            {
+                name:"Reins of the Proudmoore Sea Scout",
+                id:"161879"
+            },
+            {
+                name:"Proudmoore Admiralty Tabard",
+                id:"160540"
+            }
+        ]
+    },
+    "2162": { //Storms Wake
+        "Friendly":[
+            {
+                name:"Contract: Storm's Wake",
+                id:"153661"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Cape of the Divine Depths",
+                id:"160533"
+            },
+            {
+                name:"Recipe: Contract: Storm's Wake",
+                id:"162363"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Gearspun Goggles",
+                id:"162325"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Bindings of the Seacallers",
+                id:"161579"
+            },
+            {
+                name:"Handwraps of Deep Faith",
+                id:"161575"
+            },
+            {
+                name:"Keelbreak Girdle",
+                id:"161582"
+            },
+            {
+                name:"Seabinder's Leggings",
+                id:"161577"
+            },
+            {
+                name:"Dead Ringer",
+                id:"163463"
+            },
+            {
+                name:"Tome of Polymorph: Bumblebee",
+                id:"162626"
+            },
+            {
+                name:"Pair of Bee Wings",
+                id:"163490"
+            },
+            {
+                name:"Design: Laribole Staff of Alacrity",
+                id:"162382"
+            },
+            {
+                name:"Design: Owlseye Loop",
+                id:"162379"
+            },
+            {
+                name:"Design: Scarlet Diamond Staff of Intuition",
+                id:"162385"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Haste",
+                id:"162303"
+            },
+            {
+                name:"Formula: Enchant Weapon - Deadly Navigation",
+                id:"162313"
+            },
+            {
+                name:"Formula: Enchant Weapon - Stalwart Navigation",
+                id:"162312"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak of Resilience",
+                id:"162426"
+            },
+            {
+                name:"Recipe: Battle Potion of Stamina",
+                id:"163318"
+            },
+            {
+                name:"Recipe: Coastal Healing Potion",
+                id:"162255"
+            },
+            {
+                name:"Recipe: Flask of Endless Fathoms",
+                id:"162133"
+            },
+            {
+                name:"Recipe: Potion of Replenishment",
+                id:"162129"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Gearspun Goggles",
+                id:"162326"
+            },
+            {
+                name:"Schematic: Deployable Attire Rearranger",
+                id:"162342"
+            },
+            {
+                name:"Schematic: Interdimensional Companion Repository",
+                id:"162341"
+            },
+            {
+                name:"Schematic: Organic Discombobulation Grenade",
+                id:"162337"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Kelp-Encrusted Bindings",
+                id:"161578"
+            },
+            {
+                name:"Reins of the Dapple Gray",
+                id:"161912"
+            },
+            {
+                name:"Reins of the Stormsong Coastwatcher",
+                id:"161909"
+            },
+            {
+                name:"Sea Priest's Waistcord",
+                id:"161576"
+            },
+            {
+                name:"Stormbreaker Galoshes",
+                id:"161580"
+            },
+            {
+                name:"Tidecrest Gauntlets",
+                id:"161581"
+            },
+            {
+                name:"Storm's Wake Tabard",
+                id:"160542"
+            }
+        ]
+    },
+    "2164": { //Champions of Azeroth
+        "Friendly":[
+            {
+                name:"Contract: Champions of Azeroth",
+                id:"153668"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Drape of the Azerothian Champion",
+                id:"160537"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Drop of Azerite",
+                id:"163555"
+            },
+            {
+                name:"Shard of Azerite",
+                id:"163515"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Azerothian Champion's Crown",
+                id:"161555"
+            },
+            {
+                name:"Azerothian Champion's Spaulders",
+                id:"161560"
+            },
+            {
+                name:"Helm of the Azerothian Champion",
+                id:"161563"
+            },
+            {
+                name:"Vest of the Azerothian Champion",
+                id:"161557"
+            },
+            {
+                name:"Champions of Azeroth Tabard",
+                id:"160544"
+            }
+        ]
+    },
 }
 
 export default rewards;

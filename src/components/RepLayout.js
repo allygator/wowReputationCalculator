@@ -131,7 +131,7 @@ class RepLayout extends Component {
     }
 
     render() {
-        const {vanilla,bc,wrath,cata,mop,wod,legion,alliance,horde} = this.state;
+        const {vanilla,bc,wrath,cata,mop,wod,legion,bfa,alliance,horde} = this.state;
         return [
             (!this.props.isHorde && <Expac name="Alliance" cName="alliance" reps={alliance} key={"Alliance"} hideProgress={this.props.hideProgress} />),
             (this.props.isHorde && <Expac name="Horde" cName="horde" reps={horde} key={"Horde"} hideProgress={this.props.hideProgress} />),
@@ -141,7 +141,8 @@ class RepLayout extends Component {
             <Expac name="Cataclysm" cName="cata" reps={cata} key={"cata"} hideProgress={this.props.hideProgress} />,
             <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"mop"} hideProgress={this.props.hideProgress} />,
             <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"wod"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Legion" cName="legion" reps={legion}  key={"legion"} hideProgress={this.props.hideProgress} />
+            <Expac name="Legion" cName="legion" reps={legion}  key={"legion"} hideProgress={this.props.hideProgress} />,
+            <Expac name="Battle for Azeroth" cName="bfa" reps={bfa}  key={"bfa"} hideProgress={this.props.hideProgress} />
         ]
     }
 };
