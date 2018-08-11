@@ -21,7 +21,7 @@ class RealmList extends Component {
     }
 
     componentDidMount() {
-        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.blizzardKey)
+        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
             .then(response => response.json(),othererror => console.log(othererror))
             .then((realmList) => {
                 this.setState({

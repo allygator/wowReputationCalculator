@@ -29,7 +29,7 @@ class Reputation extends Component {
         this.setState({reps:[], error:null});
         //console.log(this.props.name + ":Get Reputations");
         if(this.props.realm && this.props.name) {
-            fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + process.env.blizzardKey)
+            fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + process.env.REACT_APP_blizzardKey)
             .then(function(response) {
                 if(response.ok) {
                     return response.json()
