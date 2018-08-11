@@ -7,6 +7,7 @@ const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [510, 947, 1052, 1067, 1172, 1375, 1388, 1445, 1681, 1708, 1848];
 const horde = [68, 76, 81, 530, 911, 1133];
 const noHorde = [509, 946, 1126, 1376, 1387, 1682, 1710, 1731, 1847];
+const nobody = [67, 469, 1374, 1690, 1691, 1733, 2010, 2011];
 
 class RepLayout extends Component {
     constructor(props) {
@@ -78,7 +79,7 @@ class RepLayout extends Component {
         */
         for(let rep of reps) {
             var tempRep;
-            if(rep.id === 469 || rep.id === 1733 || rep.id === 67 || rep.id === 1691 || rep.id === 2011) {
+            if(nobody.includes(rep.id)) {
                 //This filters out faction "containers" like Alliance and Horde which
                 // seem to only serve the purpose of holding the other factions
                 // Also a follower, and the Brawlers Guild
@@ -122,7 +123,7 @@ class RepLayout extends Component {
                 tempRep = this.state.legion;
                 tempRep.push(rep);
                 this.setState({legion: tempRep});
-            } else if (rep.id > 2103 && rep.id !== 2135) { // Bfa Reps
+            } else if (rep.id >= 2103 && rep.id !== 2135) { // Bfa Reps
                 tempRep = this.state.bfa;
                 tempRep.push(rep);
                 this.setState({bfa: tempRep});

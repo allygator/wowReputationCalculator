@@ -1,3 +1,23 @@
+@media screen and (min-width:501px) {
+    .user-input-wrapper.popout {
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        width: 52%;
+        border: 2px solid grey;
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.2), inset 0px 0px 4px black ;
+        border-radius: 4px;
+    }
+
+    .popout .user-input-box {
+        width: 95%;
+    }
+
+    .popout #name {
+        margin: 0;
+    }
+
+}
 @media screen and (max-width: 500px) {
     .user-input-box {
         width: 90%;
@@ -66,7 +86,11 @@ body {
 }
 
 #name {
-    margin: 8px auto;
+    margin: 8px 0;
+}
+
+input[type="text"] {
+    font-size:18px;
 }
 
 input[type=checkbox] {

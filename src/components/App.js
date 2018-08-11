@@ -12,6 +12,7 @@ class App extends Component {
         this.setRealmState = this.setRealmState.bind(this);
         this.showReputations = this.showReputations.bind(this);
         this.state = {
+            isSubmitted: false,
             isChecked: false
         }
     }
@@ -22,7 +23,7 @@ class App extends Component {
 
     showReputations(e) {
         //console.log("Submitted");
-        this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked});
+        this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked, isSubmitted:true});
     }
 
     render() {
@@ -32,6 +33,7 @@ class App extends Component {
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to RepCalc</h1>
             </header>
+            <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"}`}>
             <p className="App-intro">
               Select your realm from the dropdown and type your character name, then submit.
             </p>
@@ -48,6 +50,7 @@ class App extends Component {
                     <input type="checkbox" id="showCompleted" name="Hide Completed Reputations" label="Hide Completed Reputations" onChange={e=>this.setState({isChecked:e.target.checked})} />
                 </div>
                 <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
+          </div>
           </div>
           {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked}/>}
           </div>
