@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {blizzardKey} from '../API_Keys';
 import RepLayout from './RepLayout';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 
@@ -30,7 +29,7 @@ class Reputation extends Component {
         this.setState({reps:[], error:null});
         //console.log(this.props.name + ":Get Reputations");
         if(this.props.realm && this.props.name) {
-            fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + blizzardKey)
+            fetch('https://us.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&locale=en_US' + process.env.blizzardKey)
             .then(function(response) {
                 if(response.ok) {
                     return response.json()

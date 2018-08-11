@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {blizzardKey} from '../API_Keys';
 import Select from 'react-select';
 
 class RealmList extends Component {
@@ -22,7 +21,7 @@ class RealmList extends Component {
     }
 
     componentDidMount() {
-        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + blizzardKey)
+        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.blizzardKey)
             .then(response => response.json(),othererror => console.log(othererror))
             .then((realmList) => {
                 this.setState({
