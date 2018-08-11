@@ -2224,6 +2224,584 @@ const rewards = {
             }
         ]
     },
+    "2103": { //Zandalari Empire
+        "Friendly":[
+            {
+                name:"Contract: Zandalari Empire",
+                id:"153664"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Dinomancer's Cloak",
+                id:"160530"
+            },
+            {
+                name:"Recipe: Contract: Zandalari Empire",
+                id:"162753"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Gearspun Goggles",
+                id:"162730"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Bindings of the Disparate Tribes",
+                id:"161516"
+            },
+            {
+                name:"Cord of the Loa Worshippers",
+                id:"161497"
+            },
+            {
+                name:"Gral Worshipper's Waders",
+                id:"161526"
+            },
+            {
+                name:"Grand Fleet Legplates",
+                id:"161546"
+            },
+            {
+                name:"Party Totem",
+                id:"163210"
+            },
+            {
+                name:"Tome of Hex: Zandalari Tendonripper",
+                id:"162623"
+            },
+            {
+                name:"Tome of Polymorph: Direhorn",
+                id:"162625"
+            },
+            {
+                name:"Design: Laribole Staff of Alacrity",
+                id:"162764"
+            },
+            {
+                name:"Design: Owlseye Loop",
+                id:"162761"
+            },
+            {
+                name:"Design: Scarlet Diamond Staff of Intuition",
+                id:"162765"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Haste",
+                id:"162717"
+            },
+            {
+                name:"Formula: Enchant Weapon - Deadly Navigation",
+                id:"162722"
+            },
+            {
+                name:"Formula: Enchant Weapon - Stalwart Navigation",
+                id:"162721"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak of Resilience",
+                id:"162771"
+            },
+            {
+                name:"Recipe: Battle Potion of Stamina",
+                id:"163317"
+            },
+            {
+                name:"Recipe: Coastal Healing Potion",
+                id:"162704"
+            },
+            {
+                name:"Recipe: Flask of Endless Fathoms",
+                id:"162696"
+            },
+            {
+                name:"Recipe: Potion of Replenishment",
+                id:"162692"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Gearspun Goggles",
+                id:"162731"
+            },
+            {
+                name:"Schematic: Deployable Attire Rearranger",
+                id:"162743"
+            },
+            {
+                name:"Schematic: Interdimensional Companion Repository",
+                id:"162341"
+            },
+            {
+                name:"Schematic: Organic Discombobulation Grenade",
+                id:"162741"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Gonk Adherents Vambraces",
+                id:"161548"
+            },
+            {
+                name:"Reins of the Armored Albino Pterrordax",
+                id:"161667"
+            },
+            {
+                name:"Reins of the Armored Ebony Pterrordax",
+                id:"161664"
+            },
+            {
+                name:"Reins of the Armored Orange Pterrordax",
+                id:"161666"
+            },
+            {
+                name:"Reins of the Armored Cobalt Pterrordax",
+                id:"161665"
+            },
+            {
+                name:"Shadraspun Legwraps",
+                id:"161500"
+            },
+            {
+                name:"Torcali's Grips of the Bounty",
+                id:"161524"
+            },
+            {
+                name:"Waistcord of Pa'ku's Flight",
+                id:"161517"
+            },
+            {
+                name:"Tabard of the Zandalari Empire",
+                id:"160546"
+            }
+        ]
+    },
+    "2156": { //Talanji's Expedition
+        "Friendly":[
+            {
+                name:"Contract: Talanji's Expedition",
+                id:"153665"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Drape of the Blood Purge",
+                id:"160531"
+            },
+            {
+                name:"Recipe: Contract: Talanji's Expedition",
+                id:"162754"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Bionic Bifocals",
+                id:"162732"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Gloomplate Gauntlets",
+                id:"161538"
+            },
+            {
+                name:"Grips of the Swamp Hunter",
+                id:"161528"
+            },
+            {
+                name:"Swamp Medic's Leggings",
+                id:"161493"
+            },
+            {
+                name:"Swampstalker Footpads",
+                id:"161506"
+            },
+            {
+                name:"Tragg the Curious",
+                id:"163501"
+            },
+            {
+                name:"Design: Tidal Amethyst Loop",
+                id:"162762"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Mastery",
+                id:"162718"
+            },
+            {
+                name:"Formula: Enchant Weapon - Masterful Navigation",
+                id:"162724"
+            },
+            {
+                name:"Formula: Enchant Weapon - Siphoning",
+                id:"162723"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak of the Feather",
+                id:"162770"
+            },
+            {
+                name:"Recipe: Battle Potion of Intellect",
+                id:"163315"
+            },
+            {
+                name:"Recipe: Coastal Mana Potion",
+                id:"162703"
+            },
+            {
+                name:"Recipe: Flask of the Vast Horizon",
+                id:"162697"
+            },
+            {
+                name:"Recipe: Hardened Tempest Knuckles",
+                id:"162768"
+            },
+            {
+                name:"Recipe: Mistscale Knuckles",
+                id:"162767"
+            },
+            {
+                name:"Recipe: Potion of Bursting Blood",
+                id:"162693"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Bionic Bifocals",
+                id:"162733"
+            },
+            {
+                name:"Schematic: Charged Refrigeration Projectile",
+                id:"162738"
+            },
+            {
+                name:"Schematic: Fro-Grow Grenade",
+                id:"162739"
+            },
+            {
+                name:"Schematic: Neurological Immobilization Bomb",
+                id:"162740"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Hir'eek Hide Leggings",
+                id:"161520"
+            },
+            {
+                name:"Reins of the Expedition Bloodswarmer",
+                id:"161774"
+            },
+            {
+                name:"Torga Scale Girdle",
+                id:"161536"
+            },
+            {
+                name:"Zo'bal Spirit Gloves",
+                id:"161492"
+            },
+            {
+                name:"Zul'jan Camp Stalkers",
+                id:"161551"
+            },
+            {
+                name:"Talanji's Expedition Tabard",
+                id:"160547"
+            }
+        ]
+    },
+    "2157": { //The Honorbound
+        "Honored":[
+            {
+                name:"Schematic: AZ3-R1-T3 Synthetic Specs",
+                id:"162728"
+            },
+            {
+                name:"Scouting Report: Swiftwind Post",
+                id:"162536"
+            },
+            {
+                name:"Scouting Report: Wolf's Den",
+                id:"162530"
+            },
+            {
+                name:"Drape of the Horde's Fury",
+                id:"160532"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Goblin Sapper's Legguards",
+                id:"161521"
+            },
+            {
+                name:"Sabatons of the Renewed Warpath",
+                id:"161537"
+            },
+            {
+                name:"Silent Stalker Belt",
+                id:"161512"
+            },
+            {
+                name:"Wristwraps of the Dutiful Apothecary",
+                id:"161498"
+            },
+            {
+                name:"Lil' War Machine",
+                id:"163779"
+            },
+            {
+                name:"Design: Amberblaze Loop",
+                id:"162760"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Critical Strike",
+                id:"162716"
+            },
+            {
+                name:"Recipe: Battle Potion of Strength",
+                id:"163319"
+            },
+            {
+                name:"Recipe: Enchanter's Sorcerous Scepter",
+                id:"162720"
+            },
+            {
+                name:"Recipe: Endless Tincture of Fractional Power",
+                id:"162701"
+            },
+            {
+                name:"Recipe: Flask of the Currents",
+                id:"162695"
+            },
+            {
+                name:"Recipe: Steelskin Potion",
+                id:"162691"
+            },
+            {
+                name:"Recipe: Stormsteel Dagger",
+                id:"162707"
+            },
+            {
+                name:"Recipe: Stormsteel Saber",
+                id:"162774"
+            },
+            {
+                name:"Recipe: Stormsteel Shield",
+                id:"162706"
+            },
+            {
+                name:"Recipe: Stormsteel Spear",
+                id:"162708"
+            },
+            {
+                name:"Recipe: Surging Alchemist Stone",
+                id:"162702"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Synthetic Specs",
+                id:"162729"
+            },
+            {
+                name:"Schematic: Finely-Tuned Stormsteel Destroyer",
+                id:"162746"
+            },
+            {
+                name:"Schematic: Monelite Scope of Alacrity",
+                id:"162744"
+            },
+            {
+                name:"Schematic: Precision Attitude Adjuster",
+                id:"162745"
+            },
+            {
+                name:"Scouting Report: Hillcrest Pasture",
+                id:"162533"
+            },
+            {
+                name:"Scouting Report: Mudfisher Cove",
+                id:"162535"
+            },
+            {
+                name:"Scouting Report: Stonefist Watch",
+                id:"162531"
+            },
+            {
+                name:"Scouting Report: Stonetusk Watch",
+                id:"162534"
+            },
+            {
+                name:"Scouting Report: Windfall Cavern",
+                id:"162532"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Bindings of the Elemental Allies",
+                id:"161532"
+            },
+            {
+                name:"Lustful Warbringer's Legplates",
+                id:"161550"
+            },
+            {
+                name:"Tranquil Health Weavers",
+                id:"161509"
+            },
+            {
+                name:"Witch Doctor's Slippers",
+                id:"161501"
+            },
+            {
+                name:"Tabard of the Honorbound",
+                id:"160545"
+            }
+        ]
+    },
+    "2158": { //Voldunai
+        "Friendly":[
+            {
+                name:"Contract: Voldunai",
+                id:"153666"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Akunda's Firesticks",
+                id:"163211"
+            },
+            {
+                name:"Desert Flute",
+                id:"159753"
+            },
+            {
+                name:"Dune Shroud",
+                id:"160529"
+            },
+            {
+                name:"Vulpera Battle Banner",
+                id:"163566"
+            },
+            {
+                name:"Recipe: Contract: Voldunai",
+                id:"162755"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Orthogonal Optics",
+                id:"162734"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Alpaca Wool Gloves",
+                id:"161489"
+            },
+            {
+                name:"Bracers of Zem'lan",
+                id:"161527"
+            },
+            {
+                name:"Girdle of Scavenged Plates",
+                id:"161545"
+            },
+            {
+                name:"Silent Scavenger Leggings",
+                id:"161507"
+            },
+            {
+                name:"Ghostly Explorer's Skull",
+                id:"163213"
+            },
+            {
+                name:"Pack of Many Pockets",
+                id:"161999"
+            },
+            {
+                name:"Vulpera Scrapper's Armor",
+                id:"163565"
+            },
+            {
+                name:"Design: Royal Quartz Loop",
+                id:"162763"
+            },
+            {
+                name:"Formula: Enchant Ring - Pact of Versatility",
+                id:"162719"
+            },
+            {
+                name:"Formula: Enchant Weapon - Gale-Force Striking",
+                id:"162725"
+            },
+            {
+                name:"Formula: Enchant Weapon - Versatile Navigation",
+                id:"162726"
+            },
+            {
+                name:"Pattern: Deep Sea Bag",
+                id:"162769"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Cloak",
+                id:"162772"
+            },
+            {
+                name:"Recipe: Battle Potion of Agility",
+                id:"163313"
+            },
+            {
+                name:"Recipe: Coastal Rejuvenation Potion",
+                id:"162705"
+            },
+            {
+                name:"Recipe: Flask of the Undertow",
+                id:"162698"
+            },
+            {
+                name:"Recipe: Potion of Rising Death",
+                id:"162694"
+            },
+            {
+                name:"Recipe: Recurve Bow of the Strands",
+                id:"162766"
+            },
+            {
+                name:"Schematic: AZ3-R1-T3 Orthogonal Optics",
+                id:"162735"
+            },
+            {
+                name:"Schematic: Catchroot Seed Spreader",
+                id:"162737"
+            },
+            {
+                name:"Schematic: Frost-Laced Ammunition",
+                id:"162727"
+            },
+            {
+                name:"Schematic: Thermo-Accelerated Plague Spreader",
+                id:"162736"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Akunda's Grounding Boots",
+                id:"161531"
+            },
+            {
+                name:"Gauntlets of the Scorched Sands",
+                id:"161542"
+            },
+            {
+                name:"Kimbul's Cuffs of Redemption",
+                id:"161511"
+            },
+            {
+                name:"Reins of the Alabaster Hyena",
+                id:"161773"
+            },
+            {
+                name:"Sash of the Scaled Devoted",
+                id:"161502"
+            },
+            {
+                name:"Tabard of the Voldunai",
+                id:"160548"
+            }
+        ]
+    },
     "2159": { //7th Legion
         "Honored":[
             {
@@ -2794,6 +3372,140 @@ const rewards = {
             }
         ]
     },
+    "2163": { //Tortollan Seekers
+        "Friendly":[
+            {
+                name:"Contract: Tortollan Seekers",
+                id:"153667"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Cape of the Scroll Keepers",
+                id:"160538"
+            },
+            {
+                name:"Scroll of Combustible Critters",
+                id:"163215"
+            },
+            {
+                name:"Recipe: Bountiful Captain's Feast",
+                id:"162288"
+            },
+            {
+                name:"Recipe: Contract: Champions of Azeroth",
+                id:"162373"
+            },
+            {
+                name:"Recipe: Contract: Tortollan Seekers",
+                id:"162371"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Girdle of the Scroll-Sages",
+                id:"161529"
+            },
+            {
+                name:"Antiquity Handler's Gloves",
+                id:"161514"
+            },
+            {
+                name:"Sea-Treated Footwraps",
+                id:"161494"
+            },
+            {
+                name:"Vambraces of a Thousand Year Toil",
+                id:"161544"
+            },
+            {
+                name:"Cou'pa",
+                id:"163513"
+            },
+            {
+                name:"Pattern: Embroidered Deep Sea Bag",
+                id:"163026"
+            },
+            {
+                name:"Formula: Enchant Ring - Seal of Critical Strike",
+                id:"162298"
+            },
+            {
+                name:"Formula: Enchant Ring - Seal of Versatility",
+                id:"162301"
+            },
+            {
+                name:"Recipe: Bountiful Captain's Feast",
+                id:"162289"
+            },
+            {
+                name:"Recipe: Codex of the Quiet Mind",
+                id:"162358"
+            },
+            {
+                name:"Recipe: Darkmoon Card of War",
+                id:"162377"
+            },
+            {
+                name:"Recipe: Endless Tincture of Renewed Combat",
+                id:"162136"
+            },
+            {
+                name:"Recipe: Galley Banquet",
+                id:"162287"
+            },
+            {
+                name:"Recipe: Grilled Catfish",
+                id:"162292"
+            },
+            {
+                name:"Recipe: Inked Vessel of Robust Regeneration",
+                id:"162355"
+            },
+            {
+                name:"Recipe: Inscribed Vessel of Mysticism",
+                id:"162352"
+            },
+            {
+                name:"Recipe: Seasoned Loins",
+                id:"162293"
+            },
+            {
+                name:"Recipe: Siren's Alchemist Stone",
+                id:"162137"
+            },
+            {
+                name:"Recipe: Tome of the Quiet Mind",
+                id:"162376"
+            },
+            {
+                name:"Technique: Glyph of the Dolphin",
+                id:"162023"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Legguards of Ai'twen's Resurgence",
+                id:"161534"
+            },
+            {
+                name:"Shellbuckle Girdle",
+                id:"161549"
+            },
+            {
+                name:"Supple Moccasins of Pilgrimage",
+                id:"161519"
+            },
+            {
+                name:"Wristwraps of Scrollbinding",
+                id:"161503"
+            },
+            {
+                name:"Tabard of the Tortollan Seekers",
+                id:"160543"
+            }
+        ]
+    },
     "2164": { //Champions of Azeroth
         "Friendly":[
             {
@@ -2840,6 +3552,8 @@ const rewards = {
             }
         ]
     },
+
+
 }
 
 export default rewards;
