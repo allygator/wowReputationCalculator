@@ -1,7 +1,7 @@
 @media screen and (min-width:501px) {
     .user-input-wrapper.popout {
         position: absolute;
-        left: 30%;
+        left: 25%;
         top: 30%;
         width: 52%;
         border: 2px solid grey;
