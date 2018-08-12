@@ -19,13 +19,25 @@
 
 }
 @media screen and (max-width: 500px) {
+
+    .App .Submitted-app-header .siteInfo {
+        width: 100%;
+    }
+
+    .Submitted-app-header .siteInfo h1 {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .Submitted-app-header .characterInfo {
+        display: none;
+    }
+
     .user-input-box {
         width: 90%;
     }
 
-    #realmSelector {
-        min-width: 100%;
-    }
+
 
     input[type=checkbox] {
         transform: scale(1.5);
@@ -45,6 +57,10 @@
 }
 
 @media screen and (max-width:700px) {
+    #realmSelector {
+        min-width: 100%;
+    }
+
     .expac h2 {
         display: flex;
         justify-content: center;
@@ -73,20 +89,23 @@ body {
 
 .Submitted-app-header .siteInfo {
     width: 49%;
+    display: flex;
     align-self: center;
 }
 
 .Submitted-app-header .App-logo {
     float: left;
     height: 50px;
+    align-self: center;
 }
 
 .Submitted-app-header h1 {
     width: 70%;
     margin: 5px 0;
+    align-self: center;
 }
 
-.Submitted-app-header .characterInfo {
+.characterInfo {
     width: 49%;
     align-self: center;
     text-align: right;
