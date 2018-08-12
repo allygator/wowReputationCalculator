@@ -64,9 +64,44 @@ body {
 
 .Submitted-app-header {
   background-color: #222;
-  height: 70px;
-  padding: 20px;
+  height: 60px;
+  padding: 15px;
   color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Submitted-app-header .siteInfo {
+    width: 49%;
+    align-self: center;
+}
+
+.Submitted-app-header .App-logo {
+    float: left;
+    height: 50px;
+}
+
+.Submitted-app-header h1 {
+    width: 70%;
+    margin: 5px 0;
+}
+
+.Submitted-app-header .characterInfo {
+    width: 49%;
+    align-self: center;
+    text-align: right;
+}
+.Submitted-app-header .characterInfo h2{
+    width: 49%;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 75px;
+}
+
+.Submitted-app-header .characterInfo img {
+    height: 60px;
+    width: 60px;
+    float: right;
 }
 
 .user-input-box {

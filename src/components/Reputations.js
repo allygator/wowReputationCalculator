@@ -36,17 +36,19 @@ class Reputation extends Component {
                 } else
                     throw new Error(response.statusText)
             })
-            .then((repList) => {
+            .then((character) => {
                 this.setState({
                     isLoaded: true,
                 });
-                this.setState({faction:repList.faction});
+                this.setState({faction:character.faction});
+                this.props.setThumbnail(character.thumbnail);
+                this.props.setName(character.name);
                 if(this.props.isChecked) {
-                    repList.reputation.sort((a,b) => a.id-b.id);
-                    this.setState({reps:repList.reputation.filter(this.isCompletedRep)});
+                    character.reputation.sort((a,b) => a.id-b.id);
+                    this.setState({reps:character.reputation.filter(this.isCompletedRep)});
                 } else {
-                    repList.reputation.sort((a,b) => a.id-b.id);
-                    this.setState({reps: repList.reputation})
+                    character.reputation.sort((a,b) => a.id-b.id);
+                    this.setState({reps: character.reputation})
                 }
             },
             (error) => {
