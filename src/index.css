@@ -62,6 +62,13 @@ body {
     font-family: sans-serif;
 }
 
+.Submitted-app-header {
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+}
+
 .user-input-box {
     width: 60%;
     margin-left: auto;
@@ -124,8 +131,13 @@ progress[value] {
     border-radius: 5px;
 }
 
-progress[value]::-webkit-progress-bar, progress[value]::-moz-progress-bar {
+progress[value]::-webkit-progress-bar {
     background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-moz-progress-bar {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
@@ -135,39 +147,75 @@ progress[value]::-webkit-progress-value {
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-.alliance progress[value]::-webkit-progress-value, .alliance progress[value]::-moz-progress-bar {
+.alliance progress[value]::-webkit-progress-value {
     background-color: #10276B;
 }
 
-.horde progress[value]::-webkit-progress-value, .horde progress[value]::-moz-progress-bar {
+.alliance progress[value]::-moz-progress-bar {
+    background-color: #10276B;
+}
+
+.horde progress[value]::-webkit-progress-value {
     background-color: #7F0302;
 }
 
-.vanilla progress[value]::-webkit-progress-value, .vanilla progress[value]::-moz-progress-bar {
+.horde progress[value]::-moz-progress-bar {
+    background-color: #7F0302;
+}
+
+.vanilla progress[value]::-webkit-progress-value {
     background-color: #E5B46F;
 }
 
-.bc progress[value]::-webkit-progress-value, .bc progress[value]::-moz-progress-bar {
+.vanilla progress[value]::-moz-progress-bar {
+    background-color: #E5B46F;
+}
+
+.bc progress[value]::-webkit-progress-value {
     background-color: #536F44;
 }
 
-.wrath progress[value]::-webkit-progress-value, .wrath progress[value]::-moz-progress-bar {
+.bc progress[value]::-moz-progress-bar {
+    background-color: #536F44;
+}
+
+.wrath progress[value]::-webkit-progress-value {
     background-color: #5283BD;
 }
 
-.cata progress[value]::-webkit-progress-value, .cata progress[value]::-moz-progress-bar {
+.wrath progress[value]::-moz-progress-bar {
+    background-color: #5283BD;
+}
+
+.cata progress[value]::-webkit-progress-value {
     background-color: #F98A23;
 }
 
-.mop progress[value]::-webkit-progress-value, .mop progress[value]::-moz-progress-bar {
+.cata progress[value]::-moz-progress-bar {
+    background-color: #F98A23;
+}
+
+.mop progress[value]::-webkit-progress-value {
     background-color: #8ED4A2;
 }
 
-.wod progress[value]::-webkit-progress-value, .wod progress[value]::-moz-progress-bar {
+.mop progress[value]::-moz-progress-bar {
+    background-color: #8ED4A2;
+}
+
+.wod progress[value]::-webkit-progress-value {
     background-color: #761501;
 }
 
-.legion progress[value]::-webkit-progress-value, .legion progress[value]::-moz-progress-bar {
+.wod progress[value]::-moz-progress-bar {
+    background-color: #761501;
+}
+
+.legion progress[value]::-webkit-progress-value {
+    background-color: #7E58AD;
+}
+
+.legion progress[value]::-moz-progress-bar {
     background-color: #7E58AD;
 }
 
