@@ -7,7 +7,8 @@ class RealmList extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            realms: [],
+            USrealms: [],
+            EUrealms: [],
             selectedRealm: "",
             selectedOption: null
         };
@@ -46,6 +47,16 @@ class RealmList extends Component {
     render() {
         const { error, isLoaded, realms } = this.state;
         const { selectedOption } = this.state;
+        const groupedOptions = [
+            {
+                label: "US",
+                options: this.state.USrealms
+            },
+            {
+                label: "EU",
+                options: this.state.EUrealms
+            }
+        ]
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
