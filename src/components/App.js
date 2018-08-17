@@ -27,7 +27,6 @@ class App extends Component {
     }
 
     setRegionState(b) {
-        console.log(b);
         this.setState({region: b});
     }
 
@@ -47,7 +46,7 @@ class App extends Component {
     render() {
         return (
           <div className="App">
-            <Header isSubmitted={this.state.isSubmitted} thumbnail={this.state.thumbnail} name={this.state.formattedName}/>
+            <Header isSubmitted={this.state.isSubmitted} thumbnail={this.state.thumbnail} name={this.state.formattedName} region={this.state.submittedRegion}/>
             <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"}`}>
                 <p className="App-intro">
                   Select your realm from the dropdown and type your character name, then submit.
