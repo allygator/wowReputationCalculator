@@ -27,7 +27,7 @@ class RealmList extends Component {
             .then((realmList) => {
                 this.setState({
                     isLoaded: true,
-                    realms: realmList.realms
+                    USrealms: realmList.realms
                 });
             },
             (error) => {
@@ -37,6 +37,21 @@ class RealmList extends Component {
                 });
             }
             )
+            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
+                .then(response => response.json(),othererror => console.log(othererror))
+                .then((realmList) => {
+                    this.setState({
+                        isLoaded: true,
+                        EUrealms: realmList.realms
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+                )
     }
 
     realmSelection(option) {
@@ -45,18 +60,38 @@ class RealmList extends Component {
     }
 
     render() {
-        const { error, isLoaded, realms } = this.state;
+        const { error, isLoaded, USrealms, EUrealms } = this.state;
+        var USOptions = [];
+        var EUOptions = [];
+        for(let realm of USrealms) {
+            USOptions.push({value: realm.name,label: realm.name});
+
+        }
+        for(let realm of EUrealms) {
+            EUOptions.push({value: realm.name,label: realm.name});
+        }
         const { selectedOption } = this.state;
         const groupedOptions = [
             {
-                label: "US",
-                options: this.state.USrealms
+                label: 'US',
+                options: USOptions
             },
             {
-                label: "EU",
-                options: this.state.EUrealms
+                label: 'EU',
+                options: EUOptions
             }
-        ]
+        ];
+        const groupStyles = {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderBottom: "1px solid grey"
+        };
+        const formatGroupLabel = data => (
+          <div style={groupStyles}>
+            <span>{data.label}</span>
+          </div>
+        );
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -74,17 +109,9 @@ class RealmList extends Component {
             }
           return (
               <Select id="realmSelector"
-                value={selectedOption}
                 onChange={this.handleChange}
-                options={realms.map(
-                    function(realm) {
-                      return {
-                        value: realm.name,
-                        label: realm.name
-                      };
-                    }
-                  )
-              } />
+                options={groupedOptions}
+                formatGroupLabel={formatGroupLabel} />
 
             /*<select id="realmSelector" onChange={this.realmSelection}>
               /*{realms.map((realm) => (
