@@ -36,6 +36,7 @@ class Rewards extends Component {
                 <Tabs>
                     <TabList>
                         <Tab>Rewards</Tab>
+                        <Tab>How to Earn</Tab>
                     </TabList>
                     <TabPanel>
                         <Tabs>
