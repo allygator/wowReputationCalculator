@@ -21,21 +21,27 @@ class RealmList extends Component {
     }
 
     componentDidMount() {
-        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
-            .then(response => response.json(),othererror => console.log(othererror))
-            .then((realmList) => {
-                this.setState({
-                    isLoaded: true,
-                    realms: realmList.realms
-                });
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                });
+        if(this.props.specificRealm) {
+            this.setState({
+                isLoaded: true
+            })
+        } else {
+            fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
+                .then(response => response.json(),othererror => console.log(othererror))
+                .then((realmList) => {
+                    this.setState({
+                        isLoaded: true,
+                        realms: realmList.realms
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
             }
             )
+        }
     }
 
     realmSelection(option) {

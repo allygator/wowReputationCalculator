@@ -6,8 +6,8 @@ const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Hon
 const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [510, 947, 1052, 1067, 1172, 1375, 1388, 1445, 1681, 1708, 1848];
 const horde = [68, 76, 81, 530, 911, 1133];
-const noHorde = [509, 946, 1126, 1376, 1387, 1682, 1710, 1731, 1847];
-const nobody = [67, 469, 1374, 1690, 1691, 1733, 2010, 2011];
+const noHorde = [509, 946, 1126, 1376, 1387, 1682, 1710, 1731, 1847, 2159, 2160, 2161, 2162];
+const nobody = [67, 469, 1374, 1690, 1691, 1733, 1736, 1737,1738, 1739, 1740, 1741, 2010, 2011];
 
 class RepLayout extends Component {
     constructor(props) {
