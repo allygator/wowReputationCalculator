@@ -23,7 +23,9 @@ class RealmList extends Component {
 
     componentDidMount() {
         if(this.props.specificRealm) {
-
+            this.setState({
+                isLoaded: true
+            })
         } else {
             fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
                 .then(response => response.json(),othererror => console.log(othererror))
