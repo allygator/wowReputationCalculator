@@ -22,20 +22,23 @@ class RealmList extends Component {
     }
 
     componentDidMount() {
-        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
-            .then(response => response.json(),othererror => console.log(othererror))
-            .then((realmList) => {
-                this.setState({
-                    isLoaded: true,
-                    USrealms: realmList.realms
-                });
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                });
-            }
+        if(this.props.specificRealm) {
+
+        } else {
+            fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
+                .then(response => response.json(),othererror => console.log(othererror))
+                .then((realmList) => {
+                    this.setState({
+                        isLoaded: true,
+                        USrealms: realmList.realms
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
             )
             fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
                 .then(response => response.json(),othererror => console.log(othererror))
@@ -52,6 +55,7 @@ class RealmList extends Component {
                     });
                 }
                 )
+            }
     }
 
     realmSelection(option) {
@@ -64,11 +68,10 @@ class RealmList extends Component {
         var USOptions = [];
         var EUOptions = [];
         for(let realm of USrealms) {
-            USOptions.push({value: realm.name,label: realm.name});
-
+            USOptions.push({value: realm.name,label: realm.name})
         }
         for(let realm of EUrealms) {
-            EUOptions.push({value: realm.name,label: realm.name});
+            EUOptions.push({value: realm.name,label: realm.name})
         }
         const { selectedOption } = this.state;
         const groupedOptions = [
@@ -103,23 +106,16 @@ class RealmList extends Component {
                         id="realmSelector"
                         value={selectedOption}
                         onChange={this.handleChange}
-                        options={[{value: this.props.specificRealm, label:this.props.specificRealm}]}
-                    />
+                        options={[{value: this.props.specificRealm, label:this.props.specificRealm}]} />
                 )
+            } else {
+                return (
+                    <Select id="realmSelector"
+                      onChange={this.handleChange}
+                      options={groupedOptions}
+                      formatGroupLabel={formatGroupLabel} />
+                );
             }
-          return (
-              <Select id="realmSelector"
-                onChange={this.handleChange}
-                options={groupedOptions}
-                formatGroupLabel={formatGroupLabel} />
-
-            /*<select id="realmSelector" onChange={this.realmSelection}>
-              /*{realms.map((realm) => (
-                <option key={realm.name}>{realm.name}
-                </option>
-            ))}
-            </select>*/
-          );
         }
     }
 }
