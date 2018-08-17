@@ -10,6 +10,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.setRealmState = this.setRealmState.bind(this);
+        this.setRegionState = this.setRegionState.bind(this);
         this.showReputations = this.showReputations.bind(this);
         this.setThumbnail = this.setThumbnail.bind(this);
         this.setName = this.setName.bind(this);
@@ -22,7 +23,12 @@ class App extends Component {
     }
 
     setRealmState(a) {
-        this.setState({realm: a})
+        this.setState({realm: a});
+    }
+
+    setRegionState(b) {
+        console.log(b);
+        this.setState({region: b});
     }
 
     setThumbnail(url) {
@@ -35,7 +41,7 @@ class App extends Component {
 
     showReputations(e) {
         //console.log("Submitted");
-        this.setState({submittedName:this.state.name, submittedRealm: this.state.realm, submittedisChecked: this.state.isChecked, isSubmitted:true});
+        this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, submittedisChecked:this.state.isChecked, isSubmitted:true});
     }
 
     render() {
@@ -48,7 +54,7 @@ class App extends Component {
                 </p>
                 <div className="user-input-box">
                     <div id="selectionBoxes">
-                        <RealmsList realmSelection={this.setRealmState} /*specificRealm="Quel'Dorei"*//>
+                        <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} /*specificRealm="Quel'Dorei"*//>
                         <div id="name">
                             Character Name:
                             <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
@@ -61,7 +67,7 @@ class App extends Component {
                     <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
               </div>
           </div>
-          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName}/>}
+          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName}/>}
           </div>
     );}
 
