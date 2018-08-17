@@ -7,8 +7,7 @@ class RealmList extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            USrealms: [],
-            EUrealms: [],
+            realms: [],
             selectedRealm: "",
             selectedOption: null
         };
@@ -22,42 +21,21 @@ class RealmList extends Component {
     }
 
     componentDidMount() {
-        if(this.props.specificRealm) {
-            this.setState({
-                isLoaded: true
-            })
-        } else {
-            fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
-                .then(response => response.json(),othererror => console.log(othererror))
-                .then((realmList) => {
-                    this.setState({
-                        isLoaded: true,
-                        USrealms: realmList.realms
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
-            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
-                .then(response => response.json(),othererror => console.log(othererror))
-                .then((realmList) => {
-                    this.setState({
-                        isLoaded: true,
-                        EUrealms: realmList.realms
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-                )
+        fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
+            .then(response => response.json(),othererror => console.log(othererror))
+            .then((realmList) => {
+                this.setState({
+                    isLoaded: true,
+                    realms: realmList.realms
+                });
+            },
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                });
             }
+            )
     }
 
     realmSelection(option) {
@@ -66,37 +44,8 @@ class RealmList extends Component {
     }
 
     render() {
-        const { error, isLoaded, USrealms, EUrealms } = this.state;
-        var USOptions = [];
-        var EUOptions = [];
-        for(let realm of USrealms) {
-            USOptions.push({value: realm.name,label: realm.name})
-        }
-        for(let realm of EUrealms) {
-            EUOptions.push({value: realm.name,label: realm.name})
-        }
+        const { error, isLoaded, realms } = this.state;
         const { selectedOption } = this.state;
-        const groupedOptions = [
-            {
-                label: 'US',
-                options: USOptions
-            },
-            {
-                label: 'EU',
-                options: EUOptions
-            }
-        ];
-        const groupStyles = {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderBottom: "1px solid grey"
-        };
-        const formatGroupLabel = data => (
-          <div style={groupStyles}>
-            <span>{data.label}</span>
-          </div>
-        );
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -108,16 +57,31 @@ class RealmList extends Component {
                         id="realmSelector"
                         value={selectedOption}
                         onChange={this.handleChange}
-                        options={[{value: this.props.specificRealm, label:this.props.specificRealm}]} />
+                        options={[{value: this.props.specificRealm, label:this.props.specificRealm}]}
+                    />
                 )
-            } else {
-                return (
-                    <Select id="realmSelector"
-                      onChange={this.handleChange}
-                      options={groupedOptions}
-                      formatGroupLabel={formatGroupLabel} />
-                );
             }
+          return (
+              <Select id="realmSelector"
+                value={selectedOption}
+                onChange={this.handleChange}
+                options={realms.map(
+                    function(realm) {
+                      return {
+                        value: realm.name,
+                        label: realm.name
+                      };
+                    }
+                  )
+              } />
+
+            /*<select id="realmSelector" onChange={this.realmSelection}>
+              /*{realms.map((realm) => (
+                <option key={realm.name}>{realm.name}
+                </option>
+            ))}
+            </select>*/
+          );
         }
     }
 }
