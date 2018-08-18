@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import rewardsCont from '../rewardsobj';
+import {getGains} from '../gainsobj.js';
 
 class Rewards extends Component {
     constructor(props) {
@@ -45,6 +46,9 @@ class Rewards extends Component {
                             </TabList>
                             {tabPanelComplete}
                         </Tabs>
+                    </TabPanel>
+                    <TabPanel>
+                    {getGains(rep)}
                     </TabPanel>
                 </Tabs>
             );

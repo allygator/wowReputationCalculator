@@ -1,4 +1,10 @@
-const rewards = {
+function getGains(repID) {
+    //console.log(gains[repID]);
+    return JSON.stringify(gains[repID]);
+}
+
+
+const gains = {
     "47": { //Ironforge
         "Friendly":[
             {
@@ -1738,90 +1744,36 @@ const rewards = {
         ]
     },
     "990": { //The Scale of the Sands
+        "Neutral":[
+            {
+                name:"Battle for Mount Hyjal",
+                amount: 1500,
+                stepsLeft: 3,
+                type: "Raid"
+            }
+        ],
         "Friendly":[
             {
-                name:"Design: Bold Crimson Spinel",
-                id:"32274"
-            },
-            {
-                name:"Design: Brilliant Crimson Spinel",
-                id:"32282"
-            },
-            {
-                name:"Design: Delicate Crimson Spinel",
-                id:"32277"
-            },
-            {
-                name:"Design: Smooth Lionseye",
-                id:"32291"
-            },
-            {
-                name:"Design: Solid Empyrean Sapphire",
-                id:"32286"
-            },
-            {
-                name:"Design: Sparkling Empyrean Sapphire",
-                id:"32287"
-            },
-            {
-                name:"Design: Subtle Lionseye",
-                id:"32284"
+                name:"Battle for Mount Hyjal",
+                amount: 1500,
+                stepsLeft: 2,
+                type: "Raid"
             }
         ],
         "Honored":[
             {
-                name:"Design: Forceful Seaspray Emerald",
-                id:"35765"
-            },
-            {
-                name:"Design: Jagged Seaspray Emerald",
-                id:"32312"
-            },
-            {
-                name:"Design: Steady Seaspray Emerald",
-                id:"35764"
-            },
-            {
-                name:"Design: Radiant Seaspray Emerald",
-                id:"32310"
-            },
-            {
-                name:"Design: Quick Lionseye",
-                id:"35763"
-            },
-            {
-                name:"Design: Glinting Shadowsong Amethyst",
-                id:"32306"
-            },
-            {
-                name:"Design: Purified Shadowsong Amethyst",
-                id:"32311"
-            },
-            {
-                name:"Design: Timeless Shadowsong Amethyst",
-                id:"32301"
-            },
-            {
-                name:"Design: Potent Pyrestone",
-                id:"32304"
-            },
-            {
-                name:"Design: Reckless Pyrestone",
-                id:"35762"
+                name:"Battle for Mount Hyjal",
+                amount: 1500,
+                stepsLeft: 1,
+                type: "Raid"
             }
         ],
         "Revered":[
             {
-                name:"Design: Deadly Pyrestone",
-                id:"32308"
-            },
-            {
-                name:"Design: Regal Seaspray Emerald",
-                id:"32309"
-            },
-            {
-                name:"Design: Rigid Empyrean Sapphire",
-                id:"32292"
+                name:"Battle for Mount Hyjal",
+                amount: 1500,
+                stepsLeft: 0,
+                type: "Raid"
             }
         ]
     },
@@ -3511,52 +3463,60 @@ const rewards = {
             {
                 name:"World Quests",
                 amount: 75,
-                stepsLeft: 4
+                stepsLeft: 4,
+                type: "Quest"
             },
             {
                 name:"Emmisary Quest",
                 amount: 1500,
-                stepsLeft: 3
+                stepsLeft: 3,
+                type: "Quest"
             }
         ],
         "Friendly":[
             {
                 name:"World Quests",
                 amount: 75,
-                stepsLeft: 2
+                stepsLeft: 2,
+                type: "Quest"
             },
             {
                 name:"Emmisary Quest",
                 amount: 1500,
-                stepsLeft: 2
+                stepsLeft: 2,
+                type: "Quest"
             }
         ],
         "Honored":[
             {
                 name:"World Quests",
                 amount: 75,
-                stepsLeft: 1
+                stepsLeft: 1,
+                type: "Quest"
             },
             {
                 name:"Emmisary Quest",
                 amount: 1500,
-                stepsLeft: 1
+                stepsLeft: 1,
+                type: "Quest"
             }
         ],
         "Revered":[
             {
                 name:"World Quests",
                 amount: 75,
-                stepsLeft: 0
+                stepsLeft: 0,
+                type: "Quest"
             },
             {
                 name:"Emmisary Quest",
                 amount: 1500,
-                stepsLeft: 0
+                stepsLeft: 0,
+                type: "Quest"
             }
         ]
     },
 
 }
 
-export default rewards;
+export {getGains};
