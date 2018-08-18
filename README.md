@@ -2,7 +2,7 @@
 
 A reputation calculator project using ReactJS for World of Warcraft
 
-##Hosting
+## Hosting
 
 The site is hosted at repcalc.net through netlify.
 
