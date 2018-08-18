@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Rewards from './Rewards';
-import {getGains} from '../gainsobj.js';
+import Gains from './Gains';
 
 class PanelLayout extends Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class PanelLayout extends Component {
                 <Rewards rep={rep} />
                 </TabPanel>
                 <TabPanel>
-                {getGains(rep)}
+                <Gains rep={rep} />
                 </TabPanel>
             </Tabs>
         );

@@ -11,10 +11,22 @@ class Faction extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHidden: true
+            isHidden: true,
+            standing: null
         }
         this.repLevel = this.repLevel.bind(this);
         this.showHidden = this.showHidden.bind(this);
+        this.getStanding = this.getStanding.bind(this);
+    }
+
+    componentDidMount() {
+        this.getStanding(this.props.rep)
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.reps !== this.props.reps) {
+            this.getStanding(this.props.rep)
+        }
     }
 
     repLevel(rep) {
@@ -31,6 +43,12 @@ class Faction extends Component {
         })))
     }
 
+    getStanding(rep) {
+        if(rep.standing !== 7) {
+            this.setState({standing: rep.value + " / " + rep.max})
+        }
+    }
+
     render() {
         let rep = this.props.rep;
         let isHidden = this.state.isHidden;
@@ -42,6 +60,7 @@ class Faction extends Component {
                     <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
                 </div>
                 <div className={`rewards ${isHidden ? "hidden" : ""}`}>
+                {this.state.standing}
                 <PanelLayout rep={rep.id} />
                 </div>
                 </div>
