@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import rewardsCont from '../rewardsobj';
-import Rewards from './Rewards';
+import PanelLayout from './PanelLayout';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
@@ -42,7 +42,7 @@ class Faction extends Component {
                     <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
                 </div>
                 <div className={`rewards ${isHidden ? "hidden" : ""}`}>
-                <Rewards rep={rep.id} />
+                <PanelLayout rep={rep.id} />
                 </div>
                 </div>
             )

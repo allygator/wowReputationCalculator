@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import rewardsCont from '../rewardsobj';
-import {getGains} from '../gainsobj.js';
 
 class Rewards extends Component {
     constructor(props) {
@@ -34,35 +33,15 @@ class Rewards extends Component {
                 tabPanelComplete.push(<TabPanel key={levels[i]}>{rewardsCompleted}</TabPanel>);
             }
             return (
-                <Tabs>
-                    <TabList>
-                        <Tab>Rewards</Tab>
-                        <Tab>How to Earn</Tab>
-                    </TabList>
-                    <TabPanel>
                         <Tabs>
                             <TabList>
                                 {tabTitles}
                             </TabList>
                             {tabPanelComplete}
                         </Tabs>
-                    </TabPanel>
-                    <TabPanel>
-                    {getGains(rep)}
-                    </TabPanel>
-                </Tabs>
             );
         } else {
-            return (
-                <Tabs>
-                    <TabList>
-                        <Tab>Rewards</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <p>No Rewards Exist! If this is an error, let me know!</p>
-                    </TabPanel>
-                </Tabs>
-            )
+            return ( <p>No Rewards Exist! If this is an error, let me know!</p> );
         }
     }
 }
