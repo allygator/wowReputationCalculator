@@ -4,6 +4,7 @@ import '../App.css';
 import RealmsList from './Realms';
 import Reputation from './Reputations';
 import Header from './Header';
+import  { Route, Switch } from 'react-router-dom';
 //Multi Select Code: Reputation Types to Hide: <Select options={this.state.options} isMulti onChange={e=>console.log(e)}/>
 
 class App extends Component {
@@ -71,6 +72,11 @@ class App extends Component {
     );}
 
 
+}
+
+function DisplayParams(props) {
+    console.log(props);
+    return <p>{props.match.params.realm + " " + props.match.params.character}</p>;
 }
 
 export default App;
