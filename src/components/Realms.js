@@ -18,6 +18,7 @@ class RealmList extends Component {
     handleChange = (selectedOption) => {
         this.setState({ selectedOption });
         this.props.realmSelection(selectedOption.value);
+        this.props.regionSelection(selectedOption.group);
         //console.log(`Option selected:`, selectedOption.value);
     }
 
@@ -70,10 +71,10 @@ class RealmList extends Component {
         var USOptions = [];
         var EUOptions = [];
         for(let realm of USrealms) {
-            USOptions.push({value: realm.name,label: realm.name})
+            USOptions.push({value: realm.name,label: realm.name, group:"US"})
         }
         for(let realm of EUrealms) {
-            EUOptions.push({value: realm.name,label: realm.name})
+            EUOptions.push({value: realm.name,label: realm.name, group:"EU"})
         }
         const { selectedOption } = this.state;
         const groupedOptions = [

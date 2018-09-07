@@ -8,7 +8,9 @@ class Header extends Component {
 
 
     render() {
+        const region = this.props.region;
         if(this.props.isSubmitted) {
+            var url = "https://render-"+region+".worldofwarcraft.com/character/"+this.props.thumbnail;
             return (
                 <header className="Submitted-app-header">
                 <div className="siteInfo">
@@ -16,7 +18,7 @@ class Header extends Component {
                 <h1>Reputation Calculator</h1>
                 </div>
                 <div className="characterInfo">
-                <img src={['https://render-us.worldofwarcraft.com/character/',this.props.thumbnail].join('')} alt="character portrait"/>
+                <img src={url} alt="character portrait"/>
                 <h2>{this.props.name}</h2>
                 </div>
                 </header>

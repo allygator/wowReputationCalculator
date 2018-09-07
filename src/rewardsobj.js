@@ -2225,12 +2225,6 @@ const rewards = {
         ]
     },
     "2103": { //Zandalari Empire
-        "Friendly":[
-            {
-                name:"Contract: Zandalari Empire",
-                id:"153664"
-            }
-        ],
         "Honored":[
             {
                 name:"Dinomancer's Cloak",
@@ -2375,12 +2369,6 @@ const rewards = {
         ]
     },
     "2156": { //Talanji's Expedition
-        "Friendly":[
-            {
-                name:"Contract: Talanji's Expedition",
-                id:"153665"
-            }
-        ],
         "Honored":[
             {
                 name:"Drape of the Blood Purge",
@@ -2653,12 +2641,6 @@ const rewards = {
         ]
     },
     "2158": { //Voldunai
-        "Friendly":[
-            {
-                name:"Contract: Voldunai",
-                id:"153666"
-            }
-        ],
         "Honored":[
             {
                 name:"Akunda's Firesticks",
@@ -2947,12 +2929,6 @@ const rewards = {
         ]
     },
     "2160": { //Proudmoore Admiralty
-        "Friendly":[
-            {
-                name:"Contract: Proudmoore Admiralty",
-                id:"153661"
-            }
-        ],
         "Honored":[
             {
                 name:"Gnoll Targetting Barrel",
@@ -3089,12 +3065,6 @@ const rewards = {
         ]
     },
     "2161": { //Order of Embers
-        "Friendly":[
-            {
-                name:"Contract: Order of Embers",
-                id:"153662"
-            }
-        ],
         "Honored":[
             {
                 name:"Witch Hunter's Cape",
@@ -3231,12 +3201,6 @@ const rewards = {
         ]
     },
     "2162": { //Storms Wake
-        "Friendly":[
-            {
-                name:"Contract: Storm's Wake",
-                id:"153661"
-            }
-        ],
         "Honored":[
             {
                 name:"Cape of the Divine Depths",
@@ -3373,12 +3337,6 @@ const rewards = {
         ]
     },
     "2163": { //Tortollan Seekers
-        "Friendly":[
-            {
-                name:"Contract: Tortollan Seekers",
-                id:"153667"
-            }
-        ],
         "Honored":[
             {
                 name:"Cape of the Scroll Keepers",
@@ -3507,12 +3465,6 @@ const rewards = {
         ]
     },
     "2164": { //Champions of Azeroth
-        "Friendly":[
-            {
-                name:"Contract: Champions of Azeroth",
-                id:"153668"
-            }
-        ],
         "Honored":[
             {
                 name:"Drape of the Azerothian Champion",
