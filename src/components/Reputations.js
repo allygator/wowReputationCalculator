@@ -85,14 +85,6 @@ class Reputation extends Component {
                 <div className="reputations" key="reputationPanel">
                 {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
                 </div>
-                /*reps.map((rep) => (
-                        <div key={rep.name} className="rep">
-                        <h3>{rep.name}</h3>
-                        <p>{this.repLevel(rep)}</p>
-                        <p>{rep.value}/{rep.max}</p>
-                        </div>
-                )
-            )*/
             )
         }
     }

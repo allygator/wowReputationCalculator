@@ -15,6 +15,7 @@ class Faction extends Component {
         }
         this.repLevel = this.repLevel.bind(this);
         this.showHidden = this.showHidden.bind(this);
+        this.showProgress = this.showProgress.bind(this);
     }
 
     repLevel(rep) {
@@ -31,6 +32,12 @@ class Faction extends Component {
         })))
     }
 
+    showProgress() {
+        if(this.props.max!=0) {
+            return this.props.rep.value+'/'+this.props.rep.max;
+        }
+    }
+
     render() {
         let rep = this.props.rep;
         let isHidden = this.state.isHidden;
@@ -42,7 +49,8 @@ class Faction extends Component {
                     <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
                 </div>
                 <div className={`rewards ${isHidden ? "hidden" : ""}`}>
-                <Rewards rep={rep.id} />
+                    {this.showProgress()}
+                    <Rewards rep={rep.id} />
                 </div>
                 </div>
             )
