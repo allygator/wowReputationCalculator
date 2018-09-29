@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     /*constructor(props) {
@@ -8,29 +9,16 @@ class Header extends Component {
 
 
     render() {
-        const region = this.props.region;
-        if(this.props.isSubmitted) {
-            var url = "https://render-"+region+".worldofwarcraft.com/character/"+this.props.thumbnail;
-            return (
-                <header className="Submitted-app-header">
-                <div className="siteInfo">
+        return (
+            <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <h1>Reputation Calculator</h1>
-                </div>
-                <div className="characterInfo">
-                <img src={url} alt="character portrait"/>
-                <h2>{this.props.name}</h2>
-                </div>
-                </header>
-            )
-        } else {
-            return (
-                <header className="App-header">
-                  <img src={logo} className="App-logo" alt="logo" />
-                  <h1 className="App-title">World of Warcraft Reputation Calculator</h1>
-                </header>
-            );
-        }
+                <h1 className="App-title">RepCalc</h1>
+                <nav>
+                <button><Link to='/'>Reputation Calculator</Link></button>
+                <button><Link to='/blog'>Blog</Link></button>
+                </nav>
+            </header>
+        );
     }
 }
 
