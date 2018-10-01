@@ -5,6 +5,7 @@ import RealmsList from './Realms';
 import Reputation from './Reputations';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper';
@@ -104,7 +105,8 @@ class Calc extends Component {
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
                         <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
-                            <div className="user-input-box">
+                            <form className="user-input-box" onSubmit={this.showReputations}>
+                            <FormControl >
                                 <div id="selectionBoxes">
                                     <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
                                     <div id="name">
@@ -114,8 +116,10 @@ class Calc extends Component {
                                 <div id="hiddenTypes">
                                     <FormControlLabel control={ <Checkbox checked={this.state.completed} onChange={this.handleChange('completed')} value="completed" /> } label="Hide Completed Reputations" />
                                 </div>
-                                <Button variant="contained" id="submitButton" onClick={this.showReputations}>Submit</Button>
-                                </div>
+                                <Button variant="contained" id="submitButton" type="submit">Submit</Button>
+                                </FormControl>
+                                </form>
+
                         </div>
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
