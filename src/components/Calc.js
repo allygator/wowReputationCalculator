@@ -5,7 +5,6 @@ import RealmsList from './Realms';
 import Reputation from './Reputations';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper';
@@ -37,6 +36,7 @@ class Calc extends Component {
         this.setRealm = this.setRealm.bind(this);
         this.showSearch = this.showSearch.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.enterPressed = this.enterPressed.bind(this)
         this.state = {
             isSubmitted: false,
             isCompleted: false,
@@ -96,6 +96,14 @@ class Calc extends Component {
         this.setState({ [name]: event.target.checked });
     };
 
+    enterPressed(event) {
+        console.log("enter?");
+        var code = event.keyCode || event.which;
+        if(code === 13) { //13 is the enter keycode
+            this.showReputations();
+        }
+    }
+
     render() {
         return (
             <div className="calc">
@@ -105,8 +113,7 @@ class Calc extends Component {
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
                         <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
-                            <form className="user-input-box" onSubmit={this.showReputations}>
-                            <FormControl >
+                            <div className="user-input-box" onKeyPress={this.enterPressed}>
                                 <div id="selectionBoxes">
                                     <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
                                     <div id="name">
@@ -116,10 +123,8 @@ class Calc extends Component {
                                 <div id="hiddenTypes">
                                     <FormControlLabel control={ <Checkbox checked={this.state.completed} onChange={this.handleChange('completed')} value="completed" /> } label="Hide Completed Reputations" />
                                 </div>
-                                <Button variant="contained" id="submitButton" type="submit">Submit</Button>
-                                </FormControl>
-                                </form>
-
+                                <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
+                                </div>
                         </div>
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
