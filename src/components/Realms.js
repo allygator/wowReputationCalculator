@@ -43,21 +43,21 @@ class RealmList extends Component {
                     });
                 }
             )
-            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
-                .then(response => response.json(),othererror => console.log(othererror))
-                .then((realmList) => {
-                    this.setState({
-                        isLoaded: true,
-                        EUrealms: realmList.realms
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-                )
+            // fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + /*process.env.REACT_APP_*/blizzardKey)
+            //     .then(response => response.json(),othererror => console.log(othererror))
+            //     .then((realmList) => {
+            //         this.setState({
+            //             isLoaded: true,
+            //             EUrealms: realmList.realms
+            //         });
+            //     },
+            //     (error) => {
+            //         this.setState({
+            //             isLoaded: true,
+            //             error
+            //         });
+            //     }
+            //     )
             }
     }
 
