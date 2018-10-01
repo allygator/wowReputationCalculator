@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 //import rewardsCont from '../rewardsobj';
-import Rewards from './Rewards';
+import RepData from './RepData';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import '../faction.css';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
@@ -32,8 +36,14 @@ class Faction extends Component {
         })))
     }
 
+    handleChange = panel => (event, expanded) => {
+    this.setState({
+      expanded: expanded ? panel : false,
+    });
+    };
+
     showProgress() {
-        if(this.props.max!=0) {
+        if(this.props.rep.max!==0) {
             return this.props.rep.value+'/'+this.props.rep.max;
         }
     }
@@ -42,17 +52,17 @@ class Faction extends Component {
         let rep = this.props.rep;
         let isHidden = this.state.isHidden;
         return (
-                <div key={rep.name} className="rep">
-                <div onClick={this.showHidden} className="repName">
-                    <h3>{rep.name}</h3>
-                    <p>{this.repLevel(rep)}</p>
-                    <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i>
-                </div>
-                <div className={`rewards ${isHidden ? "hidden" : ""}`}>
-                    {this.showProgress()}
-                    <Rewards rep={rep.id} />
-                </div>
-                </div>
+                <ExpansionPanel className=" repPanel" onChange={this.handleChange}>
+                    <ExpansionPanelSummary className=" repName">
+                        <h3>{rep.name}</h3>
+                        <span className="status-carat"><p>{this.repLevel(rep)}</p>
+                        <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails className="repDetails">
+                        {this.showProgress()}
+                        <RepData rep={rep.id} />
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             )
     }
 }

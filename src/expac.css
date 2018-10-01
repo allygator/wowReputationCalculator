@@ -1,0 +1,71 @@
+/*.expand-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.expand-wrapper h2 {
+    width: 20%;
+}
+
+@media screen and (max-width: 800px) {
+    .expand-wrapper h2 {
+        width: 100%;
+    }
+}
+
+.progress-carat {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .progress-carat {
+        width: 60%;
+    }
+}
+
+.expand-wrapper .MuiLinearProgress-root-1 {
+    width: 80%;
+    display: inline-block;
+    height: 8px;
+}
+*/
+.expacName:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.expacName  {
+    margin: 6px 0;
+}
+
+.expacName h2 {
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .expacName h2 {
+        width: 20%;
+    }
+}
+
+.expacName .progress-carat {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.expacName .expacProgress {
+    width: 80%;
+    display: inline-block;
+    height: 8px;
+}
+
+.expacDetails {
+    justify-content: center;
+    flex-wrap: wrap;
+}

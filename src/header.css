@@ -1,0 +1,36 @@
+.App-logo {
+  height: 60px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 25px 0 0 30px;
+  color: white;
+  display: flex;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.siteInfo {
+    display: flex;
+    width: 50%;
+}
+
+header nav {
+    display: flex;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+nav button:hover {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+button a:visited {
+    color: white;
+}

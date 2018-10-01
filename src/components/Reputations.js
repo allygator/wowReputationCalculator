@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import RepLayout from './RepLayout';
+import '../reputation.css'
+import LinearProgress from '@material-ui/core/LinearProgress';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 
 class Reputation extends Component {
@@ -20,7 +22,7 @@ class Reputation extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(prevProps.name !== this.props.name || prevProps.realm !== this.props.realm || prevProps.isChecked !== this.props.isChecked) {
+        if(prevProps.name !== this.props.name || prevProps.realm !== this.props.realm || prevProps.completed !== this.props.completed) {
             this.getReputations();
         }
     }
@@ -44,6 +46,7 @@ class Reputation extends Component {
                 this.setState({faction:character.faction});
                 this.props.setThumbnail(character.thumbnail);
                 this.props.setName(character.name);
+                this.props.setRealm(character.realm);
                 if(this.props.isChecked) {
                     character.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps:character.reputation.filter(this.isCompletedRep)});
@@ -79,11 +82,11 @@ class Reputation extends Component {
         if (error) {
           return <div>Error: {error}</div>;
         } else if (!isLoaded) {
-          return <div>Loading...</div>;
+          return <LinearProgress className="loading"/>;
         } else {
             return (
                 <div className="reputations" key="reputationPanel">
-                {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
+                    {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
                 </div>
             )
         }

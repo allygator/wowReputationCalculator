@@ -1,0 +1,125 @@
+.calc {
+    margin: -20px auto 0 auto;
+    width: 98%;
+}
+
+.calc>div {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+#buttonDiv {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#inputButton {
+    margin-top: -10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 5px 10px;
+}
+
+.characterCard {
+    display: flex;
+    width: 95%;
+    margin:auto;
+    margin-bottom: 10px;
+}
+
+.characterCard>div:first-child {
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.characterCard>div:last-child {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.user-input-wrapper {
+    width: 100%;
+    transform: scale(.9);
+}
+
+.user-input-box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#selectionBoxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#realmSelector {
+    width: 40%;
+    z-index: 10;
+}
+
+#name {
+    margin: 8px 0;
+}
+
+#name>div>div input {
+    padding: 15px;
+}
+
+.expacName:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.expacName  {
+    margin: 6px 0;
+}
+
+.expacName h2 {
+    width: 20%;
+}
+
+.expacName .progress-carat {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.expacName .expacProgress {
+    width: 80%;
+    display: inline-block;
+    height: 8px;
+}
+
+.expacDetails {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 800px) {
+    #buttonDiv {
+        position: absolute;
+        right: 1%;
+    }
+
+    .calc .user-input-wrapper {
+        width: 45%;
+        margin: auto;
+    }
+
+    .characterCard {
+        width: 40%;
+    }
+
+}
