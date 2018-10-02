@@ -12,6 +12,7 @@ class Reputation extends Component {
             isLoaded: false,
             reps: [],
             max: false,
+            completedCounter: 0
         }
         this.isCompletedRep = this.isCompletedRep.bind(this);
         //this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
@@ -50,6 +51,7 @@ class Reputation extends Component {
                 if(this.props.completed) {
                     character.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps:character.reputation.filter(this.isCompletedRep)});
+                    console.log(this.state.completedCounter)
                 } else {
                     character.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps: character.reputation})
@@ -69,11 +71,14 @@ class Reputation extends Component {
 
     isCompletedRep(rep) {
         if(bestFriends.includes(rep.id) && rep.standing === 5) {
-          return false;
+            return false;
         } else if (rep.standing === 7) {
-          return false;
+            this.setState((prevState => ({
+                completedCounter: prevState.completedCounter + 1
+            })))
+            return false;
         } else {
-          return true;
+            return true;
         }
     }
 
