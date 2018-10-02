@@ -25,6 +25,7 @@
     width: 95%;
     margin:auto;
     margin-bottom: 10px;
+
 }
 
 .characterCard>div:first-child {
@@ -37,6 +38,7 @@
     padding: 10px;
     width: 60px;
     height: 60px;
+    position: inherit;
 }
 
 .user-input-wrapper {
@@ -45,7 +47,6 @@
 }
 
 .user-input-box {
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -53,10 +54,10 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 #selectionBoxes {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +72,7 @@
 
 #name {
     margin: 8px 0;
+    width: 100%;
 }
 
 #name>div>div input {
@@ -116,6 +118,12 @@
     #buttonDiv {
         position: absolute;
         right: 1%;
+    }
+
+    #inputButton {
+        margin-top: -10px;
+        border-top-right-radius: 4px;
+        padding: 5px 10px;
     }
 
     .calc .user-input-wrapper {

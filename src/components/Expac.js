@@ -58,14 +58,16 @@ class Expac extends Component {
         const progress=<LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress" />
         if(reps.length === 0) {
             return (
-                <div className={[cName,"expac "].join(' ')}>
+                <ExpansionPanel className={[cName,"expacPanel completed"].join(' ')} onChange={this.handleChange}>
+                    <ExpansionPanelSummary className="expacName">
                 <h2 onClick={this.handleChange}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress} &nbsp;
                     <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
                 </h2>
-                <div className={`child ${isHidden ? "hidden" : ""}`}>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails className="expacDetails">
                     <p> You are Exalted with every faction in {(name==="Alliance")||(name==="Horde") ? ["The ",name].join(' ') : name}! </p>
-                </div>
-                </div>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             )
         } else {
             return (

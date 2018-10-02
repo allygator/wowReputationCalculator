@@ -113,11 +113,12 @@ class Calc extends Component {
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
                         <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
+                        <Paper>
                             <div className="user-input-box" onKeyPress={this.enterPressed}>
                                 <div id="selectionBoxes">
                                     <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
                                     <div id="name">
-                                    <TextField id="characterName" label="Character Name" variant="outlined" onChange={e=>this.setState({name:e.target.value})}/>
+                                    <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
                                     </div>
                                 </div>
                                 <div id="hiddenTypes">
@@ -125,6 +126,7 @@ class Calc extends Component {
                                 </div>
                                 <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
                                 </div>
+                                </Paper>
                         </div>
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
