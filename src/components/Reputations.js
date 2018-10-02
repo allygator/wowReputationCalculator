@@ -51,10 +51,16 @@ class Reputation extends Component {
                 if(this.props.completed) {
                     character.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps:character.reputation.filter(this.isCompletedRep)});
-                    console.log(this.state.completedCounter)
+                    this.props.setCompletedCount(this.state.completedCounter);
                 } else {
                     character.reputation.sort((a,b) => a.id-b.id);
+                    character.reputation.forEach((rep) => {
+                        if(rep.standing === 7) {
+                            this.countCompleted();
+                        }
+                    })
                     this.setState({reps: character.reputation})
+                    this.props.setCompletedCount(this.state.completedCounter);
                 }
             },
             (error) => {
@@ -73,13 +79,17 @@ class Reputation extends Component {
         if(bestFriends.includes(rep.id) && rep.standing === 5) {
             return false;
         } else if (rep.standing === 7) {
-            this.setState((prevState => ({
-                completedCounter: prevState.completedCounter + 1
-            })))
+            this.countCompleted();
             return false;
         } else {
             return true;
         }
+    }
+
+    countCompleted() {
+        this.setState(prevState => ({
+            completedCounter: prevState.completedCounter + 1
+        }))
     }
 
     render() {

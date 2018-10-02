@@ -13,6 +13,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
 import purple from '@material-ui/core/colors/purple';
 import blue from '@material-ui/core/colors/blue';
 //Multi Select Code: Reputation Types to Hide: <Select options={this.state.options} isMulti onChange={e=>console.log(e)}/>
@@ -34,9 +35,10 @@ class Calc extends Component {
         this.setThumbnail = this.setThumbnail.bind(this);
         this.setName = this.setName.bind(this);
         this.setRealm = this.setRealm.bind(this);
+        this.setCompletedCount = this.setCompletedCount.bind(this);
         this.showSearch = this.showSearch.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.enterPressed = this.enterPressed.bind(this)
+        this.enterPressed = this.enterPressed.bind(this);
         this.state = {
             isSubmitted: false,
             isCompleted: false,
@@ -80,6 +82,10 @@ class Calc extends Component {
         this.setState({formattedRealm:name});
     }
 
+    setCompletedCount(number) {
+        this.setState({completedCount:number});
+    }
+
     showReputations(e) {
         //console.log("Submitted");
         this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, isCompleted:this.state.completed, isSubmitted:true, showSearch:false});
@@ -111,6 +117,7 @@ class Calc extends Component {
                         <div id="buttonDiv">
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
+                        <Modal open={this.state.showSearch} onClose={this.showSearch}>
                         <Paper className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
                             <div className="user-input-box" onKeyPress={this.enterPressed}>
                                 <div id="selectionBoxes">
@@ -125,16 +132,20 @@ class Calc extends Component {
                                 <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
                                 </div>
                                 </Paper>
+                            </Modal>
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
                                 <Typography component="h2" variant="headline">{this.state.formattedName}</Typography>
                                 <Typography variant="subheading" color="textSecondary">
                                 {this.state.formattedRealm}
                                 </Typography>
+                                <Typography variant="subheading" color="textSecondary">
+                                {this.state.completedCount} Completed Reputations
+                                </Typography>
                             </CardContent>
                             {this.state.thumbnail && <Avatar alt="character thumbnail" src={['https://render-us.worldofwarcraft.com/character/',this.state.thumbnail].join('')} />}
                         </Card>
-                        {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} />}
+                        {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount} />}
                     </MuiThemeProvider>
                 </Paper>
             </div>
