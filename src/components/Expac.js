@@ -20,7 +20,6 @@ class Expac extends Component {
         }
         this.repLevel = this.repLevel.bind(this);
         this.showHidden = this.showHidden.bind(this);
-        this.handleChange = this.handleChange.bind(this);
         this.normalise = this.normalise.bind(this);
     }
 
@@ -38,12 +37,6 @@ class Expac extends Component {
         })))
     }
 
-    handleChange = panel => (event, expanded) => {
-    this.setState({
-      expanded: expanded ? panel : false,
-    });
-    };
-
     normalise(val,max) {
         return val/max*100;
     }
@@ -54,14 +47,12 @@ class Expac extends Component {
         const cName = this.props.cName;
         const isHidden = this.state.isHidden;
         const totalMaxReps = reps.reduce(countMaxReps,0);
-        const hideProgress = this.props.hideProgress;
         const progress=<LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress" />
         if(reps.length === 0) {
             return (
-                <ExpansionPanel className={[cName,"expacPanel completed"].join(' ')} onChange={this.handleChange}>
+                <ExpansionPanel className={[cName,"expacPanel completed"].join(' ')} onChange={this.showHidden}>
                     <ExpansionPanelSummary className="expacName">
-                <h2 onClick={this.handleChange}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress} &nbsp;
-                    <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                <h2>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat"><i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
                 </h2>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails className="expacDetails">
@@ -71,7 +62,7 @@ class Expac extends Component {
             )
         } else {
             return (
-                <ExpansionPanel className={[cName,"expacPanel "].join(' ')} onChange={this.handleChange}>
+                <ExpansionPanel className={[cName,"expacPanel "].join(' ')} onChange={this.showHidden}>
                     <ExpansionPanelSummary className="expacName">
                         <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
                         <span className="progress-carat">{progress} &nbsp; <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>

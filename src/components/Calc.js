@@ -97,7 +97,6 @@ class Calc extends Component {
     };
 
     enterPressed(event) {
-        console.log("enter?");
         var code = event.keyCode || event.which;
         if(code === 13) { //13 is the enter keycode
             this.showReputations();
@@ -112,8 +111,7 @@ class Calc extends Component {
                         <div id="buttonDiv">
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
-                        <div className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
-                        <Paper>
+                        <Paper className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
                             <div className="user-input-box" onKeyPress={this.enterPressed}>
                                 <div id="selectionBoxes">
                                     <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
@@ -127,7 +125,6 @@ class Calc extends Component {
                                 <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
                                 </div>
                                 </Paper>
-                        </div>
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
                                 <Typography component="h2" variant="headline">{this.state.formattedName}</Typography>

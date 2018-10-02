@@ -47,7 +47,7 @@ class Reputation extends Component {
                 this.props.setThumbnail(character.thumbnail);
                 this.props.setName(character.name);
                 this.props.setRealm(character.realm);
-                if(this.props.isChecked) {
+                if(this.props.completed) {
                     character.reputation.sort((a,b) => a.id-b.id);
                     this.setState({reps:character.reputation.filter(this.isCompletedRep)});
                 } else {
@@ -86,7 +86,7 @@ class Reputation extends Component {
         } else {
             return (
                 <div className="reputations" key="reputationPanel">
-                    {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.isChecked}/>}
+                    {reps.length > 1 && <RepLayout reps={reps} isHorde={Boolean(this.state.faction)} hideProgress={this.props.completed}/>}
                 </div>
             )
         }

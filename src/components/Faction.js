@@ -36,12 +36,6 @@ class Faction extends Component {
         })))
     }
 
-    handleChange = panel => (event, expanded) => {
-    this.setState({
-      expanded: expanded ? panel : false,
-    });
-    };
-
     showProgress() {
         if(this.props.rep.max!==0) {
             return this.props.rep.value+'/'+this.props.rep.max;
@@ -52,7 +46,7 @@ class Faction extends Component {
         let rep = this.props.rep;
         let isHidden = this.state.isHidden;
         return (
-                <ExpansionPanel className=" repPanel" onChange={this.handleChange}>
+                <ExpansionPanel className=" repPanel" onChange={this.showHidden}>
                     <ExpansionPanelSummary className=" repName">
                         <h3>{rep.name}</h3>
                         <span className="status-carat"><p>{this.repLevel(rep)}</p>
