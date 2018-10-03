@@ -42,7 +42,7 @@ class RealmList extends Component {
                     });
                 }
             )
-            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + /*process.env.REACT_APP_*/blizzardKey)
+            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
                     this.setState({
