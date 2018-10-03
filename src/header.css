@@ -5,9 +5,11 @@
 .App-header {
   background-color: #222;
   height: 100px;
-  padding: 25px 0 0 30px;
+  padding: 25px 0 15px 10px;
   color: white;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .App-title {
@@ -16,12 +18,12 @@
 
 .siteInfo {
     display: flex;
-    width: 50%;
+    width: 100%;
+    justify-content: center;
 }
 
 header nav {
     display: flex;
-    width: 50%;
     align-items: flex-start;
     justify-content: flex-end;
     margin-right: 10px;
@@ -33,4 +35,19 @@ nav button:hover {
 
 button a:visited {
     color: white;
+}
+
+@media screen and (min-width: 800px) {
+    .App-header {
+      padding: 25px 0 0 30px;
+    }
+
+    .siteInfo {
+        width: 45%;
+        justify-content: flex-start;
+    }
+
+    header nav {
+        width: 45%;
+    }
 }

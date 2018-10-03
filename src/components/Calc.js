@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-//import Select from 'react-select';
 import '../calc.css';
 import RealmsList from './Realms';
 import Reputation from './Reputations';
 import Button from '@material-ui/core/Button';
+import Collapse from '@material-ui/core/Collapse';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -13,7 +13,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 import purple from '@material-ui/core/colors/purple';
 import blue from '@material-ui/core/colors/blue';
 //Multi Select Code: Reputation Types to Hide: <Select options={this.state.options} isMulti onChange={e=>console.log(e)}/>
@@ -49,6 +48,7 @@ class Calc extends Component {
             submittedRegion: "",
             submittedRealm: "",
             submittedName: "",
+            completedCount: 0
         }
     }
 
@@ -88,7 +88,8 @@ class Calc extends Component {
 
     showReputations(e) {
         //console.log("Submitted");
-        this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, isCompleted:this.state.completed, isSubmitted:true, showSearch:false});
+        this.setState({isSubmitted:true, showSearch:false})
+        this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, isCompleted:this.state.completed, });
         this.setHistory('/'+this.state.region+'/'+this.state.realm+'/'+this.state.name);
     }
 
@@ -110,29 +111,36 @@ class Calc extends Component {
     }
 
     render() {
+        let style = {};
+        if(this.state.isSubmitted) {
+            style.height = 0;
+        }
+
         return (
-            <div className="calc">
+            <div className="calc" id="calc">
                 <Paper>
                     <MuiThemeProvider theme={theme}>
                         <div id="buttonDiv">
                             {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
                         </div>
-                        <Modal open={this.state.showSearch} onClose={this.showSearch}>
-                        <Paper className={`user-input-wrapper ${this.state.isSubmitted ? "" : "popout"} ${(this.state.showSearch) ? "" : "hidden"}`}>
-                            <div className="user-input-box" onKeyPress={this.enterPressed}>
-                                <div id="selectionBoxes">
-                                    <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
-                                    <div id="name">
-                                    <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
+
+                                <div className="user-input-wrapper" onKeyPress={this.enterPressed}>
+                                    <Collapse in={this.state.showSearch} style={{style}} className="input-wrapper-collapse">
+                                    <Paper className={`user-input-box ${this.state.isSubmitted ? "" : "popout"} `}>
+                                    <div id="selectionBoxes">
+                                        <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
+                                        <div id="name">
+                                        <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
+                                        </div>
                                     </div>
+                                    <div id="hiddenTypes">
+                                        <FormControlLabel control={ <Checkbox checked={this.state.completed} onChange={this.handleChange('completed')} value="completed" /> } label="Hide Completed Reputations" />
+                                    </div>
+                                    <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
+                                    </Paper>
+                                </Collapse>
                                 </div>
-                                <div id="hiddenTypes">
-                                    <FormControlLabel control={ <Checkbox checked={this.state.completed} onChange={this.handleChange('completed')} value="completed" /> } label="Hide Completed Reputations" />
-                                </div>
-                                <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
-                                </div>
-                                </Paper>
-                            </Modal>
+
                         <Card className={`characterCard ${this.state.isSubmitted ? "" : "hidden"}`}>
                             <CardContent>
                                 <Typography component="h2" variant="headline">{this.state.formattedName}</Typography>
@@ -140,7 +148,7 @@ class Calc extends Component {
                                 {this.state.formattedRealm}
                                 </Typography>
                                 <Typography variant="subheading" color="textSecondary">
-                                {this.state.completedCount} Completed Reputations
+                                {this.state.completedCount && this.state.completedCount + " Completed Reputations"}
                                 </Typography>
                             </CardContent>
                             {this.state.thumbnail && <Avatar alt="character thumbnail" src={['https://render-us.worldofwarcraft.com/character/',this.state.thumbnail].join('')} />}

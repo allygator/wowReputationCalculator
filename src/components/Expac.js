@@ -5,6 +5,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../expac.css';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
@@ -47,15 +48,10 @@ class Expac extends Component {
         const cName = this.props.cName;
         const isHidden = this.state.isHidden;
         const totalMaxReps = reps.reduce(countMaxReps,0);
-        const progress = [];
-        if(!this.props.hideProgress) {
-            progress.push(<LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress" key={name}/>);
-        }
-
         if(reps.length === 0) {
             return (
                 <ExpansionPanel className={[cName,"expacPanel completed"].join(' ')} onChange={this.showHidden}>
-                    <ExpansionPanelSummary className="expacName">
+                    <ExpansionPanelSummary className="expacName" expandIcon={<ExpandMoreIcon />}>
                 <h2>{name[0].toUpperCase() + name.slice(1)}
                 </h2>
                 <span className="carat"><i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
@@ -68,9 +64,9 @@ class Expac extends Component {
         } else {
             return (
                 <ExpansionPanel className={[cName,"expacPanel "].join(' ')} onChange={this.showHidden}>
-                    <ExpansionPanelSummary className="expacName">
+                    <ExpansionPanelSummary className="expacName"  expandIcon={<ExpandMoreIcon />}>
                         <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
-                        <span className={this.props.hideProgress ? "carat" : "progress-carat"}>{progress} &nbsp; <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                        <span className={this.props.hideProgress ? "carat" : "progress-carat"}><LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress"/></span>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails className="expacDetails">
 
