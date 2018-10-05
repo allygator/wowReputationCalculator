@@ -2280,6 +2280,314 @@ const rewards = {
             }
         ]
     },
+    "1435": { //Shado-Pan Assault
+        "Neutral": [
+            {
+                name: "Destroyer's Battletags",
+                id: "95146"
+            },
+            {
+                name: "Flanker's Battletags",
+                id: "95143"
+            },
+            {
+                name: "Mender's Battletags",
+                id: "95145"
+            },
+            {
+                name: "Striker's Battletags",
+                id: "95142"
+            },
+            {
+                name: "Vanguard's Battletags",
+                id: "95144"
+            },
+            {
+                name: "Axebinder Wristguards",
+                id: "95129"
+            }
+        ],
+        "Friendly": [
+            {
+                name: "Bloodstained Skullsqueezers",
+                id: "95111"
+            },
+            {
+                name: "Bonecrusher Bracers",
+                id: "95128"
+            },
+            {
+                name: "Bracers of Shielding Thought",
+                id: "95135"
+            },
+            {
+                name: "Breastplate of Brutal Strikes",
+                id: "95076"
+            },
+            {
+                name: "Brutal Talisman of the Shado-Pan Assault",
+                id: "94508"
+            },
+            {
+                name: "Carapace of Segmented Scale",
+                id: "95079"
+            },
+            {
+                name: "Charfire Leggings",
+                id: "95123"
+            },
+            {
+                name: "Cracklebite Links",
+                id: "95087"
+            },
+            {
+                name: "Daggerfinger Clutches",
+                id: "95108"
+            },
+            {
+                name: "Darkfang Belt",
+                id: "95088"
+            },
+            {
+                name: "Dreamweaver Drape",
+                id: "95118"
+            },
+            {
+                name: "Fire Support Robes",
+                id: "95081"
+            },
+            {
+                name: "Firestrike Cord",
+                id: "95090"
+            },
+            {
+                name: "Flameweaver Handwraps",
+                id: "95106"
+            },
+            {
+                name: "Gauntlets of the Longbow",
+                id: "95109"
+            },
+            {
+                name: "Ghostbinder Grips",
+                id: "95105"
+            },
+            {
+                name: "Gianttooth Chestplate",
+                id: "95075"
+            },
+            {
+                name: "Girdle of Glowing Light",
+                id: "95091"
+            },
+            {
+                name: "Gloves of Enduring Renewal",
+                id: "95107"
+            },
+            {
+                name: "Hauberk of Gleaming Fire",
+                id: "95074"
+            },
+            {
+                name: "Hearthfire Armwraps",
+                id: "95134"
+            },
+            {
+                name: "Homeguard Leggings",
+                id: "95127"
+            },
+            {
+                name: "Kilt of Rising Thunder",
+                id: "95126"
+            },
+            {
+                name: "Legguards of Hidden Knives",
+                id: "95125"
+            },
+            {
+                name: "Legguards of Renewal",
+                id: "95120"
+            },
+            {
+                name: "Longshot Forestcloak",
+                id: "95116"
+            },
+            {
+                name: "Loop of the Shado-Pan Assault",
+                id: "95141"
+            },
+            {
+                name: "Many-Layered Scalecloak",
+                id: "95115"
+            },
+            {
+                name: "Martiean's Splitleaf Girdle",
+                id: "95089"
+            },
+            {
+                name: "Nightflight Chain",
+                id: "95086"
+            },
+            {
+                name: "Powderburn Bracers",
+                id: "95131"
+            },
+            {
+                name: "Raiment of Silent Stars",
+                id: "95078"
+            },
+            {
+                name: "Reinforced Spiritplate Girdle",
+                id: "95084"
+            },
+            {
+                name: "Ring of the Shado-Pan Assault",
+                id: "95139"
+            },
+            {
+                name: "Robes of Misty Bindings",
+                id: "95082"
+            },
+            {
+                name: "Roofstalker Shadowwrap",
+                id: "95077"
+            },
+            {
+                name: "Seal of the Shado-Pan Assault",
+                id: "95137"
+            },
+            {
+                name: "Shadowspike Cloak",
+                id: "95117"
+            },
+            {
+                name: "Signet of the Shado-Pan Assault",
+                id: "95138"
+            },
+            {
+                name: "Skinsealer Tunic",
+                id: "95080"
+            },
+            {
+                name: "Softscar Armplates",
+                id: "95130"
+            },
+            {
+                name: "Soothing Talisman of the Shado-Pan Assault",
+                id: "94509"
+            },
+            {
+                name: "Spikeshard Greatcloak",
+                id: "95114"
+            },
+            {
+                name: "Spiritcaller Cuffs",
+                id: "95132"
+            },
+            {
+                name: "Steadfast Talisman of the Shado-Pan Assault",
+                id: "94507"
+            },
+            {
+                name: "Stoneward Handguards",
+                id: "95110"
+            },
+            {
+                name: "Swordhook Slingbelt",
+                id: "95083"
+            },
+            {
+                name: "Thunderbreaker Legplates",
+                id: "95119"
+            },
+            {
+                name: "Totemshaper Gloves",
+                id: "95112"
+            },
+            {
+                name: "Touch of Soothing Mists",
+                id: "95113"
+            },
+            {
+                name: "Troll-Burner Bracers",
+                id: "95136"
+            },
+            {
+                name: "Trousers of Waning Shadow",
+                id: "95124"
+            },
+            {
+                name: "Vaultbreaker Greaves",
+                id: "95121"
+            },
+            {
+                name: "Vicious Talisman of the Shado-Pan Assault",
+                id: "94511"
+            },
+            {
+                name: "Volatile Talisman of the Shado-Pan Assault",
+                id: "94510"
+            },
+            {
+                name: "Waistplate of Channeled Mending",
+                id: "95085"
+            },
+            {
+                name: "Willow-Weave Armbands",
+                id: "95133"
+            },
+            {
+                name: "Wisp-Weave Pantaloons",
+                id: "95122"
+            }
+        ],
+        "Exalted": [
+            {
+                name: "Frost-Kissed Shoulderwraps",
+                id: "95102"
+            },
+            {
+                name: "Halo-Graced Mantle",
+                id: "95101"
+            },
+            {
+                name: "Heartroot Shoulderguards",
+                id: "95097"
+            },
+            {
+                name: "Lightning Strike Mantle",
+                id: "95099"
+            },
+            {
+                name: "Shoulderguards of Potentiation",
+                id: "95104"
+            },
+            {
+                name: "Shoulders of Demonic Dreams",
+                id: "95096"
+            },
+            {
+                name: "Sightblinder Shoulderguards",
+                id: "95098"
+            },
+            {
+                name: "Sparksmasher Pauldrons",
+                id: "95103"
+            },
+            {
+                name: "Targetblinder Spaulders",
+                id: "95095"
+            },
+            {
+                name: "Wallwalker Spaulders",
+                id: "95100"
+            },
+            {
+                name: "Shado-Pan Assault Tabard",
+                id: "97131"
+            }
+        ]
+    },
     "1710": { //Sha'tari Defense
         "Friendly":[
             {
