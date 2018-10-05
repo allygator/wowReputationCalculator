@@ -18,8 +18,8 @@ class Header extends Component {
                 <h1 className="App-title">RepCalc</h1>
                 </div>
                 <nav>
-                <Button><Link to='/'>Reputation Calculator</Link></Button>
-                <Button><Link to='/blog'>Blog</Link></Button>
+                <Link to='/'><Button>Reputation Calculator</Button></Link>
+                <Link to='/blog'><Button>Blog</Button></Link>
                 </nav>
             </header>
         );

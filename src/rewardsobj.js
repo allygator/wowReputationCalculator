@@ -2093,8 +2093,152 @@ const rewards = {
             {
                 name:"Reins of the Violet Netherwing Drake",
                 id:"32862"
-            },
+            }
+        ]
+    },
+    "1031": { //Sha'tari Skyguard
+        "Friendly":[
+            {
+                name:"Enriched Terocone Juice",
+                id:"32722"
+            }
         ],
+        "Honored":[
+            {
+                name:"Skyguard Rations",
+                id:"32721"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Skyguard's Drape",
+                id:"32539"
+            },
+            {
+                name:"Skywitch's Drape",
+                id:"32538"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Airman's Ribbon of Gallantry",
+                id:"32771"
+            },
+            {
+                name:"Blue Riding Nether Ray",
+                id:"32319"
+            },
+            {
+                name:"Green Riding Nether Ray",
+                id:"32314"
+            },
+            {
+                name:"Purple Riding Nether Ray",
+                id:"32316"
+            },
+            {
+                name:"Red Riding Nether Ray",
+                id:"32317"
+            },
+            {
+                name:"Silver Riding Nether Ray",
+                id:"32318"
+            },
+            {
+                name:"Skyguard Silver Cross",
+                id:"32770"
+            },
+            {
+                name:"Nether Ray Fry",
+                id:"38628"
+            },
+            {
+                name:"Skyguard Tabard",
+                id:"32445"
+            }
+        ]
+    },
+    "1038": { //Ogri'la
+        "Friendly":[
+            {
+                name:"Blue Ogre Brew Special",
+                id:"32909"
+            },
+            {
+                name:"Red Ogre Brew Special",
+                id:"32910"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Blue Ogre Brew",
+                id:"32783"
+            },
+            {
+                name:"Red Ogre Brew",
+                id:"32784"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Apexis Cloak",
+                id:"32653"
+            },
+            {
+                name:"Cerulean Crystal Rod",
+                id:"32650"
+            },
+            {
+                name:"Crystalforged Trinket",
+                id:"32654"
+            },
+            {
+                name:"Ogri'la Aegis",
+                id:"32652"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Crystal Orb of Enlightenment",
+                id:"32651"
+            },
+            {
+                name:"Crystalline Crossbow",
+                id:"32645"
+            },
+            {
+                name:"Shard-Bound Bracers",
+                id:"32647"
+            },
+            {
+                name:"Vortex Walking Boots",
+                id:"32648"
+            },
+            {
+                name:"Ogri'la Tabard",
+                id:"32828"
+            }
+        ]
+    },
+    "1094": { //The Silver Covenant
+        "Exalted":[
+            {
+                name:"Quel'dorei Steed",
+                id:"46815"
+            },
+            {
+                name:"Silver Covenant Hippogryph",
+                id:"46813"
+            },
+            {
+                name:"Shimmering Wyrmling",
+                id:"46820"
+            },
+            {
+                name:"Silver Covenant Tabard",
+                id:"46817"
+            }
+        ]
     },
     "1134": { //Gilneas
         "Friendly":[
@@ -2121,6 +2265,186 @@ const rewards = {
             {
                 name:"Mantle of Gilneas",
                 id:"64892"
+            }
+        ]
+    },
+    "1376": { //Operation: Shieldwall
+        "Exalted":[
+            {
+                name:"Grand Commendation of Operation: Shieldwall",
+                id:"93231"
+            },
+            {
+                name:"Grand Armored Gryphon",
+                id:"93168"
+            }
+        ]
+    },
+    "1710": { //Sha'tari Defense
+        "Friendly":[
+            {
+                name:"Sha'tari Elixir",
+                id:"118669"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Sha'tari Protector",
+                id:"118685"
+            },
+            {
+                name:"Soul Evacuation Crystal",
+                id:"119182"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Contract: Vindicator Heluun",
+                id:"119167"
+            },
+            {
+                name:"Ensemble: Sha'tari Defender's Plate",
+                id:"158208"
+            },
+            {
+                name:"Sha'tari Defender's Medallion",
+                id:"119421"
+            },
+            {
+                name:"Sky Fry",
+                id:"119150"
+            },
+        ],
+        "Exalted":[
+            {
+                name:"Armored Irontusk",
+                id:"116665"
+            },
+            {
+                name:"Sha'tari Defense Tabard",
+                id:"119140"
+            }
+        ]
+    },
+    "1711": { //Steamwheedle Preservation Society
+        "Friendly":[
+            {
+                name:"Steamwheedle Elixir",
+                id:"118667"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Portable Goon Squad",
+                id:"118683"
+            },
+            {
+                name:"Goblin Hot Potato",
+                id:"110426"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Contract: Professor Felblast",
+                id:"119165"
+            },
+            {
+                name:"Captured Forest Sproutling",
+                id:"119149"
+            },
+            {
+                name:"Indentured Albino River Calf",
+                id:"119148"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Domesticated Razorback",
+                id:"116672"
+            },
+            {
+                name:'Steamwheedle "Preservation" Society Tabard',
+                id:"119137"
+            }
+        ]
+    },
+    "1731": { //Council of Exarchs
+        "Friendly":[
+            {
+                name:"Exarch Elixir",
+                id:"118665"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Permanent Time Bubble",
+                id:"115472"
+            },
+            {
+                name:"Tranquility of the Exarchs",
+                id:"118680"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Contract: Cleric Maluuf",
+                id:"119162"
+            },
+            {
+                name:"Relic of Karabor",
+                id:"118663"
+            },
+            {
+                name:"Draenei Micro Defender",
+                id:"119142"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Dusty Rockhide",
+                id:"116664"
+            },
+            {
+                name:'Council of Exarchs Tabard',
+                id:"119135"
+            }
+        ]
+    },
+    "1850": { //The Saberstalkers
+        "Friendly":[
+            {
+                name:"Saberstalkers Battle Standard",
+                id:"128453"
+            }
+        ],
+        "Honored":[
+            {
+                name:"Contract: Pallas",
+                id:"128439"
+            },
+            {
+                name:"Wild Goretusk",
+                id:"116671"
+            }
+        ],
+        "Revered":[
+            {
+                name:"Saberstalker Teachings: Trailblazer",
+                id:"128446"
+            },
+            {
+                name:"Savage Cub",
+                id:"128477"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Bristling Hellboar",
+                id:"128481"
+            },
+            {
+                name:'Saberstalkers Tabard',
+                id:"128449"
             }
         ]
     },
@@ -2221,6 +2545,42 @@ const rewards = {
             {
                 name:"Formula: Enchant Ring - Binding of Mastery",
                 id:"128602"
+            }
+        ]
+    },
+    "1975": { //Conjurer Margoss
+        "Friend":[
+            {
+                name:"Murloc Bobber",
+                id:"136376"
+            },
+            {
+                name:"Squeaky Duck Bobber",
+                id:"136375"
+            },
+            {
+                name:"Crate of Bobbers: Squeaky Duck",
+                id:"142531"
+            },
+            {
+                name:"Crate of Bobbers: Murloc Head",
+                id:"142532"
+            }
+        ],
+        "Good Friend":[
+            {
+                name:"Sting Ray Pup",
+                id:"138810"
+            }
+        ],
+        "Best Friend":[
+            {
+                name:"Brinedeep Bottom-Feeder",
+                id:"138811"
+            },
+            {
+                name:'Trashy',
+                id:"143842"
             }
         ]
     },
@@ -3504,7 +3864,6 @@ const rewards = {
             }
         ]
     },
-
 
 }
 
