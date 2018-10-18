@@ -8,6 +8,12 @@ class App extends Component {
     //     super(props);
     // }
 
+    componentDidMount() {
+        fetch('/.netlify/functions/slack', {
+      method: "POST")
+    })
+    }
+
     render() {
         return (
           <div className="App">
