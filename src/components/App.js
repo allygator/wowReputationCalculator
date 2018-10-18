@@ -8,9 +8,7 @@ class App extends Component {
     componentDidMount() {
         return fetch('/.netlify/functions/token', {
         method: 'POST'
-  }).then(response => {
-    return response.json()
-  })
+  });
 }
 
     render() {
