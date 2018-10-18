@@ -1,4 +1,4 @@
-const clientID = process.env.clientID;
+const clientID = process.env.CLIENTID;
 
 exports.handler = async (event, context, callback) => {
   return callback(null, {
