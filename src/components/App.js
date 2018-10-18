@@ -9,7 +9,7 @@ class App extends Component {
     // }
 
     componentDidMount() {
-        fetch('/.netlify/functions/slack', {
+        fetch('/.netlify/functions/token', {
       method: "POST"
   })
 }
