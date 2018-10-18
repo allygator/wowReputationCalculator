@@ -9,7 +9,7 @@ class App extends Component {
     // }
 
     componentDidMount() {
-        fetch('/.netlify/functions/token', {
+        fetch('./functions/token', {
       method: "POST")
     })
     }
