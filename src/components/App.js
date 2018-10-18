@@ -9,8 +9,11 @@ class App extends Component {
     // }
 
     componentDidMount() {
-        fetch('.../functions/token.js', {
-      method: "POST"
+        return fetch('/.netlify/functions/token.js', {
+    body: JSON.stringify(data),
+    method: 'POST'
+  }).then(response => {
+    return response.json()
   })
 }
 
