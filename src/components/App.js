@@ -6,7 +6,7 @@ import Main from './Main';
 class App extends Component {
 
     componentDidMount() {
-        return fetch('/.netlify/functions/token.js', {
+        return fetch('/.netlify/functions/token', {
         method: 'POST'
   }).then(response => {
     return response.json()
