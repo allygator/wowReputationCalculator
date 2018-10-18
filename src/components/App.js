@@ -9,7 +9,9 @@ class App extends Component {
     // }
 
     componentDidMount() {
-        fetch('.../functions/token', {})
+        fetch('.../functions/token', {
+      method: "GET")
+    })
     }
 
     render() {
