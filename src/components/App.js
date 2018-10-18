@@ -9,9 +9,7 @@ class App extends Component {
     // }
 
     componentDidMount() {
-        fetch('./functions/token', {
-      method: "POST")
-    })
+        fetch('.../functions/token', {})
     }
 
     render() {
