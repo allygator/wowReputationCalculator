@@ -1825,246 +1825,112 @@ const rewards = {
             }
         ]
     },
-    "1011": { //Lower City
-        "Friendly":[
-            {
-                name:"Design: Potent Flame Spessarite",
-                id:"23138"
-            }
-        ],
-        "Honored":[
-            {
-                name:"Crusader's Ornamented Leggings",
-                id:"35405"
-            },
-            {
-                name:"Crusader's Scaled Chestpiece",
-                id:"35412"
-            },
-            {
-                name:"Dragonhide Helm",
-                id:"35357"
-            },
-            {
-                name:"Dreadweave Mantle",
-                id:"35331"
-            },
-            {
-                name:"Evoker's Silk Cowl",
-                id:"35344"
-            },
-            {
-                name:"Kodohide Gloves",
-                id:"35361"
-            },
-            {
-                name:"Mooncloth Mitts",
-                id:"35335"
-            },
-            {
-                name:"Opportunist's Leather Tunic",
-                id:"35370"
-            },
-            {
-                name:"Satin Leggings",
-                id:"35340"
-            },
-            {
-                name:"Savage Plate Shoulders",
-                id:"35411"
-            },
-            {
-                name:"Seer's Linked Gauntlets",
-                id:"35382"
-            },
-            {
-                name:"Seer's Mail Leggings",
-                id:"35389"
-            },
-            {
-                name:"Seer's Ringmail Chestguard",
-                id:"35391"
-            },
-            {
-                name:"Stalker's Chain Helm",
-                id:"35378"
-            },
-            {
-                name:"Wyrmhide Legguards",
-                id:"35373"
-            },
-            {
-                name:"Formula: Enchant Ring - Stats",
-                id:"22538"
-            },
-            {
-                name:"Pattern: Cloak of Arcane Evasion",
-                id:"30833"
-            }
-        ],
-        "Revered":[
-            {
-                name:"Design: Felsteel Boar",
-                id:"24179"
-            },
-            {
-                name:"Design: Pendant of Thawing",
-                id:"24175"
-            },
-            {
-                name:"Leggings of the Skettis Exile",
-                id:"30836"
-            },
-            {
-                name:"Lower City Prayerbook",
-                id:"30841"
-            },
-            {
-                name:"Salvager's Hauberk",
-                id:"30835"
-            },
-            {
-                name:"Recipe: Elixir of Major Shadow Power",
-                id:"22910"
-            },
-            {
-                name:"Design: Falling Star",
-                id:"33157"
-            }
-        ],
-        "Exalted":[
-            {
-                name:"Gavel of Unearthed Secrets",
-                id:"30832"
-            },
-            {
-                name:"Shapeshifter's Signet",
-                id:"30834"
-            },
-            {
-                name:"Trident of the Outcast Tribe",
-                id:"30830"
-            },
-            {
-                name:"Formula: Enchant Cloak - Dodge",
-                id:"33148"
-            },
-            {
-                name:"Lower City Tabard",
-                id:"31778"
-            }
-        ]
-    },
     "1012": { //Ashtongue Deathsworn
-        "Friendly":[
-            {
-                name:"Pattern: Boots of Shackled Souls",
-                id:"32429"
+        "Friendly": [{
+                name: "Pattern: Boots of Shackled Souls",
+                id: "32429"
             },
             {
-                name:"Pattern: Bracers of Shackled Souls",
-                id:"32430"
+                name: "Pattern: Bracers of Shackled Souls",
+                id: "32430"
             },
             {
-                name:"Pattern: Redeemed Soul Cinch",
-                id:"32436"
+                name: "Pattern: Redeemed Soul Cinch",
+                id: "32436"
             },
             {
-                name:"Pattern: Redeemed Soul Legguards",
-                id:"32435"
+                name: "Pattern: Redeemed Soul Legguards",
+                id: "32435"
             },
             {
-                name:"Pattern: Soulguard Bracers",
-                id:"32438"
+                name: "Pattern: Soulguard Bracers",
+                id: "32438"
             },
             {
-                name:"Pattern: Soulguard Girdle",
-                id:"32440"
+                name: "Pattern: Soulguard Girdle",
+                id: "32440"
             },
             {
-                name:"Plans: Shadesteel Bracers",
-                id:"32442"
+                name: "Plans: Shadesteel Bracers",
+                id: "32442"
             },
             {
-                name:"Plans: Shadesteel Girdle",
-                id:"32444"
+                name: "Plans: Shadesteel Girdle",
+                id: "32444"
             }
         ],
-        "Honored":[
-            {
-                name:"Pattern: Greaves of Shackled Souls",
-                id:"32431"
+        "Honored": [{
+                name: "Pattern: Greaves of Shackled Souls",
+                id: "32431"
             },
             {
-                name:"Pattern: Night's End",
-                id:"32447"
+                name: "Pattern: Night's End",
+                id: "32447"
             },
             {
-                name:"Pattern: Redeemed Soul Moccasins",
-                id:"32433"
+                name: "Pattern: Redeemed Soul Moccasins",
+                id: "32433"
             },
             {
-                name:"Pattern: Redeemed Soul Wristguards",
-                id:"32434"
+                name: "Pattern: Redeemed Soul Wristguards",
+                id: "32434"
             },
             {
-                name:"Pattern: Soulguard Leggings",
-                id:"32439"
+                name: "Pattern: Soulguard Leggings",
+                id: "32439"
             },
             {
-                name:"Pattern: Soulguard Slippers",
-                id:"32437"
+                name: "Pattern: Soulguard Slippers",
+                id: "32437"
             },
             {
-                name:"Pattern: Waistguard of Shackled Souls",
-                id:"32432"
+                name: "Pattern: Waistguard of Shackled Souls",
+                id: "32432"
             },
             {
-                name:"Plans: Shadesteel Greaves",
-                id:"32443"
+                name: "Plans: Shadesteel Greaves",
+                id: "32443"
             },
             {
-                name:"Plans: Shadesteel Sabots",
-                id:"32441"
+                name: "Plans: Shadesteel Sabots",
+                id: "32441"
             }
         ],
-
-        "Exalted":[
-            {
-                name:"Ashtongue Talisman of Acumen",
-                id:"32490"
+        "Exalted": [{
+                name: "Ashtongue Talisman of Acumen",
+                id: "32490"
             },
             {
-                name:"Ashtongue Talisman of Equilibrium",
-                id:"32486"
+                name: "Ashtongue Talisman of Equilibrium",
+                id: "32486"
             },
             {
-                name:"Ashtongue Talisman of Insight",
-                id:"32488"
+                name: "Ashtongue Talisman of Insight",
+                id: "32488"
             },
             {
-                name:"Ashtongue Talisman of Lethality",
-                id:"32492"
+                name: "Ashtongue Talisman of Lethality",
+                id: "32492"
             },
             {
-                name:"Ashtongue Talisman of Shadows",
-                id:"32493"
+                name: "Ashtongue Talisman of Shadows",
+                id: "32493"
             },
             {
-                name:"Ashtongue Talisman of Swiftness",
-                id:"32487"
+                name: "Ashtongue Talisman of Swiftness",
+                id: "32487"
             },
             {
-                name:"Ashtongue Talisman of Valor",
-                id:"32485"
+                name: "Ashtongue Talisman of Valor",
+                id: "32485"
             },
             {
-                name:"Ashtongue Talisman of Vision",
-                id:"32491"
+                name: "Ashtongue Talisman of Vision",
+                id: "32491"
             },
             {
-                name:"Ashtongue Talisman of Zeal",
-                id:"32489"
+                name: "Ashtongue Talisman of Zeal",
+                id: "32489"
             }
         ]
     },
@@ -2158,6 +2024,48 @@ const rewards = {
             }
         ]
     },
+    "1037": { //Alliance Vanguard
+        "Revered":[
+            {
+                name:"Gnomish Magician's Quill",
+                id:"38464"
+            },
+            {
+                name:"Hammer of the Alliance Vanguard",
+                id:"38455"
+            },
+            {
+                name:"Lordaeron's Resolve",
+                id:"38463"
+            },
+            {
+                name:"Orb of the Eastern Kingdoms",
+                id:"38459"
+            },
+            {
+                name:"Sawed-Off Hand Cannon",
+                id:"38457"
+            },
+            {
+                name:"Shield of the Lion-Hearted",
+                id:"38453"
+            },
+            {
+                name:"Vanguard Soldier's Dagger",
+                id:"38465"
+            }
+        ],
+        "Exalted":[
+            {
+                name:"Schematic: Mekgineer's Chopper",
+                id:"44503"
+            },
+            {
+                name:"Plans: Titanium Plating",
+                id:"44937"
+            }
+        ]
+    },
     "1038": { //Ogri'la
         "Friendly":[
             {
@@ -2220,63 +2128,1238 @@ const rewards = {
             }
         ]
     },
+    "1077": { //Shattered Sun Offensive
+        "Friendly": [{
+                name: "Design: Bold Crimson Spinel",
+                id: "35244"
+            },
+            {
+                name: "Design: Brilliant Crimson Spinel",
+                id: "35248"
+            },
+            {
+                name: "Design: Delicate Crimson Spinel",
+                id: "35246"
+            },
+            {
+                name: "Design: Smooth Lionseye",
+                id: "35260"
+            },
+            {
+                name: "Design: Solid Empyrean Sapphire",
+                id: "35263"
+            },
+            {
+                name: "Design: Sparkling Empyrean Sapphire",
+                id: "35264"
+            },
+            {
+                name: "Design: Subtle Lionseye",
+                id: "35249"
+            },
+            {
+                name: "Naaru Ration",
+                id: "34780"
+            }
+        ],
+        "Honored": [{
+                name: "Design: Glinting Shadowsong Amethyst",
+                id: "35266"
+            },
+            {
+                name: "Design: Jagged Seaspray Emerald",
+                id: "35253"
+            },
+            {
+                name: "Design: Potent Pyrestone",
+                id: "35269"
+            },
+            {
+                name: "Design: Purified Shadowsong Amethyst",
+                id: "35251"
+            },
+            {
+                name: "Design: Radiant Seaspray Emerald",
+                id: "35254"
+            },
+            {
+                name: "Design: Timeless Shadowsong Amethyst",
+                id: "35239"
+            },
+            {
+                name: "Formula: Enchant Chest - Dodge",
+                id: "35500"
+            },
+            {
+                name: "Formula: Void Shatter",
+                id: "34872"
+            }
+        ],
+        "Revered": [{
+                name: "Design: Forceful Seaspray Emerald",
+                id: "35769"
+            },
+            {
+                name: "Design: Quick Lionseye",
+                id: "35768"
+            },
+            {
+                name: "Design: Reckless Pyrestone",
+                id: "35767"
+            },
+            {
+                name: "Design: Steady Seaspray Emerald",
+                id: "35766"
+            },
+            {
+                name: "Archmage's Guile",
+                id: "34667"
+            },
+            {
+                name: "Bombardier's Blade",
+                id: "34665"
+            },
+            {
+                name: "Inuuro's Blade",
+                id: "34672"
+            },
+            {
+                name: "K'iru's Presage",
+                id: "34671"
+            },
+            {
+                name: "Legionfoe",
+                id: "34673"
+            },
+            {
+                name: "Seeker's Gavel",
+                id: "34670"
+            },
+            {
+                name: "The Sunbreaker",
+                id: "34666"
+            },
+            {
+                name: "Truestrike Crossbow",
+                id: "34674"
+            },
+            {
+                name: "Design: Deadly Pyrestone",
+                id: "35271"
+            },
+            {
+                name: "Design: Ember Skyfire Diamond",
+                id: "35505"
+            },
+            {
+                name: "Design: Eternal Earthstorm Diamond",
+                id: "35502"
+            },
+            {
+                name: "Design: Figurine - Crimson Serpent",
+                id: "35697"
+            },
+            {
+                name: "Design: Figurine - Empyrean Tortoise",
+                id: "35695"
+            },
+            {
+                name: "Design: Figurine - Khorium Boar",
+                id: "35696"
+            },
+            {
+                name: "Design: Figurine - Seaspray Albatross",
+                id: "35699"
+            },
+            {
+                name: "Design: Figurine - Shadowsong Panther",
+                id: "35698"
+            },
+            {
+                name: "Design: Regal Seaspray Emerald",
+                id: "35252"
+            },
+            {
+                name: "Design: Regal Talasite",
+                id: "35708"
+            },
+            {
+                name: "Design: Rigid Empyrean Sapphire",
+                id: "35259"
+            },
+            {
+                name: "Arcanum of the Gladiator",
+                id: "29193"
+            }
+        ],
+        "Exalted": [{
+                name: "Dawnforged Defender",
+                id: "34676"
+            },
+            {
+                name: "Shattered Sun Pendant of Acumen",
+                id: "34678"
+            },
+            {
+                name: "Shattered Sun Pendant of Might",
+                id: "34679"
+            },
+            {
+                name: "Shattered Sun Pendant of Resolve",
+                id: "34680"
+            },
+            {
+                name: "Shattered Sun Pendant of Restoration",
+                id: "34677"
+            },
+            {
+                name: "Sunward Crest",
+                id: "34675"
+            },
+            {
+                name: "Design: Forceful Talasite",
+                id: "35325"
+            },
+            {
+                name: "Design: Quick Dawnstone",
+                id: "35322"
+            },
+            {
+                name: "Design: Reckless Noble Topaz",
+                id: "35323"
+            },
+            {
+                name: "Tabard of the Shattered Sun",
+                id: "35221"
+            },
+            {
+                name: "Design: Flashing Crimson Spinel",
+                id: "35247"
+            },
+            {
+                name: "Design: Inscribed Pyrestone",
+                id: "35267"
+            },
+            {
+                name: "Design: Mystic Lionseye",
+                id: "35258"
+            },
+            {
+                name: "Design: Shifting Shadowsong Amethyst",
+                id: "35242"
+            },
+            {
+                name: "Design: Sovereign Shadowsong Amethyst",
+                id: "35243"
+            },
+            {
+                name: "Design: Stormy Empyrean Sapphire",
+                id: "35265"
+            },
+            {
+                name: "Design: Veiled Shadowsong Amethyst",
+                id: "35270"
+            },
+            {
+                name: "Recipe: Assassin's Alchemist Stone",
+                id: "35755"
+            },
+            {
+                name: "Recipe: Guardian's Alchemist Stone",
+                id: "35752"
+            },
+            {
+                name: "Recipe: Redeemer's Alchemist Stone",
+                id: "35754"
+            },
+            {
+                name: "Recipe: Sorcerer's Alchemist Stone",
+                id: "35753"
+            }
+        ]
+    },
     "1094": { //The Silver Covenant
-        "Exalted":[
-            {
-                name:"Quel'dorei Steed",
-                id:"46815"
+        "Exalted": [{
+                name: "Quel'dorei Steed",
+                id: "46815"
             },
             {
-                name:"Silver Covenant Hippogryph",
-                id:"46813"
+                name: "Silver Covenant Hippogryph",
+                id: "46813"
             },
             {
-                name:"Shimmering Wyrmling",
-                id:"46820"
+                name: "Shimmering Wyrmling",
+                id: "46820"
             },
             {
-                name:"Silver Covenant Tabard",
-                id:"46817"
+                name: "Silver Covenant Tabard",
+                id: "46817"
+            }
+        ]
+    },
+    "1119": { //The Sons of Hodir
+        "Honored": [{
+                name: "Giant Ring Belt",
+                id: "44189"
+            },
+            {
+                name: "Lesser Inscription of the Axe",
+                id: "44131"
+            },
+            {
+                name: "Lesser Inscription of the Crag",
+                id: "44130"
+            },
+            {
+                name: "Lesser Inscription of the Pinnacle",
+                id: "44132"
+            },
+            {
+                name: "Lesser Inscription of the Storm",
+                id: "44129"
+            },
+            {
+                name: "Pattern: Mammoth Mining Bag",
+                id: "44510"
+            },
+            {
+                name: "Spaulders of Frozen Knives",
+                id: "44190"
+            },
+            {
+                name: "Arcanum of the Frosty Soul",
+                id: "44137"
+            }
+        ],
+        "Revered": [{
+                name: "Reins of the Ice Mammoth",
+                id: "43958"
+            },
+            {
+                name: "Reins of the Ice Mammoth",
+                id: "44080"
+            },
+            {
+                name: "Broken Stalactite",
+                id: "44193"
+            },
+            {
+                name: "Giant-Friend Kilt",
+                id: "44194"
+            },
+            {
+                name: "Spaulders of the Giant Lords",
+                id: "44195"
+            },
+            {
+                name: "Stalactite Chopper",
+                id: "44192"
+            }
+        ],
+        "Exalted": [{
+                name: "Greater Inscription of the Axe",
+                id: "50335"
+            },
+            {
+                name: "Greater Inscription of the Crag",
+                id: "50336"
+            },
+            {
+                name: "Greater Inscription of the Pinnacle",
+                id: "50337"
+            },
+            {
+                name: "Greater Inscription of the Storm",
+                id: "50338"
+            },
+            {
+                name: "Reins of the Grand Ice Mammoth",
+                id: "43961"
+            },
+            {
+                name: "Reins of the Grand Ice Mammoth",
+                id: "44086"
+            },
+            {
+                name: "Design: Smooth Autumn's Glow",
+                id: "41720"
+            },
+            {
+                name: "Pattern: Glacial Bag",
+                id: "42184"
             }
         ]
     },
     "1134": { //Gilneas
-        "Friendly":[
-            {
-                name:"Gilneas Tabard",
-                id:"64882"
-            }
-        ],
-        "Revered":[
-            {
-                name:"Gilnean Satchel",
-                id:"67532"
-            }
-        ],
-        "Exalted":[
-            {
-                name:"Shroud of Gilneas",
-                id:"64894"
+        "Friendly": [{
+            name: "Gilneas Tabard",
+            id: "64882"
+        }],
+        "Revered": [{
+            name: "Gilnean Satchel",
+            id: "67532"
+        }],
+        "Exalted": [{
+                name: "Shroud of Gilneas",
+                id: "64894"
             },
             {
-                name:"Cape of Gilneas",
-                id:"64893"
+                name: "Cape of Gilneas",
+                id: "64893"
             },
             {
-                name:"Mantle of Gilneas",
-                id:"64892"
+                name: "Mantle of Gilneas",
+                id: "64892"
+            }
+        ]
+    },
+    "1156": { //The Ashen Verdict
+        "Friendly": [{
+                name: "Ashen Band of Courage",
+                id: "50375"
+            },
+            {
+                name: "Ashen Band of Destruction",
+                id: "50377"
+            },
+            {
+                name: "Ashen Band of Might",
+                id: "52569"
+            },
+            {
+                name: "Ashen Band of Vengeance",
+                id: "50376"
+            },
+            {
+                name: "Ashen Band of Wisdom",
+                id: "50378"
+            }
+        ],
+        "Honored": [{
+                name: "Ashen Band of Greater Courage",
+                id: "50388"
+            },
+            {
+                name: "Ashen Band of Greater Destruction",
+                id: "50384"
+            },
+            {
+                name: "Ashen Band of Greater Might",
+                id: "52570"
+            },
+            {
+                name: "Ashen Band of Greater Vengeance",
+                id: "50387"
+            },
+            {
+                name: "Ashen Band of Greater Wisdom",
+                id: "50386"
+            },
+            {
+                name: "Pattern: Blessed Cenarion Boots",
+                id: "49958"
+            },
+            {
+                name: "Pattern: Deathfrost Boots",
+                id: "49954"
+            },
+            {
+                name: "Pattern: Earthsoul Boots",
+                id: "49963"
+            },
+            {
+                name: "Pattern: Footpads of Impending Death",
+                id: "49961"
+            },
+            {
+                name: "Pattern: Rock-Steady Treads",
+                id: "49966"
+            },
+            {
+                name: "Pattern: Sandals of Consecration",
+                id: "49956"
+            },
+            {
+                name: "Plans: Boots of Kingly Upheaval",
+                id: "49974"
+            },
+            {
+                name: "Plans: Hellfrozen Bonegrinders",
+                id: "49972"
+            },
+            {
+                name: "Plans: Protectors of Life",
+                id: "49970"
+            }
+        ],
+        "Revered": [{
+                name: "Ashen Band of Unmatched Courage",
+                id: "50403"
+            },
+            {
+                name: "Ashen Band of Unmatched Destruction",
+                id: "50397"
+            },
+            {
+                name: "Ashen Band of Unmatched Might",
+                id: "52571"
+            },
+            {
+                name: "Ashen Band of Unmatched Vengeance",
+                id: "50401"
+            },
+            {
+                name: "Ashen Band of Unmatched Wisdom",
+                id: "50399"
+            },
+            {
+                name: "Pattern: Bladeborn Leggings",
+                id: "49959"
+            },
+            {
+                name: "Pattern: Draconic Bonesplinter Legguards",
+                id: "49965"
+            },
+            {
+                name: "Pattern: Leggings of Woven Death",
+                id: "49953"
+            },
+            {
+                name: "Pattern: Legwraps of Unleashed Nature",
+                id: "49957"
+            },
+            {
+                name: "Pattern: Lightning-Infused Leggings",
+                id: "49962"
+            },
+            {
+                name: "Pattern: Lightweave Leggings",
+                id: "49955"
+            },
+            {
+                name: "Plans: Legplates of Painful Death",
+                id: "49971"
+            },
+            {
+                name: "Plans: Pillars of Might",
+                id: "49973"
+            },
+            {
+                name: "Plans: Puresteel Legplates",
+                id: "49969"
+            }
+        ],
+        "Exalted": [{
+                name: "Ashen Band of Endless Courage",
+                id: "50404"
+            },
+            {
+                name: "Ashen Band of Endless Destruction",
+                id: "50398"
+            },
+            {
+                name: "Ashen Band of Endless Might",
+                id: "52572"
+            },
+            {
+                name: "Ashen Band of Endless Vengeance",
+                id: "50402"
+            },
+            {
+                name: "Ashen Band of Endless Wisdom",
+                id: "50400"
+            }
+        ]
+    },
+    "1177": { //Baradin's Wardens
+        "Friendly": [{
+                name: "Baradin's Wardens Commendation",
+                id: "63517"
+            },
+            {
+                name: "Baradin's Wardens Bandage",
+                id: "63391"
+            },
+            {
+                name: "Baradin's Wardens Healing Potion",
+                id: "63144"
+            },
+            {
+                name: "Baradin's Wardens Mana Potion",
+                id: "63145"
+            }
+        ],
+        "Honored": [{
+                name: "Baradin Footman's Tags",
+                id: "65175"
+            },
+            {
+                name: "Baradin's Wardens Tabard",
+                id: "63379"
+            },
+            {
+                name: "Rustberg Gull",
+                id: "63355"
+            },
+            {
+                name: "Tol Barad Searchlight",
+                id: "63141"
+            }
+        ],
+        "Revered": [{
+                name: "Baradin's Wardens Battle Standard",
+                id: "63377"
+            },
+            {
+                name: "Blade of the Fearless",
+                id: "62473"
+            },
+            {
+                name: "Dagger of Restless Nights",
+                id: "62475"
+            },
+            {
+                name: "Darkheart Hacker",
+                id: "68739"
+            },
+            {
+                name: "Insidious Staff",
+                id: "62477"
+            },
+            {
+                name: "Ravening Slicer",
+                id: "62476"
+            },
+            {
+                name: "Shimmering Morningstar",
+                id: "62478"
+            },
+            {
+                name: "Sky Piercer",
+                id: "62479"
+            },
+            {
+                name: "Spear of Trailing Shadows",
+                id: "62474"
+            }
+        ],
+        "Exalted": [{
+                name: "Impatience of Youth",
+                id: "62469"
+            },
+            {
+                name: "Mandala of Stirring Patterns",
+                id: "62472"
+            },
+            {
+                name: "Mirror of Broken Images",
+                id: "62471"
+            },
+            {
+                name: "Reins of the Drake of the West Wind",
+                id: "63039"
+            },
+            {
+                name: "Reins of the Spectral Steed",
+                id: "64998"
+            },
+            {
+                name: "Stump of Time",
+                id: "62470"
+            },
+            {
+                name: "Unsolvable Riddle",
+                id: "62468"
+            },
+            {
+                name: "Fox Kit",
+                id: "90897"
+            }
+        ]
+    },
+    "1204": { //Avengers of Hyjal
+        "Friendly": [{
+                name: "Bladed Flamewrath Cover",
+                id: "71227"
+            },
+            {
+                name: "Durable Flamewrath Greatcloak",
+                id: "70930"
+            },
+            {
+                name: "Flowing Flamewrath Cape",
+                id: "71229"
+            },
+            {
+                name: "Rippling Flamewrath Drape",
+                id: "71230"
+            },
+            {
+                name: "Sleek Flamewrath Cloak",
+                id: "71228"
+            }
+        ],
+        "Honored": [{
+                name: "Belt of the Seven Seals",
+                id: "71253"
+            },
+            {
+                name: "Cinch of the Flaming Ember",
+                id: "71250"
+            },
+            {
+                name: "Embereye Belt",
+                id: "71258"
+            },
+            {
+                name: "Firearrow Belt",
+                id: "71255"
+            },
+            {
+                name: "Firemend Cinch",
+                id: "71254"
+            },
+            {
+                name: "Firescar Sash",
+                id: "71249"
+            },
+            {
+                name: "Flamebinding Girdle",
+                id: "71131"
+            },
+            {
+                name: "Girdle of the Indomitable Flame",
+                id: "70933"
+            }
+        ],
+        "Revered": [{
+                name: "Ancient Petrified Seed",
+                id: "69001"
+            },
+            {
+                name: "Essence of the Eternal Flame",
+                id: "69002"
+            },
+            {
+                name: "Fiery Quintessence",
+                id: "69000"
+            },
+            {
+                name: "Rune of Zeth",
+                id: "68998"
+            },
+            {
+                name: "Stay of Execution",
+                id: "68996"
+            }
+        ],
+        "Exalted": [{
+                name: "Adamantine Signet of the Avengers",
+                id: "70934"
+            },
+            {
+                name: "Infernal Signet of the Avengers",
+                id: "71217"
+            },
+            {
+                name: "Obsidian Signet of the Avengers",
+                id: "71215"
+            },
+            {
+                name: "Quicksilver Signet of the Avengers",
+                id: "71237"
+            },
+            {
+                name: "Viridian Signet of the Avengers",
+                id: "71216"
+            }
+        ]
+    },
+    "1269": { //Golden Lotus
+        "Honored": [{
+                name: "Pattern: Angerhide Leg Armor",
+                id: "86235"
+            },
+            {
+                name: "Pattern: Chestguard of Earthen Harmony",
+                id: "86237"
+            },
+            {
+                name: "Pattern: Gloves of Creation",
+                id: "86371"
+            },
+            {
+                name: "Pattern: Gloves of Earthen Harmony",
+                id: "86273"
+            },
+            {
+                name: "Pattern: Greater Cerulean Spellthread",
+                id: "86376"
+            },
+            {
+                name: "Pattern: Greater Pearlescent Spellthread",
+                id: "86375"
+            },
+            {
+                name: "Pattern: Greyshadow Chestguard",
+                id: "86274"
+            },
+            {
+                name: "Pattern: Greyshadow Gloves",
+                id: "86275"
+            },
+            {
+                name: "Pattern: Ironscale Leg Armor",
+                id: "86276"
+            },
+            {
+                name: "Pattern: Lifekeeper's Gloves",
+                id: "86277"
+            },
+            {
+                name: "Pattern: Lifekeeper's Robe",
+                id: "86278"
+            },
+            {
+                name: "Pattern: Robes of Creation",
+                id: "86370"
+            },
+            {
+                name: "Pattern: Shadowleather Leg Armor",
+                id: "86295"
+            },
+            {
+                name: "Pattern: Spelltwister's Gloves",
+                id: "86369"
+            },
+            {
+                name: "Pattern: Spelltwister's Grand Robe",
+                id: "86368"
+            },
+            {
+                name: "Pattern: Wildblood Gloves",
+                id: "86308"
+            },
+            {
+                name: "Pattern: Wildblood Vest",
+                id: "86309"
+            }
+        ],
+        "Revered": [{
+            name: "Grand Commendation of the Golden Lotus",
+            id: "93215"
+        }],
+        "Exalted": [{
+                name: "Reins of the Azure Riding Crane",
+                id: "87781"
+            },
+            {
+                name: "Reins of the Golden Riding Crane",
+                id: "87782"
+            },
+            {
+                name: "Reins of the Regal Riding Crane",
+                id: "87783"
+            },
+            {
+                name: "Golden Lotus Tabard",
+                id: "89797"
+            }
+        ]
+    },
+    "1272": { //The Tillers
+        "Revered": [{
+            name: "Grand Commendation of the Tillers",
+            id: "93226"
+        },
+        {
+            name: "Pandaren Scarecrow",
+            id: "89869"
+        }],
+        "Exalted": [{
+                name: "Reins of the Black Riding Goat",
+                id: "89391"
+            },
+            {
+                name: "Reins of the Brown Riding Goat",
+                id: "89362"
+            },
+            {
+                name: "Reins of the White Riding Goat",
+                id: "89390"
+            },
+            {
+                name: "Tillers Tabard",
+                id: "89784"
+            },
+            {
+                name: "Gin-Ji Knife Set",
+                id: "90175"
+            },
+            {
+                name: "Mourning Glory",
+                id: "80914"
+            },
+            {
+                name: "Recipe: Spicy Salmon",
+                id: "74657"
+            },
+            {
+                name: "Recipe: Spicy Vegetable Chips",
+                id: "74658"
+            }
+        ]
+    },
+    "1302": { //The Anglers
+        "Friendly": [{
+            name: "Recipe: Krasarang Fritters",
+            id: "85505"
+        },
+        {
+            name: "Recipe: Viseclaw Soup",
+            id: "85502"
+        }],
+        "Honored": [{
+            name: "Tiny Goldfish",
+            id: "85447"
+        },
+        {
+            name: "Pandaren Fishing Pole",
+            id: "84660"
+        }],
+        "Revered": [{
+            name: "Grand Commendation of the Anglers",
+            id: "93225"
+        },
+        {
+            name: "Anglers Fishing Raft",
+            id: "85500"
+        },
+        {
+            name: "Bipsi's Bobbing Berg",
+            id: "107950"
+        },
+        {
+            name: "Dragon Fishing Pole",
+            id: "84661"
+        },
+        {
+            name: "Sharpened Tuskarr Spear",
+            id: "88535"
+        }],
+        "Exalted": [{
+                name: "Reins of the Azure Water Strider",
+                id: "81354"
+            },
+            {
+                name: "Anglers Tabard",
+                id: "89401"
+            }
+        ]
+    },
+    "1337": { //The Klaxxi
+        "Honored": [{
+                name: "Plans: Breastplate of Ancient Steel",
+                id: "83791"
+            },
+            {
+                name: "Plans: Gauntlets of Ancient Steel",
+                id: "83792"
+            },
+            {
+                name: "Plans: Ghost Iron Shield Spike",
+                id: "90531"
+            },
+            {
+                name: "Plans: Ghost Reaver's Breastplate",
+                id: "83787"
+            },
+            {
+                name: "Plans: Ghost Reaver's Gauntlets",
+                id: "83788"
+            },
+            {
+                name: "Plans: Living Steel Belt Buckle",
+                id: "84196"
+            },
+            {
+                name: "Plans: Living Steel Breastplate",
+                id: "83789"
+            },
+            {
+                name: "Plans: Living Steel Gauntlets",
+                id: "83790"
+            },
+            {
+                name: "Plans: Living Steel Weapon Chain",
+                id: "90532"
+            },
+            {
+                name: "Plans: Masterwork Forgewire Axe",
+                id: "84197"
+            },
+            {
+                name: "Plans: Masterwork Ghost Shard",
+                id: "84198"
+            },
+            {
+                name: "Plans: Masterwork Phantasmal Hammer",
+                id: "84217"
+            },
+            {
+                name: "Plans: Masterwork Spiritblade Decimator",
+                id: "84218"
+            },
+            {
+                name: "Restorative Amber",
+                id: "89230"
+            }
+        ],
+        "Revered": [{
+            name: "Grand Commendation of the Klaxxi",
+            id: "92522"
+        }],
+        "Exalted": [{
+                name: "Reins of the Amber Scorpion",
+                id: "85262"
+            },
+            {
+                name: "Amber Espada of Klaxxi'vess",
+                id: "89396"
+            },
+            {
+                name: "Amber Flammard of Klaxxi'vess",
+                id: "89398"
+            },
+            {
+                name: "Amber Saber of Klaxxi'vess",
+                id: "89397"
+            },
+            {
+                name: "Amber Scythe of Klaxxi'vess",
+                id: "89395"
+            },
+            {
+                name: "Amber Sledge of Klaxxi'vess",
+                id: "89400"
+            },
+            {
+                name: "Amber Slicer of Klaxxi'vess",
+                id: "89393"
+            },
+            {
+                name: "Amber Spear of Klaxxi'vess",
+                id: "89394"
+            },
+            {
+                name: "Amber Spine of Klaxxi'vess",
+                id: "89392"
+            },
+            {
+                name: "Amber Sprayer of Klaxxi'vess",
+                id: "89399"
+            },
+            {
+                name: "Klaxxi Tabard",
+                id: "89798"
+            }
+        ]
+    },
+    "1341": { //The August Celestials
+        "Honored": [{
+                name: "Celestial Offering",
+                id: "89124"
+            }
+        ],
+        "Revered": [{
+            name: "Grand Commendation of the August Celestials",
+            id: "93224"
+        },
+        {
+            name: "Formula: Enchant Bracer - Exceptional Strength",
+            id: "84561"
+        },
+        {
+            name: "Formula: Enchant Bracer - Greater Agility",
+            id: "84557"
+        },
+        {
+            name: "Formula: Enchant Bracer - Super Intellect",
+            id: "84559"
+        }],
+        "Exalted": [{
+                name: "Reins of the Thundering August Cloud Serpent",
+                id: "89304"
+            },
+            {
+                name: "Pattern: Royal Satchel",
+                id: "86377"
+            },
+            {
+                name: "August Celestials Tabard",
+                id: "89799"
+            }
+        ]
+    },
+    "1345": { //The Lorewalkers
+        "Revered": [{
+            name: "Grand Commendation of the Lorewalkers",
+            id: "93230"
+        },
+        {
+            name: "Music Roll: Song of Liu Lang",
+            id: "122221"
+        }],
+        "Exalted": [{
+                name: "Disc of the Red Flying Cloud",
+                id: "89363"
+            },
+            {
+                name: "Lorewalker's Lodestone",
+                id: "87548"
+            },
+            {
+                name: "Lorewalkers Tabard",
+                id: "89795"
+            },
+            {
+                name: "Lorewalker's Map",
+                id: "87549"
+            },
+            {
+                name: "Mantid Artifact Sonic Locator",
+                id: "95509"
+            },
+            {
+                name: "Mantid Artifact Hunter's Kit",
+                id: "104198"
+            }
+        ]
+    },
+    "1358": { //Nat Pagle
+        "Friend": [{
+            name: "Nat's Drinking Hat",
+            id: "117405"
+        },
+        {
+            name: "Draenic Fishing Pole",
+            id: "116826"
+        },
+        {
+            name: "Savage Fishing Pole",
+            id: "116825"
+        }],
+        "Good Friend": [{
+                name: "Land Shark",
+                id: "117404"
+            }
+        ],
+        "Best Friend": [{
+            name: "Nat's Hat",
+            id: "88710"
+        },
+        {
+            name: "Reins of the Crimson Water Strider",
+            id: "87791"
+        }]
+    },
+    "1387": { //Kirin Tor Offensive
+        "Friendly": [{
+            name: "Potion of Light Steps",
+            id: "95054"
+        }],
+        "Honored": [{
+                name: "Belt of Loa Charms",
+                id: "95532"
+            },
+            {
+                name: "Cinch of the Dead Forest's Vigil",
+                id: "95530"
+            },
+            {
+                name: "Girdle of Shan'ze Glory",
+                id: "95529"
+            },
+            {
+                name: "Pain-Binder Girdle",
+                id: "95527"
+            },
+            {
+                name: "Rotting Bog Cinch",
+                id: "95531"
+            },
+            {
+                name: "Shan'ze Scholar's Girdle",
+                id: "95526"
+            },
+            {
+                name: "Skumblade Ritualist Links",
+                id: "95534"
+            },
+            {
+                name: "Skumblade-Tooth Girdle",
+                id: "95528"
+            },
+            {
+                name: "Thunder Caressed Waistguard",
+                id: "95533"
+            },
+            {
+                name: "A Common Rock",
+                id: "95053"
+            },
+            {
+                name: "Sleep Dust",
+                id: "95093"
+            }
+        ],
+        "Revered": [{
+                name: "Grand Commendation of the Kirin Tor Offensive",
+                id: "95545"
+            },
+            {
+                name: "Arcane Propellant",
+                id: "95052"
+            },
+            {
+                name: "Frost Rune Trap",
+                id: "95055"
+            }
+        ],
+        "Exalted": [{
+                name: "Reins of the Golden Primal Direhorn",
+                id: "95564"
+            },
+            {
+                name: "Glorious Standard of the Kirin Tor Offensive",
+                id: "95589"
+            },
+            {
+                name: "Kirin Tor Offensive Tabard",
+                id: "95591"
+            },
+            {
+                name: "Arcane Trove",
+                id: "98560"
+            },
+            {
+                name: "Empty Supply Crate",
+                id: "98558"
+            },
+            {
+                name: "Polymorphic Key",
+                id: "95056"
             }
         ]
     },
     "1376": { //Operation: Shieldwall
-        "Exalted":[
-            {
-                name:"Grand Commendation of Operation: Shieldwall",
-                id:"93231"
+        "Exalted": [{
+                name: "Grand Commendation of Operation: Shieldwall",
+                id: "93231"
             },
             {
-                name:"Grand Armored Gryphon",
-                id:"93168"
+                name: "Grand Armored Gryphon",
+                id: "93168"
             }
         ]
     },
@@ -2588,209 +3671,424 @@ const rewards = {
             }
         ]
     },
+    "1515": { //Arakkoa Outcasts
+        "Friendly": [{
+            name: "Arakkoa Elixir",
+            id: "118666"
+        }],
+        "Honored": [{
+                name: "Saberon Protector",
+                id: "118682"
+            }
+        ],
+        "Revered": [{
+                name: "Son of Sethe",
+                id: "119143"
+            },
+            {
+                name: "Trade Agreement: Arakkoa Outcasts",
+                id: "128294"
+            },
+            {
+                name: "Wings of the Outcasts",
+                id: "118698"
+            }
+        ],
+        "Exalted": [{
+                name: "Shadowmane Charger",
+                id: "116772"
+            },
+            {
+                name: 'Arakkoa Outcasts Tabard',
+                id: "119136"
+            },
+            {
+                name: "Draenor Archaeologist's Lodestone",
+                id: "117389"
+            },
+            {
+                name: "Draenor Archaeologist's Map",
+                id: "117390"
+            }
+        ]
+    },
+    "1682": { //Wrynn's Vanguard
+        "Friendly": [{
+            name: "Disposable Pocket Flying Machine",
+            id: "114126"
+        },
+        {
+            name: "Primal Combatant's Badge of Adaptation",
+            id: "115521"
+        },
+        {
+            name: "Wrynn's Vanguard Battle Standard",
+            id: "115513"
+        }],
+        "Honored": [{
+                name: "Flimsy X-Ray Goggles",
+                id: "115532"
+            },
+            {
+                name: "Swift Riding Crop",
+                id: "115522"
+            }
+        ],
+        "Revered": [{
+                name: "LeBlanc's Recorder",
+                id: "116396"
+            },
+            {
+                name: "Primal Gladiator's Badge of Adaptation",
+                id: "115496"
+            }
+        ],
+        "Exalted": [{
+                name: "Pale Thorngrazer",
+                id: "116776"
+            },
+            {
+                name: "Wrynn's Vanguard Tabard",
+                id: "115517"
+            }
+        ]
+    },
     "1710": { //Sha'tari Defense
-        "Friendly":[
+        "Friendly": [{
+            name: "Sha'tari Elixir",
+            id: "118669"
+        }],
+        "Honored": [{
+                name: "Sha'tari Protector",
+                id: "118685"
+            },
             {
-                name:"Sha'tari Elixir",
-                id:"118669"
+                name: "Soul Evacuation Crystal",
+                id: "119182"
             }
         ],
-        "Honored":[
-            {
-                name:"Sha'tari Protector",
-                id:"118685"
+        "Revered": [{
+                name: "Contract: Vindicator Heluun",
+                id: "119167"
             },
             {
-                name:"Soul Evacuation Crystal",
-                id:"119182"
-            }
-        ],
-        "Revered":[
-            {
-                name:"Contract: Vindicator Heluun",
-                id:"119167"
+                name: "Ensemble: Sha'tari Defender's Plate",
+                id: "158208"
             },
             {
-                name:"Ensemble: Sha'tari Defender's Plate",
-                id:"158208"
+                name: "Sha'tari Defender's Medallion",
+                id: "119421"
             },
             {
-                name:"Sha'tari Defender's Medallion",
-                id:"119421"
-            },
-            {
-                name:"Sky Fry",
-                id:"119150"
+                name: "Sky Fry",
+                id: "119150"
             },
         ],
-        "Exalted":[
-            {
-                name:"Armored Irontusk",
-                id:"116665"
+        "Exalted": [{
+                name: "Armored Irontusk",
+                id: "116665"
             },
             {
-                name:"Sha'tari Defense Tabard",
-                id:"119140"
+                name: "Sha'tari Defense Tabard",
+                id: "119140"
             }
         ]
     },
     "1711": { //Steamwheedle Preservation Society
-        "Friendly":[
+        "Friendly": [{
+            name: "Steamwheedle Elixir",
+            id: "118667"
+        }],
+        "Honored": [{
+                name: "Portable Goon Squad",
+                id: "118683"
+            },
             {
-                name:"Steamwheedle Elixir",
-                id:"118667"
+                name: "Goblin Hot Potato",
+                id: "110426"
             }
         ],
-        "Honored":[
-            {
-                name:"Portable Goon Squad",
-                id:"118683"
+        "Revered": [{
+                name: "Contract: Professor Felblast",
+                id: "119165"
             },
             {
-                name:"Goblin Hot Potato",
-                id:"110426"
+                name: "Captured Forest Sproutling",
+                id: "119149"
+            },
+            {
+                name: "Indentured Albino River Calf",
+                id: "119148"
             }
         ],
-        "Revered":[
-            {
-                name:"Contract: Professor Felblast",
-                id:"119165"
+        "Exalted": [{
+                name: "Domesticated Razorback",
+                id: "116672"
             },
             {
-                name:"Captured Forest Sproutling",
-                id:"119149"
-            },
-            {
-                name:"Indentured Albino River Calf",
-                id:"119148"
-            }
-        ],
-        "Exalted":[
-            {
-                name:"Domesticated Razorback",
-                id:"116672"
-            },
-            {
-                name:'Steamwheedle "Preservation" Society Tabard',
-                id:"119137"
+                name: 'Steamwheedle "Preservation" Society Tabard',
+                id: "119137"
             }
         ]
     },
     "1731": { //Council of Exarchs
-        "Friendly":[
+        "Friendly": [{
+            name: "Exarch Elixir",
+            id: "118665"
+        }],
+        "Honored": [{
+                name: "Permanent Time Bubble",
+                id: "115472"
+            },
             {
-                name:"Exarch Elixir",
-                id:"118665"
+                name: "Tranquility of the Exarchs",
+                id: "118680"
             }
         ],
-        "Honored":[
-            {
-                name:"Permanent Time Bubble",
-                id:"115472"
+        "Revered": [{
+                name: "Contract: Cleric Maluuf",
+                id: "119162"
             },
             {
-                name:"Tranquility of the Exarchs",
-                id:"118680"
+                name: "Relic of Karabor",
+                id: "118663"
+            },
+            {
+                name: "Draenei Micro Defender",
+                id: "119142"
             }
         ],
-        "Revered":[
-            {
-                name:"Contract: Cleric Maluuf",
-                id:"119162"
+        "Exalted": [{
+                name: "Dusty Rockhide",
+                id: "116664"
             },
             {
-                name:"Relic of Karabor",
-                id:"118663"
+                name: 'Council of Exarchs Tabard',
+                id: "119135"
+            }
+        ]
+    },
+    "1828": { //Highmountain Tribe
+        "Friendly": [{
+                name: "Whitewater Carp",
+                id: "131814"
             },
             {
-                name:"Draenei Micro Defender",
-                id:"119142"
+                name: "Bloodtotem War Harness",
+                id: "140333"
+            },
+            {
+                name: "Boon of the Butcher",
+                id: "140215"
             }
         ],
-        "Exalted":[
-            {
-                name:"Dusty Rockhide",
-                id:"116664"
+        "Honored": [{
+                name: "Design: Skystone Loop",
+                id: "137839"
             },
             {
-                name:'Council of Exarchs Tabard',
-                id:"119135"
+                name: "Recipe: Gleaming Iron Spike",
+                id: "136697"
+            },
+            {
+                name: "Rivermane War Harness",
+                id: "140332"
+            },
+            {
+                name: "Treasure Map: Highmountain",
+                id: "140731"
+            },
+            {
+                name: "Windfall Totem",
+                id: "140330"
+            },
+            {
+                name: "Baby Elderhorn",
+                id: "136919"
+            }
+        ],
+        "Revered": [{
+                name: "Darkshard Fragment",
+                id: "131812"
+            },
+            {
+                name: "Harpy-Hunter's Gloves",
+                id: "139601"
+            },
+            {
+                name: "Log",
+                id: "140655"
+            },
+            {
+                name: "Recipe: Drums of the Mountain",
+                id: "142408"
+            },
+            {
+                name: "Skyhorn War Harness",
+                id: "140331"
+            }
+        ],
+        "Exalted": [{
+                name: "Mountainforged Chain Hauberk",
+                id: "139597"
+            },
+            {
+                name: "Tabard of the Highmountain Tribe",
+                id: "140576"
+            },
+            {
+                name: "Totem Tote",
+                id: "140335"
+            },
+            {
+                name: "Design: Ancient Maelstrom Amulet",
+                id: "137855"
+            },
+            {
+                name: "Design: Dawnlight Band",
+                id: "137846"
+            },
+            {
+                name: "Design: Prophetic Band",
+                id: "137844"
+            },
+            {
+                name: "Highmountain War Harness",
+                id: "140334"
+            },
+            {
+                name: "Recipe: Demonsteel Armguards",
+                id: "123948"
+            },
+            {
+                name: "Recipe: Demonsteel Breastplate",
+                id: "123955"
+            },
+            {
+                name: "Recipe: Demonsteel Gauntlets",
+                id: "123953"
+            },
+            {
+                name: "Recipe: Drums of the Mountain",
+                id: "142409"
+            }
+        ]
+    },
+    "1847": { //Hand of the Prophet
+        "Friendly": [{
+            name: "Hand of the Prophet Battle Standard",
+            id: "128452"
+        },
+        {
+            name: "Ship Blueprint: Battleship",
+            id: "128492"
+        }],
+        "Honored": [{
+                name: "Contract: Dowser Bigspark",
+                id: "128445"
+            },
+            {
+                name: "Equipment Blueprint: Tuskarr Fishing Net",
+                id: "128491"
+            },
+            {
+                name: "Treasure Map: Tanaan Jungle",
+                id: "128474"
+            }
+        ],
+        "Revered": [{
+                name: "Ensemble: Ceremonial Karabor Finery",
+                id: "128473"
+            },
+            {
+                name: "Equipment Blueprint: Unsinkable",
+                id: "128250"
+            },
+            {
+                name: "Karabor Councilor's Attire",
+                id: "128462"
+            },
+            {
+                name: "Blueprint: Oil Rig",
+                id: "128444"
+            }
+        ],
+        "Exalted": [{
+                name: "Deathtusk Felboar",
+                id: "128527"
+            },
+            {
+                name: "Empowered Augment Rune",
+                id: "128482"
             }
         ]
     },
     "1850": { //The Saberstalkers
-        "Friendly":[
-            {
-                name:"Saberstalkers Battle Standard",
-                id:"128453"
-            }
-        ],
-        "Honored":[
-            {
-                name:"Contract: Pallas",
-                id:"128439"
+        "Friendly": [{
+            name: "Saberstalkers Battle Standard",
+            id: "128453"
+        }],
+        "Honored": [{
+                name: "Contract: Pallas",
+                id: "128439"
             },
             {
-                name:"Wild Goretusk",
-                id:"116671"
+                name: "Wild Goretusk",
+                id: "116671"
             }
         ],
-        "Revered":[
-            {
-                name:"Saberstalker Teachings: Trailblazer",
-                id:"128446"
+        "Revered": [{
+                name: "Saberstalker Teachings: Trailblazer",
+                id: "128446"
             },
             {
-                name:"Savage Cub",
-                id:"128477"
+                name: "Savage Cub",
+                id: "128477"
             }
         ],
-        "Exalted":[
-            {
-                name:"Bristling Hellboar",
-                id:"128481"
+        "Exalted": [{
+                name: "Bristling Hellboar",
+                id: "128481"
             },
             {
-                name:'Saberstalkers Tabard',
-                id:"128449"
+                name: 'Saberstalkers Tabard',
+                id: "128449"
             }
         ]
     },
     "1859": { //Nightfallen
-        "Friendly":[
-            {
-                name:"Scavenged Felsoul Sabatons",
-                id:"140015"
+        "Friendly": [{
+                name: "Scavenged Felsoul Sabatons",
+                id: "140015"
             },
             {
-                name:"Footpads of the Nightrunners",
-                id:"139979"
+                name: "Footpads of the Nightrunners",
+                id: "139979"
             },
             {
-                name:"Irongrove Refugee Boots",
-                id:"121738"
+                name: "Irongrove Refugee Boots",
+                id: "121738"
             },
             {
-                name:"Nightfall Slippers",
-                id:"121736"
+                name: "Nightfall Slippers",
+                id: "121736"
             },
         ],
-        "Honored":[
-            {
-                name:"Braided Manastring Cinch",
-                id:"139600"
+        "Honored": [{
+                name: "Braided Manastring Cinch",
+                id: "139600"
             },
             {
-                name:"Mobile Telemancy Beacon",
-                id:"140324"
+                name: "Mobile Telemancy Beacon",
+                id: "140324"
             },
             {
-                name:"Boon of the Manaseeker",
-                id:"140218"
+                name: "Boon of the Manaseeker",
+                id: "140218"
             },
             {
-                name:"Treasure Map: Suramar",
-                id:"140746"
+                name: "Treasure Map: Suramar",
+                id: "140746"
             },
             {
                 name: "ilvl 820 Class Hall Set Gloves"
@@ -2799,96 +4097,260 @@ const rewards = {
                 name: "830-840 Class Hall set upgrade tokens"
             }
         ],
-        "Revered":[
-            {
-                name:"Mana-Soaked Amethyst Pendant",
-                id:"139604"
+        "Revered": [{
+                name: "Mana-Soaked Amethyst Pendant",
+                id: "139604"
             },
             {
-                name:"Home Made Party Mask",
-                id:"140325"
+                name: "Home Made Party Mask",
+                id: "140325"
             },
             {
-                name:"Recipe: Potion of Prolonged Power",
-                id:"142120"
+                name: "Recipe: Potion of Prolonged Power",
+                id: "142120"
             },
             {
-                name:"Extinguished Eye",
-                id:"136899"
+                name: "Extinguished Eye",
+                id: "136899"
             },
         ],
-        "Exalted":[
-            {
-                name:"Nightfallen Tabard",
-                id:"140575"
+        "Exalted": [{
+                name: "Nightfallen Tabard",
+                id: "140575"
             },
             {
-                name:"Formula: Enchant Ring - Binding of Versatility",
-                id:"128603"
+                name: "Formula: Enchant Ring - Binding of Versatility",
+                id: "128603"
             },
             {
-                name:"Pattern: Imbued Silkweave Slippers",
-                id:"137979"
+                name: "Pattern: Imbued Silkweave Slippers",
+                id: "137979"
             },
             {
-                name:"Pattern: Imbued Silkweave Bracers",
-                id:"137973"
+                name: "Pattern: Imbued Silkweave Bracers",
+                id: "137973"
             },
             {
-                name:"Design: Subtle Shadowruby Pendant",
-                id:"137850"
+                name: "Design: Subtle Shadowruby Pendant",
+                id: "137850"
             },
             {
-                name:"Formula: Enchant Ring - Binding of Critical Strike",
-                id:"128600"
+                name: "Formula: Enchant Ring - Binding of Critical Strike",
+                id: "128600"
             },
             {
-                name:"Formula: Enchant Cloak - Binding of Intellect",
-                id:"128609"
+                name: "Formula: Enchant Cloak - Binding of Intellect",
+                id: "128609"
             },
             {
-                name:"Pattern: Imbued Silkweave Pantaloons",
-                id:"137976"
+                name: "Pattern: Imbued Silkweave Pantaloons",
+                id: "137976"
             },
             {
-                name:"Formula: Enchant Ring - Binding of Mastery",
-                id:"128602"
+                name: "Formula: Enchant Ring - Binding of Mastery",
+                id: "128602"
+            }
+        ]
+    },
+    "1894": { //The Wardens
+        "Honored": [{
+                name: "Trapped Treasure Chest Kit",
+                id: "130191"
+            },
+            {
+                name: "Recipe: Feathered Luffa",
+                id: "142333"
+            },
+            {
+                name: "Schematic: Bolt-Action Headgun",
+                id: "137713"
+            },
+            {
+                name: "Schematic: Reinforced Headgun",
+                id: "137714"
+            }
+        ],
+        "Revered": [{
+                name: "Boon of the Bloodhunter",
+                id: "140219"
+            },
+            {
+                name: "Fledgling Warden Owl",
+                id: "136898"
+            },
+            {
+                name: "Syxsehnz Rod",
+                id: "130157"
+            },
+            {
+                name: "Vault Patroller's Warboots",
+                id: "139603"
+            },
+            {
+                name: "Recipe: Spiced Falcosaur Omelet",
+                id: "142331"
+            },
+            {
+                name: "Vantus Rune Technique: Cenarius",
+                id: "137773"
+            },
+            {
+                name: "Vantus Rune Technique: Odyn",
+                id: "142107"
+            },
+            {
+                name: "Vantus Rune Technique: Return to Karazhan (Upper)",
+                id: "146385"
+            },
+            {
+                name: "Vantus Rune Technique: Spellblade Aluriel",
+                id: "137777"
+            },
+            {
+                name: "Vantus Rune Technique: Star Augur Etraeus",
+                id: "137781"
+            },
+            {
+                name: "Vantus Rune Technique: The Arcway",
+                id: "146381"
+            }
+        ],
+        "Exalted": [{
+                name: "Drape of the Patient Hunter",
+                id: "139607"
+            },
+            {
+                name: "Warden's Tabard",
+                id: "140580"
+            },
+            {
+                name: "Design: Twisted Pandemonite Choker",
+                id: "137849"
+            },
+            {
+                name: "Schematic: Sawed-Off Cranial Cannon",
+                id: "137716"
+            },
+            {
+                name: "Schematic: Semi-Automagic Cranial Cannon",
+                id: "137715"
+            }
+        ]
+    },
+    "1900": { //Court of Farondis
+        "Honored": [{
+                name: "Enchanted Stone Whistle",
+                id: "129279"
+            },
+            {
+                name: "Pattern: Silkweave Pantaloons",
+                id: "138015"
+            },
+            {
+                name: "Treasure Map: Azsuna",
+                id: "140744"
+            },
+            {
+                name: "Vainglorious Draught",
+                id: "139631"
+            }
+        ],
+        "Revered": [{
+                name: "Syriel Crescentfall's Notes: Ravenguard",
+                id: "139556"
+            },
+            {
+                name: "Beginner's Guide to Dimensional Rifting",
+                id: "129276"
+            },
+            {
+                name: "Boon of the Gemfinder",
+                id: "140213"
+            },
+            {
+                name: "Cadet's Gaudy Scarf",
+                id: "139606"
+            },
+            {
+                name: "Court Scribe",
+                id: "140672"
+            },
+            {
+                name: "Vantus Rune Technique: Cathedral of Eternal Night",
+                id: "146384"
+            },
+            {
+                name: "Vantus Rune Technique: High Botanist Tel'arn",
+                id: "137779"
+            },
+            {
+                name: "Vantus Rune Technique: Krosus",
+                id: "137780"
+            },
+            {
+                name: "Vantus Rune Technique: Skorpyron",
+                id: "137774"
+            },
+            {
+                name: "Vantus Rune Technique: Trilliax",
+                id: "137776"
+            },
+            {
+                name: "Vantus Rune Technique: Vault of the Wardens",
+                id: "146382"
+            }
+        ],
+        "Exalted": [{
+                name: "Once-Fashionable Nar'thalas Leggings",
+                id: "139595"
+            },
+            {
+                name: "Court of Farondis Tabard",
+                id: "140577"
+            },
+            {
+                name: "Pattern: Imbued Silkweave Gloves",
+                id: "137978"
+            },
+            {
+                name: "Pattern: Imbued Silkweave Hood",
+                id: "137977"
+            },
+            {
+                name: "Pattern: Imbued Silkweave Robe",
+                id: "137980"
             }
         ]
     },
     "1975": { //Conjurer Margoss
-        "Friend":[
-            {
-                name:"Murloc Bobber",
-                id:"136376"
+        "Friend": [{
+                name: "Murloc Bobber",
+                id: "136376"
             },
             {
-                name:"Squeaky Duck Bobber",
-                id:"136375"
+                name: "Squeaky Duck Bobber",
+                id: "136375"
             },
             {
-                name:"Crate of Bobbers: Squeaky Duck",
-                id:"142531"
+                name: "Crate of Bobbers: Squeaky Duck",
+                id: "142531"
             },
             {
-                name:"Crate of Bobbers: Murloc Head",
-                id:"142532"
+                name: "Crate of Bobbers: Murloc Head",
+                id: "142532"
             }
         ],
-        "Good Friend":[
-            {
-                name:"Sting Ray Pup",
-                id:"138810"
-            }
-        ],
-        "Best Friend":[
-            {
-                name:"Brinedeep Bottom-Feeder",
-                id:"138811"
+        "Good Friend": [{
+            name: "Sting Ray Pup",
+            id: "138810"
+        }],
+        "Best Friend": [{
+                name: "Brinedeep Bottom-Feeder",
+                id: "138811"
             },
             {
-                name:'Trashy',
-                id:"143842"
+                name: 'Trashy',
+                id: "143842"
             }
         ]
     },
@@ -4171,8 +5633,7 @@ const rewards = {
                 id:"160544"
             }
         ]
-    },
-
+    }
 }
 
 export default rewards;

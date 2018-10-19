@@ -92,7 +92,7 @@ class RepLayout extends Component {
                 tempRep = this.state.vanilla;
                 tempRep.push(rep);
                 this.setState({vanilla: tempRep});
-            } else if (rep.id < 1036 || rep.id === 1038) { // BC Reps
+            } else if (rep.id < 1036 || rep.id === 1038 || rep.id === 1077) { // BC Reps
                 tempRep = this.state.bc;
                 tempRep.push(rep);
                 this.setState({bc: tempRep});
@@ -104,7 +104,7 @@ class RepLayout extends Component {
                 tempRep = this.state.cata;
                 tempRep.push(rep);
                 this.setState({cata: tempRep});
-            } else if (rep.id <= 1435) { // Mop Reps
+            } else if (rep.id <= 1435 && rep.id !== 1358) { // Mop Reps
                 tempRep = this.state.mop;
                 tempRep.push(rep);
                 this.setState({mop: tempRep});
