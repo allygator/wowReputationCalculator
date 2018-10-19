@@ -1,9 +1,10 @@
-const clientID = process.env.CLIENTID;
-const secret = process.env.SECRET;
+import fetch from "node-fetch";
+
+const endpoint = 'https://us.battle.net/oauth/token?grant_type=client_credentials&client_id='+process.env.CLIENTID+'&client_secret='+process.env.SECRET;
 
 exports.handler = async (event, context, callback) => {
   return callback(null, {
     statusCode: 200,
-    body: secret
+    body: endpoint
     })
 };
