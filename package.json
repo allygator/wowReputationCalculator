@@ -5,6 +5,7 @@
   "homepage": "/",
   "dependencies": {
     "gh-pages": "^1.2.0",
+    "npm": "^6.4.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
@@ -19,5 +20,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.0.2",
+    "node-fetch": "^2.2.0"
   }
 }
