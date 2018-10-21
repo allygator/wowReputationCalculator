@@ -28,7 +28,7 @@ class RealmList extends Component {
                 isLoaded: true
             })
         } else {
-            fetch('https://us.api.battle.net/wow/realm/status?locale=en_US' + process.env.REACT_APP_blizzardKey)
+            fetch('https://us.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
                     this.setState({
@@ -43,7 +43,7 @@ class RealmList extends Component {
                     });
                 }
             )
-            fetch('https://eu.api.battle.net/wow/realm/status?locale=en_GB' + process.env.REACT_APP_blizzardKey)
+            fetch('https://eu.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
                     this.setState({
