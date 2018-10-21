@@ -14,7 +14,7 @@ exports.handler = function(event, context, callback) {
                     const firebase_endpoint = firebase_url+"?auth="+auth
                     axios(firebase_endpoint)
                         .then((databaseResponse) => {
-                            var oldtoken = databaseResponse.data;
+                            var oldtoken = databaseResponse.data.token;
                             if(oldtoken !== token ) {
                                 console.log(oldtoken);
                                 console.log(token);
