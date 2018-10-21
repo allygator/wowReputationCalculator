@@ -15,6 +15,7 @@ class Calc extends Component {
         this.setThumbnail = this.setThumbnail.bind(this);
         this.setName = this.setName.bind(this);
         this.state = {
+            token: "",
             isSubmitted: false,
             isChecked: false,
             thumbnail: "",
@@ -29,6 +30,8 @@ class Calc extends Component {
         if(this.props.match.params.name) {
             this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isChecked, isSubmitted:true});
         }
+        fetch('/.netlify/functions/gettoken')
+            .then(response => console.log(response))
     }
 
     setHistory(a) {
