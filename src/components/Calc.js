@@ -54,7 +54,7 @@ class Calc extends Component {
 
     componentDidMount() {
         if(this.props.match.params.name) {
-            this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isChecked, isSubmitted:true,showSearch:false});
+            this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isCompleted, isSubmitted:true,showSearch:false});
         }
     }
 
