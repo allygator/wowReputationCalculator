@@ -133,7 +133,7 @@ class Calc extends Component {
                                     <Collapse in={this.state.showSearch} style={{style}} className="input-wrapper-collapse">
                                     <Paper className={`user-input-box ${this.state.isSubmitted ? "" : "popout"} `}>
                                     <div id="selectionBoxes">
-                                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token = {this.state.token}/>}s
+                                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token = {this.state.token}/>}
                                         <div id="name">
                                         <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
                                         </div>
