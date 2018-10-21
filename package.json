@@ -16,10 +16,17 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "build": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test --env=jsdom",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
+    "netlify-lambda": "^1.0.2"
   }
 }
