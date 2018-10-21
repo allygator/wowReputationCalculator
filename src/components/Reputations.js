@@ -33,7 +33,7 @@ class Reputation extends Component {
         const region = this.props.region.toLowerCase();
         this.setState({reps:[], error:null, completedCounter:0});
         if(this.props.realm && this.props.name) {
-            fetch('https://'+region+'.api.battle.net/wow/character/' + this.props.realm + '/' + this.props.name + `?fields=reputation&locale=en_${(region === "us") ? 'us' : 'gb' }` + process.env.REACT_APP_blizzardKey)
+            fetch('https://'+region+'.api.blizzard.com/wow/character/' + this.props.realm + '/' + this.props.name + '?fields=reputation&access_token=' + this.props.token)
             .then(function(response) {
                 if(response.ok) {
                     return response.json()

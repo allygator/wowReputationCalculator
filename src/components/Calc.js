@@ -42,6 +42,7 @@ class Calc extends Component {
             isSubmitted: false,
             isCompleted: false,
             showSearch: true,
+            token: "",
             thumbnail: "",
             formattedName: "",
             formattedRealm: "",
@@ -56,6 +57,10 @@ class Calc extends Component {
         if(this.props.match.params.name) {
             this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isCompleted, isSubmitted:true,showSearch:false});
         }
+        fetch('/.netlify/functions/gettoken')
+            .then(response => response.json())
+            .then(json => this.setState({token:json.token}))
+            .catch(error => console.log(error))
     }
 
     setHistory(a) {
@@ -128,7 +133,7 @@ class Calc extends Component {
                                     <Collapse in={this.state.showSearch} style={{style}} className="input-wrapper-collapse">
                                     <Paper className={`user-input-box ${this.state.isSubmitted ? "" : "popout"} `}>
                                     <div id="selectionBoxes">
-                                        <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />
+                                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} />}
                                         <div id="name">
                                         <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
                                         </div>
@@ -153,7 +158,7 @@ class Calc extends Component {
                             </CardContent>
                             {this.state.thumbnail && <Avatar alt="character thumbnail" src={['https://render-us.worldofwarcraft.com/character/',this.state.thumbnail].join('')} />}
                         </Card>
-                        {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount} />}
+                        {this.state.submittedName && this.state.submittedRealm && this.state.token && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount}  token={this.state.token} />}
                     </MuiThemeProvider>
                 </Paper>
             </div>
