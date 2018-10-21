@@ -85,7 +85,7 @@ class Calc extends Component {
                     <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
               </div>
           </div>
-          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName}/>}
+          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName} token={this.state.token}/>}
           </div>
     );}
 
