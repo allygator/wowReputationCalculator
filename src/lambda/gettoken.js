@@ -13,7 +13,7 @@ const firebase_url = process.env.FIREBASE_URL;
             var token = databaseResponse.data.token;
             callback(null, {
                 statusCode: 200,
-                body: token
+                body: JSON.stringify({token})
             });
         })
         .catch((error) => callback(error.message))
