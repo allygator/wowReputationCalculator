@@ -7,10 +7,10 @@ exports.handler = async (event, context, callback) => {
     .then((realmList) => {
         // console.log(realmList);
     })
-    .catch(function(goaway) {})
+    .catch(function(goaway){})
 
     callback(null, {
         statusCode: 200,
-        body: endpoint
+        body: "It sort of works?"
     });
 }
