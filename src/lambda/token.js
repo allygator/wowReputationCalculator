@@ -16,9 +16,7 @@ exports.handler = function(event, context, callback) {
                         .then((databaseResponse) => {
                             var oldtoken = databaseResponse.data.token;
                             if(oldtoken !== token ) {
-                                console.log(oldtoken);
-                                console.log(token);
-                                console.log("Token updated");
+                                console.log("Token updated")
                                 axios.put(firebase_endpoint,{"token":token})
                                 .then((res) => {
                                 })
@@ -30,7 +28,7 @@ exports.handler = function(event, context, callback) {
                 .catch(function(error){callback(error.message)})
             callback(null, {
                 statusCode: 200,
-                body: token
+                body: "You're not supposed to be here."
             });
         })
         .catch(function(error){callback(error.message)})
