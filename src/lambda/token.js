@@ -5,9 +5,6 @@ const firebase_auth = process.env.FIREBASE_AUTH;
 const firebase_url = process.env.FIREBASE_URL;
 
 exports.handler = function(event, context, callback) {
-    console.log(token_endpoint);
-    console.log(firebase_auth);
-    console.log(firebase_url);
     axios(token_endpoint)
         .then((tokenResponse) => {
             var token = tokenResponse.data.access_token;
@@ -19,7 +16,9 @@ exports.handler = function(event, context, callback) {
                         .then((databaseResponse) => {
                             var oldtoken = databaseResponse.data;
                             if(oldtoken !== token ) {
-                                console.log("Token update");
+                                console.log(oldtoken);
+                                console.log(token);
+                                console.log("Token updated");
                                 axios.put(firebase_endpoint,{"token":token})
                                 .then((res) => {
                                 })
