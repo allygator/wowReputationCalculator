@@ -17,6 +17,7 @@ class Calc extends Component {
         this.state = {
             isSubmitted: false,
             isChecked: false,
+            token: "",
             thumbnail: "",
             formattedName: "",
             submittedRegion: "",
@@ -31,7 +32,7 @@ class Calc extends Component {
         }
         fetch('/.netlify/functions/gettoken')
             .then(response => response.json())
-            .then(json => console.log(json.token))
+            .then(json => this.setState({token:json.token}))
             .catch(error => console.log(error))
 
     }
