@@ -30,7 +30,10 @@ class Calc extends Component {
             this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isChecked, isSubmitted:true});
         }
         fetch('/.netlify/functions/gettoken')
-            .then(response => console.log(response.json()))
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch(error => console.log(error))
+
     }
 
     setHistory(a) {
