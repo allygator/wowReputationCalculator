@@ -17,6 +17,7 @@ class Calc extends Component {
         this.state = {
             isSubmitted: false,
             isChecked: false,
+            token: "",
             thumbnail: "",
             formattedName: "",
             submittedRegion: "",
@@ -29,6 +30,11 @@ class Calc extends Component {
         if(this.props.match.params.name) {
             this.setState({submittedName:this.props.match.params.name, submittedRealm:this.props.match.params.realm, submittedRegion:this.props.match.params.region, submittedisChecked:this.state.isChecked, isSubmitted:true});
         }
+        fetch('/.netlify/functions/gettoken')
+            .then(response => response.json())
+            .then(json => this.setState({token:json.token}))
+            .catch(error => console.log(error))
+
     }
 
     setHistory(a) {
@@ -66,7 +72,7 @@ class Calc extends Component {
                 </p>
                 <div className="user-input-box">
                     <div id="selectionBoxes">
-                        <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} /*specificRealm="Quel'Dorei"*//>
+                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token={this.state.token}/>}
                         <div id="name">
                             Character Name:
                             <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
@@ -79,7 +85,7 @@ class Calc extends Component {
                     <input type="button" value="Submit" onClick={this.showReputations}/*<Reputations name:this.name, realm:this.realm />*/ id="submitButton" />
               </div>
           </div>
-          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName}/>}
+          {this.state.submittedName && this.state.submittedRealm && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} isChecked={this.state.submittedisChecked} setThumbnail={this.setThumbnail} setName={this.setName} token={this.state.token}/>}
           </div>
     );}
 
