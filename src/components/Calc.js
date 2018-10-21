@@ -72,7 +72,7 @@ class Calc extends Component {
                 </p>
                 <div className="user-input-box">
                     <div id="selectionBoxes">
-                        <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} /*specificRealm="Quel'Dorei"*//>
+                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token={this.state.token}/>}
                         <div id="name">
                             Character Name:
                             <input type="text" id="characterName" name="Character Name" onChange={e=>this.setState({name:e.target.value})}/>
