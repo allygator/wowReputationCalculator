@@ -31,7 +31,7 @@ class Calc extends Component {
         }
         fetch('/.netlify/functions/gettoken')
             .then(response => response.json())
-            .then(json => console.log(json))
+            .then(json => console.log(json.token))
             .catch(error => console.log(error))
 
     }
