@@ -19,7 +19,6 @@ class RealmList extends Component {
         this.setState({ selectedOption });
         this.props.realmSelection(selectedOption.value);
         this.props.regionSelection(selectedOption.group);
-        //console.log(`Option selected:`, selectedOption.value);
     }
 
     componentDidMount() {
@@ -67,6 +66,7 @@ class RealmList extends Component {
     }
 
     render() {
+        const portalTargetElement = document.getElementById('calc');
         const { error, isLoaded, USrealms, EUrealms } = this.state;
         var USOptions = [];
         var EUOptions = [];
@@ -76,7 +76,6 @@ class RealmList extends Component {
         for(let realm of EUrealms) {
             EUOptions.push({value: realm.name,label: realm.name, group:"EU"})
         }
-        const { selectedOption } = this.state;
         const groupedOptions = [
             {
                 label: 'US',
@@ -103,22 +102,12 @@ class RealmList extends Component {
         } else if (!isLoaded) {
           return <div>Loading...</div>;
         } else {
-            if(this.props.specificRealm) {
-                return(
-                    <Select
-                        id="realmSelector"
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options={[{value: this.props.specificRealm, label:this.props.specificRealm}]} />
-                )
-            } else {
-                return (
+            return (
                     <Select id="realmSelector"
                       onChange={this.handleChange}
                       options={groupedOptions}
-                      formatGroupLabel={formatGroupLabel} />
+                      formatGroupLabel={formatGroupLabel} menuPortalTarget={portalTargetElement}/>
                 );
-            }
         }
     }
 }

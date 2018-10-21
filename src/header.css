@@ -1,0 +1,57 @@
+.App-logo {
+  height: 60px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 25px 0 15px 10px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.siteInfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+header nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+nav a button:hover {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+button a:visited {
+    color: white;
+}
+
+nav button {
+    color: white !important;
+}
+
+@media screen and (min-width: 800px) {
+    .App-header {
+      padding: 25px 0 0 30px;
+    }
+
+    .siteInfo {
+        width: 45%;
+        justify-content: flex-start;
+    }
+
+    header nav {
+        width: 45%;
+    }
+}

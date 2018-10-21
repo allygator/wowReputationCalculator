@@ -1,0 +1,32 @@
+.repPanel {
+    width: 100%;
+}
+
+.repPanel .repName:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.repName h3 {
+    width: 20%;
+}
+
+.repPanel .repName i {
+    padding-left: 10px;
+}
+
+.repName .status-carat {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.repName {
+    display: inline-block;
+}
+
+.repPanel .repDetails {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}

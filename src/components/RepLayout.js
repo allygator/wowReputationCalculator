@@ -7,7 +7,7 @@ const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [510, 947, 1052, 1067, 1172, 1375, 1388, 1445, 1681, 1708, 1848, 2103, 2156, 2157];
 const horde = [68, 76, 81, 530, 911, 1133];
 const noHorde = [509, 946, 1126, 1376, 1387, 1682, 1710, 1731, 1847, 2159, 2160, 2161, 2162];
-const nobody = [67, 469, 1374, 1690, 1691, 1733, 1736, 1737,1738, 1739, 1740, 1741, 2010, 2011];
+const nobody = [67, 469, 1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1374, 1690, 1691, 1733, 1736, 1737,1738, 1739, 1740, 1741, 2010, 2011, 2111];
 
 class RepLayout extends Component {
     constructor(props) {
@@ -41,13 +41,6 @@ class RepLayout extends Component {
             this.findExpac(this.props.reps);
         }
     }
-
-    /*isMaxRep(rep) {
-        if (bestFriends.includes(rep.id) && rep.standing === 5)
-            this.setState({max: true});
-        if (rep.standing === 7)
-            this.setState({max: true});
-    }*/
 
     isCompletedRep(rep) {
         if(bestFriends.includes(rep.id) && rep.standing === 5) {
@@ -99,7 +92,7 @@ class RepLayout extends Component {
                 tempRep = this.state.vanilla;
                 tempRep.push(rep);
                 this.setState({vanilla: tempRep});
-            } else if (rep.id < 1036 || rep.id === 1038) { // BC Reps
+            } else if (rep.id < 1036 || rep.id === 1038 || rep.id === 1077) { // BC Reps
                 tempRep = this.state.bc;
                 tempRep.push(rep);
                 this.setState({bc: tempRep});
@@ -111,7 +104,7 @@ class RepLayout extends Component {
                 tempRep = this.state.cata;
                 tempRep.push(rep);
                 this.setState({cata: tempRep});
-            } else if (rep.id <= 1435) { // Mop Reps
+            } else if (rep.id <= 1435 && rep.id !== 1358) { // Mop Reps
                 tempRep = this.state.mop;
                 tempRep.push(rep);
                 this.setState({mop: tempRep});

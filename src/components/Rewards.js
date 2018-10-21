@@ -1,65 +1,58 @@
 import React, { Component } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import rewardsCont from '../rewardsobj';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 class Rewards extends Component {
     constructor(props) {
         super(props);
+        this.handleChange = this.handleChange.bind(this);
         this.state = {
+            value: 0
         }
+    };
+
+    handleChange = (event, value) => {
+        this.setState({ value });
     };
 
     render() {
         const rep = this.props.rep;
-        let tabTitles = [];
         let tabPanelComplete = [];
-        if(rewardsCont[rep]) {
-            let levels = Object.keys(rewardsCont[rep]); //Number of Rep levels that have rewards in them
-            let items; // Number of items in a level
-            for(var i = 0; i<levels.length;i++){
-                let rewardsCompleted = [];
-                tabTitles.push(<Tab key={levels[i]}>{levels[i]}</Tab>);
-                items = Object.keys(rewardsCont[rep][levels[i]]);
-                for(var j = 0;j<items.length;j++) {
-                    var name = rewardsCont[rep][levels[i]][j].name;
-                    if(rewardsCont[rep][levels[i]][j].id) {
-                        rewardsCompleted.push(<a href={["//www.wowhead.com/item=",rewardsCont[rep][levels[i]][j].id].join('')} key={rewardsCont[rep][levels[i]][j].id}>{name}</a>);
-                    } else {
-                        let nameKey = name.replace(/ +/g, "");
-                        rewardsCompleted.push(<p key={nameKey}>{name}</p>)
-                    }
-                    rewardsCompleted.push(<br key={i+j}/>);
+        let levels = Object.keys(rewardsCont[rep]);
+        levels = levels.map(function(level,index){return <Tab label={level} key={index}/>});
+        let rewardsCompleted = [];
+        let items;
+        for(var i = 0; i<levels.length;i++){
+            let level = levels[i].props.label
+            items = rewardsCont[rep][level];
+            for(var j = 0;j<items.length;j++) {
+                let item = items[j];
+                if(item.id) {
+                    rewardsCompleted.push(<p key={item.id}><a href={["//www.wowhead.com/item=",item.id].join('')} >{item.name}</a></p>);
+                } else {
+                    let nameKey = item.name.replace(/ +/g, "");
+                    rewardsCompleted.push(<p key={nameKey}>{item.name}</p>)
                 }
-                tabPanelComplete.push(<TabPanel key={levels[i]}>{rewardsCompleted}</TabPanel>);
+                //console.log("reward completed");
             }
-            return (
-                <Tabs>
-                    <TabList>
-                        <Tab>Rewards</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <Tabs>
-                            <TabList>
-                                {tabTitles}
-                            </TabList>
-                            {tabPanelComplete}
-                        </Tabs>
-                    </TabPanel>
-                </Tabs>
-            );
-        } else {
-            return (
-                <Tabs>
-                    <TabList>
-                        <Tab>Rewards</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <p>No Rewards Exist! If this is an error, let me know!</p>
-                    </TabPanel>
-                </Tabs>
-            )
+            tabPanelComplete.push(<div key={level}>{this.state.value === i && <TabContainer>{rewardsCompleted}</TabContainer>}</div>);
+            rewardsCompleted = [];
         }
+
+        return (
+            <div>
+            <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary" textColor="primary" centered>
+            {levels}
+            </Tabs>
+            {tabPanelComplete}
+            </div>
+        );
     }
 }
+
+function TabContainer(props) {
+  return props.children;
+};
 
 export default Rewards;

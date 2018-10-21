@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 //import rewardsCont from '../rewardsobj';
 import Faction from './Faction';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import '../expac.css';
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
 const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
 const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
@@ -15,6 +21,7 @@ class Expac extends Component {
         }
         this.repLevel = this.repLevel.bind(this);
         this.showHidden = this.showHidden.bind(this);
+        this.normalise = this.normalise.bind(this);
     }
 
     repLevel(rep) {
@@ -31,37 +38,44 @@ class Expac extends Component {
         })))
     }
 
+    normalise(val,max) {
+        return val/max*100;
+    }
+
     render() {
         const reps = this.props.reps;
         const name = this.props.name;
         const cName = this.props.cName;
         const isHidden = this.state.isHidden;
         const totalMaxReps = reps.reduce(countMaxReps,0);
-        const hideProgress = this.props.hideProgress;
-        const progress=<progress value={totalMaxReps} max={reps.length}></progress>;
         if(reps.length === 0) {
             return (
-                <div className={[cName,"expac "].join(' ')}>
-                <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress} &nbsp;
-                    <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                <ExpansionPanel className={[cName,"expacPanel completed"].join(' ')} onChange={this.showHidden}>
+                    <ExpansionPanelSummary className="expacName" expandIcon={<ExpandMoreIcon />}>
+                <h2>{name[0].toUpperCase() + name.slice(1)}
                 </h2>
-                <div className={`child ${isHidden ? "hidden" : ""}`}>
+                <span className="carat"><i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails className="expacDetails">
                     <p> You are Exalted with every faction in {(name==="Alliance")||(name==="Horde") ? ["The ",name].join(' ') : name}! </p>
-                </div>
-                </div>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             )
         } else {
             return (
-            <div className={[cName,"expac "].join(' ')}>
-            <h2 onClick={this.showHidden}>{name[0].toUpperCase() + name.slice(1)} <span className="progress-carat">{hideProgress ? null : progress} &nbsp;
-                <i className={`fas fa-caret-${isHidden ? "down" : "up"}`}></i></span>
-            </h2>
-            <div className={`child ${isHidden ? "hidden" : ""}`}>
-            {reps.map((rep) => (
-                <Faction rep={rep} key={rep.name} />
-            ))}
-            </div>
-            </div>
+                <ExpansionPanel className={[cName,"expacPanel "].join(' ')} onChange={this.showHidden}>
+                    <ExpansionPanelSummary className="expacName"  expandIcon={<ExpandMoreIcon />}>
+                        <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
+                        <span className={this.props.hideProgress ? "carat" : "progress-carat"}><LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress"/></span>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails className="expacDetails">
+
+                        {reps.map((rep) => (
+                            <Faction rep={rep} key={rep.name} />
+                        ))}
+
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             )
         }
     }
