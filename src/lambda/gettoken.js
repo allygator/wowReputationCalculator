@@ -4,6 +4,7 @@ const firebase_auth = process.env.FIREBASE_AUTH;
 const firebase_url = process.env.FIREBASE_URL;
 
 exports.handler = function(event, context, callback) {
+    console.log("Ive run?");
     axios.post(firebase_auth)
         .then((authResponse) => {
             var auth = authResponse.data.idToken;
