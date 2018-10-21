@@ -33,7 +33,7 @@ class Faction extends Component {
     }
 
     showProgress() {
-        if(this.props.max!==0) {
+        if(this.props.max!=0) {
             return this.props.rep.value+'/'+this.props.rep.max;
         }
     }

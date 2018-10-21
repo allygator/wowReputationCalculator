@@ -11,6 +11,7 @@ exports.handler = function(event, context, callback) {
             axios(firebase_endpoint)
                 .then((databaseResponse) => {
                     var token = databaseResponse.data.token;
+                    console.log(token);
                     callback(null, {
                         statusCode: 200,
                         body: token
