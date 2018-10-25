@@ -14,7 +14,8 @@ exports.handler = function(event, context, callback) {
         .then((authResponse) => {
                     var auth = authResponse.data.idToken;
                     console.log(auth);
-                    const firebase_endpoint = firebase_url+"?auth="+auth
+                    const firebase_endpoint = firebase_url+"?auth="+auth;
+                    console.log(firebase_endpoint)
                     return axios(firebase_endpoint)
         })
         .then((databaseResponse) => {
