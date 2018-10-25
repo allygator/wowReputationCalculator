@@ -6,7 +6,7 @@ const firebase_url = process.env.FIREBASE_URL;
 
 exports.handler = function(event, context, callback) {
     var token;
-    const firebase_endpoint;
+    var firebase_endpoint;
     axios(token_endpoint)
         .then((tokenResponse) => {
             token = tokenResponse.data.access_token;
