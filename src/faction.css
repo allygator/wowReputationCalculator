@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.repPanel .repName:hover {
+.repPanel .repName:hover, .repDetails button:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
