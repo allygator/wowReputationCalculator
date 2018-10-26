@@ -1,11 +1,22 @@
 .calc {
     margin: -20px auto 0 auto;
     width: 98%;
+    padding-top: 10px;
 }
 
-.calc>div:first-child {
-    padding: 10px 0;
-    margin-bottom: 10px;
+.calc button {
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    background-color: #e0e0e0;
+}
+
+.calc button:hover {
+    background-color: #d5d5d5;
+}
+
+.paper {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
 
 #buttonDiv {

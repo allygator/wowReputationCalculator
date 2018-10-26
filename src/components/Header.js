@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
 import '../header.css';
 
 class Header extends Component {
@@ -18,8 +17,8 @@ class Header extends Component {
                 <h1 className="App-title">RepCalc</h1>
                 </div>
                 <nav>
-                <Link to='/'><Button>Reputation Calculator</Button></Link>
-                <Link to='/blog'><Button>Blog</Button></Link>
+                <Link to='/'><button>Reputation Calculator</button></Link>
+                <Link to='/blog'><button>Blog</button></Link>
                 </nav>
             </header>
         );

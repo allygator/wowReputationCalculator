@@ -7,7 +7,6 @@ import Collapse from '@material-ui/core/Collapse';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
@@ -122,16 +121,15 @@ class Calc extends Component {
         }
 
         return (
-            <div className="calc" id="calc">
-                <Paper>
+            <div className="calc paper" id="calc">
                     <MuiThemeProvider theme={theme}>
                         <div id="buttonDiv">
-                            {this.state.isSubmitted && <Button variant="contained" id="inputButton" onClick={this.showSearch}>New Character Search</Button> }
+                            {this.state.isSubmitted && <button id="inputButton" onClick={this.showSearch}>New Character Search</button> }
                         </div>
 
                                 <div className="user-input-wrapper" onKeyPress={this.enterPressed}>
                                     <Collapse in={this.state.showSearch} style={{style}} className="input-wrapper-collapse">
-                                    <Paper className={`user-input-box ${this.state.isSubmitted ? "" : "popout"} `}>
+                                    <div className={`user-input-box paper ${this.state.isSubmitted ? "" : "popout"} `}>
                                     <div id="selectionBoxes">
                                         {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token = {this.state.token}/>}
                                         <div id="name">
@@ -142,7 +140,7 @@ class Calc extends Component {
                                         <FormControlLabel control={ <Checkbox checked={this.state.completed} onChange={this.handleChange('completed')} value="completed" /> } label="Hide Completed Reputations" />
                                     </div>
                                     <Button variant="contained" id="submitButton" onClick={this.showReputations} >Submit</Button>
-                                    </Paper>
+                                    </div>
                                 </Collapse>
                                 </div>
 
@@ -160,7 +158,6 @@ class Calc extends Component {
                         </Card>
                         {this.state.submittedName && this.state.submittedRealm && this.state.token && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount}  token={this.state.token} />}
                     </MuiThemeProvider>
-                </Paper>
             </div>
     );}
 
