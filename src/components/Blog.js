@@ -8,10 +8,11 @@ class Blog extends Component {
 
     render() {
         return (
-          <div className="blog">
-              Here is a blog.
-          </div>
-    );}
+            <div className="blog">
+                Here is a blog.
+            </div>
+        );
+    }
 }
 
 export default Blog;

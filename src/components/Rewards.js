@@ -9,8 +9,8 @@ class Rewards extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.state = {
             value: 0
-        }
-    };
+        };
+    }
 
     handleChange = (event, value) => {
         this.setState({ value });
@@ -19,20 +19,19 @@ class Rewards extends Component {
     render() {
         const rep = this.props.rep;
         let tabPanelComplete = [];
-        let levels = Object.keys(rewardsCont[rep]);
-        levels = levels.map(function(level,index){return <Tab label={level} key={index}/>});
+        let levels = Object.keys(rewardsCont[rep]).map((level,index) => <Tab label={level} key={index}/>);
         let rewardsCompleted = [];
         let items;
         for(var i = 0; i<levels.length;i++){
-            let level = levels[i].props.label
+            let level = levels[i].props.label;
             items = rewardsCont[rep][level];
             for(var j = 0;j<items.length;j++) {
                 let item = items[j];
                 if(item.id) {
-                    rewardsCompleted.push(<p key={item.id}><a href={["//www.wowhead.com/item=",item.id].join('')} >{item.name}</a></p>);
+                    rewardsCompleted.push(<p key={item.id}><a href={['//www.wowhead.com/item=',item.id].join('')} >{item.name}</a></p>);
                 } else {
-                    let nameKey = item.name.replace(/ +/g, "");
-                    rewardsCompleted.push(<p key={nameKey}>{item.name}</p>)
+                    let nameKey = item.name.replace(/ +/g, '');
+                    rewardsCompleted.push(<p key={nameKey}>{item.name}</p>);
                 }
                 //console.log("reward completed");
             }
@@ -42,17 +41,17 @@ class Rewards extends Component {
 
         return (
             <div>
-            <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary" textColor="primary" centered>
-            {levels}
-            </Tabs>
-            {tabPanelComplete}
+                <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary" textColor="primary" centered>
+                    {levels}
+                </Tabs>
+                {tabPanelComplete}
             </div>
         );
     }
 }
 
 function TabContainer(props) {
-  return props.children;
-};
+    return props.children;
+}
 
 export default Rewards;

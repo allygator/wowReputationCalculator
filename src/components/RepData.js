@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import rewardsCont from '../rewardsobj';
-import Rewards from './Rewards';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+
+import Rewards from './Rewards';
+
+import rewardsCont from '../rewardsobj';
 
 class RepData extends Component {
     constructor(props) {
@@ -10,8 +12,8 @@ class RepData extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.state = {
             value: 0
-        }
-    };
+        };
+    }
 
     handleChange = (event, value) => {
         this.setState({ value });
@@ -27,7 +29,7 @@ class RepData extends Component {
                 </Tabs>
                 {value === 0 && rewardsCont[rep] && <Rewards rep={rep}></Rewards>}
             </div>
-        )
+        );
     }
 }
 

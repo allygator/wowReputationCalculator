@@ -7,7 +7,7 @@ export const characterData = {
     region: '',
     realm: '',
     name: ''
-}
+};
 
 export const characterContext = React.createContext(
     characterData
@@ -25,7 +25,8 @@ class Main extends Component {
                 <Route path='/:region/:realm/:name' component={Calc}/>
                 <Route path='/blog' component={Blog}/>
             </Switch>
-    );}
+        );
+    }
 
 
 }

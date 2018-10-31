@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Expac from './Expac';
+
 const bestFriends = [1273, 1275, 1276, 1277, 1278, 1279, 1280, 1281, 1282, 1283, 1975, 1358]; //IDs for NPCs that have "Friend" levels rather than reputations
-const friendLevels = ["Stranger","Acquantaince", "Buddy", "Friend", "Good Friend", "Best Friend"];
-const repTitles = ["Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"]; // Reputation levels
+const friendLevels = ['Stranger','Acquantaince', 'Buddy', 'Friend', 'Good Friend', 'Best Friend'];
+const repTitles = ['Hated', 'Hostile', 'Unfriendly', 'Neutral', 'Friendly', 'Honored', 'Revered', 'Exalted']; // Reputation levels
 const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [510, 947, 1052, 1067, 1172, 1375, 1388, 1445, 1681, 1708, 1848, 2103, 2156, 2157];
 const horde = [68, 76, 81, 530, 911, 1133];
@@ -44,11 +45,11 @@ class RepLayout extends Component {
 
     isCompletedRep(rep) {
         if(bestFriends.includes(rep.id) && rep.standing === 5) {
-          return false;
+            return false;
         } else if (rep.standing === 7) {
-          return false;
+            return false;
         } else {
-          return true;
+            return true;
         }
     }
 
@@ -87,7 +88,7 @@ class RepLayout extends Component {
                 tempRep.push(rep);
                 this.setState({horde: tempRep});
             } else if (rep.id === 1168) { // Guild Rep
-                this.setState({guild: rep})
+                this.setState({guild: rep});
             } else if (rep.id < 929) { // Vanilla Reps
                 tempRep = this.state.vanilla;
                 tempRep.push(rep);
@@ -127,18 +128,18 @@ class RepLayout extends Component {
     render() {
         const {vanilla,bc,wrath,cata,mop,wod,legion,bfa,alliance,horde} = this.state;
         return [
-            (!this.props.isHorde && <Expac name="Alliance" cName="alliance" reps={alliance} key={"Alliance"} hideProgress={this.props.hideProgress} />),
-            (this.props.isHorde && <Expac name="Horde" cName="horde" reps={horde} key={"Horde"} hideProgress={this.props.hideProgress} />),
-            <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={"vanilla"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Burning Crusade" cName="bc" reps={bc} key={"bc"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Wrath of the Lich King" cName="wrath" reps={wrath} key={"wrath"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Cataclysm" cName="cata" reps={cata} key={"cata"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"mop"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"wod"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Legion" cName="legion" reps={legion}  key={"legion"} hideProgress={this.props.hideProgress} />,
-            <Expac name="Battle for Azeroth" cName="bfa" reps={bfa}  key={"bfa"} hideProgress={this.props.hideProgress} />
-        ]
+            (!this.props.isHorde && <Expac name="Alliance" cName="alliance" reps={alliance} key={'Alliance'} hideProgress={this.props.hideProgress} />),
+            (this.props.isHorde && <Expac name="Horde" cName="horde" reps={horde} key={'Horde'} hideProgress={this.props.hideProgress} />),
+            <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={'vanilla'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Burning Crusade" cName="bc" reps={bc} key={'bc'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Wrath of the Lich King" cName="wrath" reps={wrath} key={'wrath'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Cataclysm" cName="cata" reps={cata} key={'cata'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={'mop'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={'wod'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Legion" cName="legion" reps={legion}  key={'legion'} hideProgress={this.props.hideProgress} />,
+            <Expac name="Battle for Azeroth" cName="bfa" reps={bfa}  key={'bfa'} hideProgress={this.props.hideProgress} />
+        ];
     }
-};
+}
 
 export default RepLayout;

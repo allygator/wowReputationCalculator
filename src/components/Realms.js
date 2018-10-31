@@ -9,7 +9,7 @@ class RealmList extends Component {
             isLoaded: false,
             USrealms: [],
             EUrealms: [],
-            selectedRealm: "",
+            selectedRealm: '',
             selectedOption: null
         };
         this.realmSelection = this.realmSelection.bind(this);
@@ -25,7 +25,7 @@ class RealmList extends Component {
         if(this.props.specificRealm) {
             this.setState({
                 isLoaded: true
-            })
+            });
         } else {
             fetch('https://us.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
@@ -41,7 +41,7 @@ class RealmList extends Component {
                         error
                     });
                 }
-            )
+                );
             fetch('https://eu.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
@@ -56,8 +56,8 @@ class RealmList extends Component {
                         error
                     });
                 }
-                )
-            }
+                );
+        }
     }
 
     realmSelection(option) {
@@ -68,13 +68,13 @@ class RealmList extends Component {
     render() {
         const portalTargetElement = document.getElementById('calc');
         const { error, isLoaded, USrealms, EUrealms } = this.state;
-        var USOptions = [];
-        var EUOptions = [];
+        const USOptions = [];
+        const EUOptions = [];
         for(let realm of USrealms) {
-            USOptions.push({value: realm.name,label: realm.name, group:"US"})
+            USOptions.push({value: realm.name,label: realm.name, group:'US'});
         }
         for(let realm of EUrealms) {
-            EUOptions.push({value: realm.name,label: realm.name, group:"EU"})
+            EUOptions.push({value: realm.name,label: realm.name, group:'EU'});
         }
         const groupedOptions = [
             {
@@ -87,29 +87,29 @@ class RealmList extends Component {
             }
         ];
         const groupStyles = {
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderBottom: "1px solid grey"
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderBottom: '1px solid grey'
         };
         const formatGroupLabel = data => (
-          <div style={groupStyles}>
-            <span>{data.label}</span>
-          </div>
+            <div style={groupStyles}>
+                <span>{data.label}</span>
+            </div>
         );
         if (error) {
-          return <div>Error: {error.message}</div>;
+            return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-          return <div>Loading...</div>;
+            return <div>Loading...</div>;
         } else {
             return (
-                    <Select id="realmSelector"
-                      onChange={this.handleChange}
-                      options={groupedOptions}
-                      formatGroupLabel={formatGroupLabel} menuPortalTarget={portalTargetElement}/>
-                );
+                <Select id="realmSelector"
+                    onChange={this.handleChange}
+                    options={groupedOptions}
+                    formatGroupLabel={formatGroupLabel} menuPortalTarget={portalTargetElement}/>
+            );
         }
     }
 }
 
-export default RealmList
+export default RealmList;
