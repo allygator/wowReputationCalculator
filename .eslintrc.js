@@ -1,6 +1,7 @@
 module.exports = {
     "env": {
         "browser": true,
+        "node": true,
         "es6": true
     },
     "extends": [
@@ -36,6 +37,7 @@ module.exports = {
             "always"
         ],
         "react/prop-types": 0,
-        "no-console": 1
+        "no-console": 1,
+        "no-unused-vars": 1
     }
 };
