@@ -17,82 +17,82 @@ const repTitles = ['Hated', 'Hostile', 'Unfriendly', 'Neutral', 'Friendly', 'Hon
 
 
 class Expac extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isHidden: true
-        };
-        this.repLevel = this.repLevel.bind(this);
-        this.showHidden = this.showHidden.bind(this);
-        this.normalise = this.normalise.bind(this);
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+			isHidden: true
+		};
+		this.repLevel = this.repLevel.bind(this);
+		this.showHidden = this.showHidden.bind(this);
+		this.normalise = this.normalise.bind(this);
+	}
 
-    repLevel(rep) {
-        if(bestFriends.includes(rep.id)) {
-            return friendLevels[rep.standing];
-        } else {
-            return repTitles[rep.standing];
-        }
-    }
+	repLevel(rep) {
+		if(bestFriends.includes(rep.id)) {
+			return friendLevels[rep.standing];
+		} else {
+			return repTitles[rep.standing];
+		}
+	}
 
-    showHidden() {
-        this.setState( prevState => ({
-            isHidden: !prevState.isHidden
-        }));
-    }
+	showHidden() {
+		this.setState( prevState => ({
+			isHidden: !prevState.isHidden
+		}));
+	}
 
-    normalise(val,max) {
-        return val/max*100;
-    }
+	normalise(val,max) {
+		return val/max*100;
+	}
 
-    render() {
+	render() {
 
-        const {
-            reps,
-            name,
-            cName,
-            isHidden
-        } = this.props;
+		const {
+			reps,
+			name,
+			cName,
+			isHidden
+		} = this.props;
 
-        const totalMaxReps = reps.reduce(countMaxReps,0);
-        if(reps.length === 0) {
-            return (
-                <ExpansionPanel className={[cName,'expacPanel completed'].join(' ')} onChange={this.showHidden}>
-                    <ExpansionPanelSummary className="expacName" expandIcon={<ExpandMoreIcon />}>
-                        <h2>{name[0].toUpperCase() + name.slice(1)}
-                        </h2>
-                        <span className="carat"><i className={`fas fa-caret-${isHidden ? 'down' : 'up'}`}></i></span>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails className="expacDetails">
-                        <p> You are Exalted with every faction in {(name==='Alliance')||(name==='Horde') ? ['The ',name].join(' ') : name}! </p>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            );
-        } else {
-            return (
-                <ExpansionPanel className={[cName,'expacPanel '].join(' ')} onChange={this.showHidden}>
-                    <ExpansionPanelSummary className="expacName"  expandIcon={<ExpandMoreIcon />}>
-                        <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
-                        <span className={this.props.hideProgress ? 'carat' : 'progress-carat'}><LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress"/></span>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails className="expacDetails">
+		const totalMaxReps = reps.reduce(countMaxReps,0);
+		if(reps.length === 0) {
+			return (
+				<ExpansionPanel className={[cName,'expacPanel completed'].join(' ')} onChange={this.showHidden}>
+					<ExpansionPanelSummary className="expacName" expandIcon={<ExpandMoreIcon />}>
+						<h2>{name[0].toUpperCase() + name.slice(1)}
+						</h2>
+						<span className="carat"><i className={`fas fa-caret-${isHidden ? 'down' : 'up'}`}></i></span>
+					</ExpansionPanelSummary>
+					<ExpansionPanelDetails className="expacDetails">
+						<p> You are Exalted with every faction in {(name==='Alliance')||(name==='Horde') ? ['The ',name].join(' ') : name}! </p>
+					</ExpansionPanelDetails>
+				</ExpansionPanel>
+			);
+		} else {
+			return (
+				<ExpansionPanel className={[cName,'expacPanel '].join(' ')} onChange={this.showHidden}>
+					<ExpansionPanelSummary className="expacName"  expandIcon={<ExpandMoreIcon />}>
+						<h2>{name[0].toUpperCase() + name.slice(1)}</h2>
+						<span className={this.props.hideProgress ? 'carat' : 'progress-carat'}><LinearProgress variant="determinate" value={this.normalise(totalMaxReps,reps.length)} className="expacProgress"/></span>
+					</ExpansionPanelSummary>
+					<ExpansionPanelDetails className="expacDetails">
 
-                        {reps.map((rep) => (
-                            <Faction rep={rep} key={rep.name} />
-                        ))}
+						{reps.map((rep) => (
+							<Faction rep={rep} key={rep.name} />
+						))}
 
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-            );
-        }
-    }
+					</ExpansionPanelDetails>
+				</ExpansionPanel>
+			);
+		}
+	}
 }
 
 function countMaxReps(accumulator,currentValue) {
-    if(currentValue.max === 0 && (currentValue.standing === 7 || currentValue.standing === 5))
-        return accumulator + 1;
-    else
-        return accumulator;
+	if(currentValue.max === 0 && (currentValue.standing === 7 || currentValue.standing === 5))
+		return accumulator + 1;
+	else
+		return accumulator;
 }
 
 

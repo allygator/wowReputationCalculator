@@ -15,42 +15,42 @@ const repTitles = ['Hated', 'Hostile', 'Unfriendly', 'Neutral', 'Friendly', 'Hon
 
 
 class Faction extends Component {
-    constructor(props) {
-        super(props);
-        this.repLevel = this.repLevel.bind(this);
-        this.showProgress = this.showProgress.bind(this);
-    }
+	constructor(props) {
+		super(props);
+		this.repLevel = this.repLevel.bind(this);
+		this.showProgress = this.showProgress.bind(this);
+	}
 
-    repLevel(rep) {
-        if(bestFriends.includes(rep.id)) {
-            return friendLevels[rep.standing];
-        } else {
-            return repTitles[rep.standing];
-        }
-    }
+	repLevel(rep) {
+		if(bestFriends.includes(rep.id)) {
+			return friendLevels[rep.standing];
+		} else {
+			return repTitles[rep.standing];
+		}
+	}
 
-    showProgress() {
-        if(this.props.rep.max!==0) {
-            return this.props.rep.value+'/'+this.props.rep.max;
-        }
-    }
+	showProgress() {
+		if(this.props.rep.max!==0) {
+			return this.props.rep.value+'/'+this.props.rep.max;
+		}
+	}
 
-    render() {
-        let rep = this.props.rep;
-        return (
-            <ExpansionPanel className=" repPanel" onChange={this.showHidden}>
-                <ExpansionPanelSummary className=" repName" expandIcon={<ExpandMoreIcon />}>
-                    <h3>{rep.name}</h3>
-                    <span className="status-carat"><p>{this.repLevel(rep)}</p>
-                    </span>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className="repDetails">
-                    {this.showProgress()}
-                    <RepData rep={rep.id} />
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-        );
-    }
+	render() {
+		let rep = this.props.rep;
+		return (
+			<ExpansionPanel className=" repPanel" onChange={this.showHidden}>
+				<ExpansionPanelSummary className=" repName" expandIcon={<ExpandMoreIcon />}>
+					<h3>{rep.name}</h3>
+					<span className="status-carat"><p>{this.repLevel(rep)}</p>
+					</span>
+				</ExpansionPanelSummary>
+				<ExpansionPanelDetails className="repDetails">
+					{this.showProgress()}
+					<RepData rep={rep.id} />
+				</ExpansionPanelDetails>
+			</ExpansionPanel>
+		);
+	}
 }
 
 export default Faction;

@@ -25,7 +25,8 @@
     "test": "react-scripts test --env=jsdom",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint --fix ./src"
   },
   "devDependencies": {
     "axios": "^0.18.0",

@@ -5,35 +5,35 @@ const firebase_auth = process.env.FIREBASE_AUTH;
 const firebase_url = process.env.FIREBASE_URL;
 
 exports.handler = function(event, context, callback) {
-    var token;
-    var firebase_endpoint;
-    axios(token_endpoint)
-        .then((tokenResponse) => {
-            token = tokenResponse.data.access_token;
-            return axios.post(firebase_auth)
-        })
-        .then((authResponse) => {
-                    var auth = authResponse.data.idToken;
-                    console.log(auth);
-                    firebase_endpoint = firebase_url+"?auth="+auth;
-                    console.log(firebase_endpoint);
-                    return axios(firebase_endpoint)
-        })
-        .then((databaseResponse) => {
-            var oldtoken = databaseResponse.data.token;
-            if(oldtoken !== token ) {
-                console.log("Token updated")
-                axios.put(firebase_endpoint,{"token":token})
-                .then((res) => {
-                })
-                .catch(function(error){callback(error.message)})
-            }
-        })
-        .then((response) => {
-            callback(null, {
-            statusCode: 200,
-            body: "You're not supposed to be here."
-            })
-        })
-        .catch((error)=> callback(error.message))
-}
+	var token;
+	var firebase_endpoint;
+	axios(token_endpoint)
+		.then((tokenResponse) => {
+			token = tokenResponse.data.access_token;
+			return axios.post(firebase_auth);
+		})
+		.then((authResponse) => {
+			var auth = authResponse.data.idToken;
+			console.log(auth);
+			firebase_endpoint = firebase_url+'?auth='+auth;
+			console.log(firebase_endpoint);
+			return axios(firebase_endpoint);
+		})
+		.then((databaseResponse) => {
+			var oldtoken = databaseResponse.data.token;
+			if(oldtoken !== token ) {
+				console.log('Token updated');
+				axios.put(firebase_endpoint,{'token':token})
+					.then((res) => {
+					})
+					.catch(function(error){callback(error.message);});
+			}
+		})
+		.then((response) => {
+			callback(null, {
+				statusCode: 200,
+				body: 'You\'re not supposed to be here.'
+			});
+		})
+		.catch((error)=> callback(error.message));
+};
