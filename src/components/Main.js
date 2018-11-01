@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calc from './Calc';
 import Blog from './Blog';
-import  { Route, Switch } from 'react-router-dom';
+import  { Route, Switch, Redirect } from 'react-router-dom';
 
 export const characterData = {
     region: '',
@@ -22,6 +22,7 @@ class Main extends Component {
         return (
             <Switch>
                 <Route exact path='/' component={Calc}/>
+                <Redirect from="/example" to="/us/quel'dorei/elilla"/>
                 <Route path='/:region/:realm/:name' component={Calc}/>
                 <Route path='/blog' component={Blog}/>
             </Switch>
