@@ -16,6 +16,7 @@ class RealmList extends Component {
     }
 
     handleChange = (selectedOption) => {
+        console.log(selectedOption);
         this.setState({ selectedOption });
         this.props.realmSelection(selectedOption.value);
         this.props.regionSelection(selectedOption.group);
@@ -27,7 +28,7 @@ class RealmList extends Component {
                 isLoaded: true
             })
         } else {
-            fetch('https://us.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
+            fetch('https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
                     this.setState({
@@ -42,7 +43,7 @@ class RealmList extends Component {
                     });
                 }
             )
-            fetch('https://eu.api.blizzard.com/wow/realm/status?access_token=' + this.props.token)
+            fetch('https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=' + this.props.token)
                 .then(response => response.json(),othererror => console.log(othererror))
                 .then((realmList) => {
                     this.setState({
@@ -71,10 +72,10 @@ class RealmList extends Component {
         var USOptions = [];
         var EUOptions = [];
         for(let realm of USrealms) {
-            USOptions.push({value: realm.name,label: realm.name, group:"US"})
+            USOptions.push({value: realm.slug,label: realm.name, group:"US"})
         }
         for(let realm of EUrealms) {
-            EUOptions.push({value: realm.name,label: realm.name, group:"EU"})
+            EUOptions.push({value: realm.slug,label: realm.name, group:"EU"})
         }
         const groupedOptions = [
             {

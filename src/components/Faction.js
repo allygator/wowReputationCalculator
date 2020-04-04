@@ -20,16 +20,16 @@ class Faction extends Component {
     }
 
     repLevel(rep) {
-        if(bestFriends.includes(rep.id)) {
-            return friendLevels[rep.standing];
+        if(bestFriends.includes(rep.faction.id)) {
+            return friendLevels[rep.standing.tier];
         } else {
-            return repTitles[rep.standing];
+            return repTitles[rep.standing.tier];
         }
     }
 
     showProgress() {
         if(this.props.rep.max!==0) {
-            return this.props.rep.value+'/'+this.props.rep.max;
+            return this.props.rep.standing.value+'/'+this.props.rep.standing.max;
         }
     }
 
@@ -38,13 +38,13 @@ class Faction extends Component {
         return (
                 <ExpansionPanel className=" repPanel" onChange={this.showHidden}>
                     <ExpansionPanelSummary className=" repName" expandIcon={<ExpandMoreIcon />}>
-                        <h3>{rep.name}</h3>
+                        <h3>{rep.faction.name}</h3>
                         <span className="status-carat"><p>{this.repLevel(rep)}</p>
                         </span>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails className="repDetails">
                         {this.showProgress()}
-                        <RepData rep={rep.id} />
+                        <RepData rep={rep.faction.id} />
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
             )

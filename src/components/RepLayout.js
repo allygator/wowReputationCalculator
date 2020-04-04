@@ -43,7 +43,7 @@ class RepLayout extends Component {
     }
 
     isCompletedRep(rep) {
-        if(bestFriends.includes(rep.id) && rep.standing === 5) {
+        if(bestFriends.includes(rep.faction.id) && rep.standing === 5) {
           return false;
         } else if (rep.standing === 7) {
           return false;
@@ -53,7 +53,7 @@ class RepLayout extends Component {
     }
 
     repLevel(rep) {
-        if(bestFriends.includes(rep.id)) {
+        if(bestFriends.includes(rep.faction.id)) {
             return friendLevels[rep.standing];
         } else {
             return repTitles[rep.standing];
@@ -72,51 +72,51 @@ class RepLayout extends Component {
         */
         for(let rep of reps) {
             var tempRep;
-            if(nobody.includes(rep.id)) {
+            if(nobody.includes(rep.faction.id)) {
                 //This filters out faction "containers" like Alliance and Horde which
                 // seem to only serve the purpose of holding the other factions
                 // Also a follower, and the Brawlers Guild
-            } else if((!this.props.isHorde && noAlli.includes(rep.id)) || (this.props.isHorde && noHorde.includes(rep.id))) {
+            } else if((!this.props.isHorde && noAlli.includes(rep.faction.id)) || (this.props.isHorde && noHorde.includes(rep.faction.id))) {
                 //This filters out reputations only available to the other faction
-            } else if(alli.includes(rep.id)) { // Alliance reps
+            } else if(alli.includes(rep.faction.id)) { // Alliance reps
                 tempRep = this.state.alliance;
                 tempRep.push(rep);
                 this.setState({alliance: tempRep});
-            } else if (horde.includes(rep.id)) { // Horde Reps
+            } else if (horde.includes(rep.faction.id)) { // Horde Reps
                 tempRep = this.state.horde;
                 tempRep.push(rep);
                 this.setState({horde: tempRep});
-            } else if (rep.id === 1168) { // Guild Rep
+            } else if (rep.faction.id === 1168) { // Guild Rep
                 this.setState({guild: rep})
-            } else if (rep.id < 929) { // Vanilla Reps
+            } else if (rep.faction.id < 929) { // Vanilla Reps
                 tempRep = this.state.vanilla;
                 tempRep.push(rep);
                 this.setState({vanilla: tempRep});
-            } else if (rep.id < 1036 || rep.id === 1038 || rep.id === 1077) { // BC Reps
+            } else if (rep.faction.id < 1036 || rep.faction.id === 1038 || rep.faction.id === 1077) { // BC Reps
                 tempRep = this.state.bc;
                 tempRep.push(rep);
                 this.setState({bc: tempRep});
-            } else if (rep.id <= 1126) { // Wrath Reps
+            } else if (rep.faction.id <= 1126) { // Wrath Reps
                 tempRep = this.state.wrath;
                 tempRep.push(rep);
                 this.setState({wrath: tempRep});
-            } else if (rep.id <= 1204) { // Cata Reps
+            } else if (rep.faction.id <= 1204) { // Cata Reps
                 tempRep = this.state.cata;
                 tempRep.push(rep);
                 this.setState({cata: tempRep});
-            } else if (rep.id <= 1435 && rep.id !== 1358) { // Mop Reps
+            } else if (rep.faction.id <= 1435 && rep.faction.id !== 1358) { // Mop Reps
                 tempRep = this.state.mop;
                 tempRep.push(rep);
                 this.setState({mop: tempRep});
-            } else if ((rep.id <= 1850 && rep.id !== 1691 && rep.id !== 1828) || rep.id ===  1848 || rep.id === 1847) { // Wod Reps
+            } else if ((rep.faction.id <= 1850 && rep.faction.id !== 1691 && rep.faction.id !== 1828) || rep.faction.id ===  1848 || rep.faction.id === 1847) { // Wod Reps
                 tempRep = this.state.wod;
                 tempRep.push(rep);
                 this.setState({wod: tempRep});
-            } else if (rep.id < 2045 || rep.id === 2165 || rep.id === 2170) { // Legion Reps
+            } else if (rep.faction.id < 2045 || rep.faction.id === 2165 || rep.faction.id === 2170) { // Legion Reps
                 tempRep = this.state.legion;
                 tempRep.push(rep);
                 this.setState({legion: tempRep});
-            } else if (rep.id >= 2103 && rep.id !== 2135) { // Bfa Reps
+            } else if (rep.faction.id >= 2103 && rep.faction.id !== 2135) { // Bfa Reps
                 tempRep = this.state.bfa;
                 tempRep.push(rep);
                 this.setState({bfa: tempRep});

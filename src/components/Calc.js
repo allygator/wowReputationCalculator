@@ -45,9 +45,11 @@ class Calc extends Component {
             thumbnail: "",
             formattedName: "",
             formattedRealm: "",
+            slug: "",
             submittedRegion: "",
             submittedRealm: "",
             submittedName: "",
+            submittedSlug: "",
             completedCount: 0
         }
     }
@@ -58,8 +60,10 @@ class Calc extends Component {
         }
         fetch('/.netlify/functions/gettoken')
             .then(response => response.json())
-            .then(json => this.setState({token:json.token}))
-            .catch(error => console.log(error))
+            .then(json => {
+                this.setState({token:json.token})
+            })
+            .catch(error => console.log(error));
     }
 
     setHistory(a) {
@@ -93,7 +97,7 @@ class Calc extends Component {
     showReputations(e) {
         //console.log("Submitted");
         this.setState({isSubmitted:true, showSearch:false})
-        this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, isCompleted:this.state.completed, });
+        this.setState({submittedName:this.state.name, submittedRealm:this.state.realm, submittedRegion:this.state.region, isCompleted:this.state.completed});
         this.setHistory('/'+this.state.region+'/'+this.state.realm+'/'+this.state.name);
     }
 
@@ -131,7 +135,7 @@ class Calc extends Component {
                                     <Collapse in={this.state.showSearch} style={{style}} className="input-wrapper-collapse">
                                     <div className={`user-input-box paper ${this.state.isSubmitted ? "" : "popout"} `}>
                                     <div id="selectionBoxes">
-                                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} history={this.setHistory} token = {this.state.token}/>}
+                                        {this.state.token && <RealmsList realmSelection={this.setRealmState} regionSelection={this.setRegionState} slug={this.setSlug} history={this.setHistory} token = {this.state.token}/>}
                                         <div id="name">
                                         <TextField id="characterName" label="Character Name" variant="outlined" required={true} onChange={e=>this.setState({name:e.target.value})} fullWidth/>
                                         </div>
@@ -154,9 +158,9 @@ class Calc extends Component {
                                 {this.state.completedCount && this.state.completedCount + " Completed Reputations"}
                                 </Typography>
                             </CardContent>
-                            {this.state.thumbnail && <Avatar alt="character thumbnail" src={['https://render-us.worldofwarcraft.com/character/',this.state.thumbnail].join('')} />}
+                            {this.state.thumbnail && <Avatar alt="character thumbnail" src={this.state.thumbnail} />}
                         </Card>
-                        {this.state.submittedName && this.state.submittedRealm && this.state.token && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount}  token={this.state.token} />}
+                        {this.state.submittedName && this.state.submittedRealm && this.state.token && <Reputation name={this.state.submittedName} realm={this.state.submittedRealm} region={this.state.submittedRegion} slug={this.state.submittedSlug} completed={this.state.isCompleted} setThumbnail={this.setThumbnail} setName={this.setName} setRealm={this.setRealm} setCompletedCount={this.setCompletedCount}  token={this.state.token} />}
                     </MuiThemeProvider>
             </div>
     );}

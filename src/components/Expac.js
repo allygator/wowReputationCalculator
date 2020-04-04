@@ -25,7 +25,7 @@ class Expac extends Component {
     }
 
     repLevel(rep) {
-        if(bestFriends.includes(rep.id)) {
+        if(bestFriends.includes(rep.faction.id)) {
             return friendLevels[rep.standing];
         } else {
             return repTitles[rep.standing];
@@ -71,7 +71,7 @@ class Expac extends Component {
                     <ExpansionPanelDetails className="expacDetails">
 
                         {reps.map((rep) => (
-                            <Faction rep={rep} key={rep.name} />
+                            <Faction rep={rep} key={rep.faction.name} />
                         ))}
 
                     </ExpansionPanelDetails>
@@ -82,7 +82,7 @@ class Expac extends Component {
 }
 
 function countMaxReps(accumulator,currentValue) {
-    if(currentValue.max === 0 && (currentValue.standing === 7 || currentValue.standing === 5))
+    if(currentValue.standing.max === 0 && (currentValue.standing.tier === 7 || currentValue.standing.tier === 5))
         return accumulator + 1;
     else
         return accumulator;
