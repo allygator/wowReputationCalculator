@@ -1,34 +1,15 @@
-import React, { Component } from 'react';
-import Calc from './Calc';
-import Blog from './Blog';
-import  { Route, Switch, Redirect } from 'react-router-dom';
+import React from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Calc from "./Calc";
 
-export const characterData = {
-    region: '',
-    realm: '',
-    name: ''
-}
-
-export const characterContext = React.createContext(
-    characterData
-);
-
-class Main extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-
-    render() {
-        return (
-            <Switch>
-                <Route exact path='/' component={Calc}/>
-                <Redirect from="/example" to="/us/quel'dorei/elilla"/>
-                <Route path='/:region/:realm/:name' component={Calc}/>
-                <Route path='/blog' component={Blog}/>
-            </Switch>
-    );}
-
-
+function Main() {
+  return (
+    <Switch>
+      <Route exact path="/" component={Calc} />
+      <Redirect from="/example" to="/us/queldorei/elilla" />
+      <Route path="/:region/:realm/:name" component={Calc} />
+    </Switch>
+  );
 }
 
 export default Main;
