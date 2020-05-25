@@ -150,6 +150,7 @@
     .calc .user-input-wrapper {
         width: 45%;
         margin: auto;
+        height: auto;
     }
 
     #selectionBoxes {
