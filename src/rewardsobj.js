@@ -2160,6 +2160,89 @@ const rewards = {
       },
     ],
   },
+  "1073": {
+    //The Kalu'ak
+    Friendly: [
+      {
+        name: "Design: Purified Shadow Crystal",
+        id: "41568",
+      },
+      {
+        name: "Freshly-Speared Emperor Salmon",
+        id: "44049",
+      },
+    ],
+    Honored: [
+      {
+        name: "Cuttlefish Scale Breastplate",
+        id: "44059",
+      },
+      {
+        name: "Cuttlefish Tooth Ringmail",
+        id: "44060",
+      },
+      {
+        name: "Ivory-Reinforced Chestguard",
+        id: "44057",
+      },
+      {
+        name: "Pigment-Stained Robes",
+        id: "44061",
+      },
+      {
+        name: "Turtle-Minders Robe",
+        id: "44062",
+      },
+      {
+        name: "Whale-Skin Breastplate",
+        id: "44054",
+      },
+      {
+        name: "Whalebone Carapace",
+        id: "44058",
+      },
+      {
+        name: "Design: Defender's Shadow Crystal",
+        id: "41574",
+      },
+      {
+        name: "Whale-Skin Vest",
+        id: "44055",
+      },
+    ],
+    Revered: [
+      {
+        name: "Pattern: Trapper's Traveling Pack",
+        id: "44509",
+      },
+      {
+        name: "Totemic Purification Rod",
+        id: "44052",
+      },
+      {
+        name: "Traditional Flensing Knife",
+        id: "44051",
+      },
+      {
+        name: "Whale-Stick Harpoon",
+        id: "44053",
+      },
+      {
+        name: "Pattern: Emerald Bag",
+        id: "45774",
+      },
+    ],
+    Exalted: [
+      {
+        name: "Mastercraft Kalu'ak Fishing Pole",
+        id: "44050",
+      },
+      {
+        name: "Nurtured Penguin Egg",
+        id: "44723",
+      },
+    ],
+  },
   "1077": {
     //Shattered Sun Offensive
     Friendly: [
@@ -2415,6 +2498,152 @@ const rewards = {
       },
     ],
   },
+  "1090": {
+    //Kirin Tor
+    Friendly: [
+      {
+        name: "Tabard of the Kirin Tor",
+        id: "43157",
+      },
+    ],
+    Honored: [
+      {
+        name: "Helm of the Majestic Stag",
+        id: "44170",
+      },
+      {
+        name: "Lightblade Rivener",
+        id: "44166",
+      },
+      {
+        name: "Shroud of Dedicated Research",
+        id: "44167",
+      },
+      {
+        name: "Spaulders of Grounded Lightning",
+        id: "44171",
+      },
+    ],
+    Revered: [
+      {
+        name: "Flameheart Spell Scalpel",
+        id: "44173",
+      },
+      {
+        name: "Girdle of the Warrior Magi",
+        id: "44176",
+      },
+      {
+        name: "Mind-Expanding Leggings",
+        id: "44179",
+      },
+      {
+        name: "Stave of Shrouded Mysteries",
+        id: "44174",
+      },
+    ],
+    Exalted: [
+      {
+        name: "Boots of Twinkling Stars",
+        id: "44182",
+      },
+      {
+        name: "Fireproven Gauntlets",
+        id: "44183",
+      },
+      {
+        name: "Ghostflicker Waistband",
+        id: "44181",
+      },
+      {
+        name: "Robes of Crackling Flame",
+        id: "44180",
+      },
+      {
+        name: "Design: Brilliant Scarlet Ruby",
+        id: "41718",
+      },
+      {
+        name: "Pattern: Sapphire Spellthread",
+        id: "42188",
+      },
+    ],
+  },
+  "1091": {
+    //The Wyrmrest Accord
+    Friendly: [
+      {
+        name: "Tabard of the Wyrmrest Accord",
+        id: "43156",
+      },
+    ],
+    Honored: [
+      {
+        name: "Bracers of Accorded Courtesy",
+        id: "44197",
+      },
+      {
+        name: "Cloak of Peaceful Resolutions",
+        id: "44188",
+      },
+      {
+        name: "Fang of Truth",
+        id: "44187",
+      },
+      {
+        name: "Sash of the Wizened Wyrm",
+        id: "44196",
+      },
+    ],
+    Revered: [
+      {
+        name: "Ancestral Sinew Wristguards",
+        id: "44200",
+      },
+      {
+        name: "Breastplate of the Solemn Council",
+        id: "44198",
+      },
+      {
+        name: "Gavel of the Brewing Storm",
+        id: "44199",
+      },
+      {
+        name: "Sabatons of Draconic Vigor",
+        id: "44201",
+      },
+      {
+        name: "Pattern: Mysterious Bag",
+        id: "42185",
+      },
+    ],
+    Exalted: [
+      {
+        name: "Dragonfriend Bracers",
+        id: "44203",
+      },
+      {
+        name: "Grips of Fierce Pronouncements",
+        id: "44204",
+      },
+      {
+        name: "Legplates of Bloody Reprisal",
+        id: "44205",
+      },
+      {
+        name: "Reins of the Red Drake",
+        id: "43955",
+      },
+      {
+        name: "Sandals of Crimson Fury",
+        id: "44202",
+      },
+      {
+        name: "Design: Stalwart Monarch Topaz",
+        id: "41722",
+      },
+    ],
+  },
   "1094": {
     //The Silver Covenant
     Exalted: [
@@ -2433,6 +2662,126 @@ const rewards = {
       {
         name: "Silver Covenant Tabard",
         id: "46817",
+      },
+    ],
+  },
+  "1104": {
+    //Frenzyheart Tribe
+    Friendly: [
+      {
+        name: "Design: Reckless Huge Citrine",
+        id: "41561",
+      },
+      {
+        name: "Nepeta Leaf",
+        id: "44064",
+      },
+      {
+        name: "Roasted Mystery Beast",
+        id: "44072",
+      },
+    ],
+    Revered: [
+      {
+        name: "Azure Strappy Pants",
+        id: "44117",
+      },
+      {
+        name: "Design: Jagged Forest Emerald",
+        id: "41723",
+      },
+      {
+        name: "Discarded Titanium Legplates",
+        id: "44123",
+      },
+      {
+        name: "Giant-Sized Gauntlets",
+        id: "44120",
+      },
+      {
+        name: "Muddied Crimson Gloves",
+        id: "44116",
+      },
+      {
+        name: "Scavenged Feathery Leggings",
+        id: "44122",
+      },
+      {
+        name: "Sparkly Shiny Gloves",
+        id: "44121",
+      },
+      {
+        name: "Disgusting Jar",
+        id: "44717",
+      },
+    ],
+    Exalted: [
+      {
+        name: "Frenzyheart Insignia of Fury",
+        id: "44073",
+      },
+    ],
+  },
+  "1105": {
+    //The Oracles
+    Friendly: [
+      {
+        name: "Design: Nimble Dark Jade",
+        id: "41567",
+      },
+      {
+        name: "Oracle Secret Solution",
+        id: "44065",
+      },
+    ],
+    Honored: [
+      {
+        name: "Slow-Roasted Eel",
+        id: "44071",
+      },
+    ],
+    Revered: [
+      {
+        name: "Design: Misty Forest Emerald",
+        id: "41724",
+      },
+      {
+        name: "Fishy Cinch",
+        id: "44104",
+      },
+      {
+        name: "Glimmershell Shoulder Protectors",
+        id: "44112",
+      },
+      {
+        name: "Glitterscale Wrap",
+        id: "44106",
+      },
+      {
+        name: "Gold Star Spaulders",
+        id: "44111",
+      },
+      {
+        name: "Sharkjaw Cap",
+        id: "44110",
+      },
+      {
+        name: "Shinygem Rod",
+        id: "44108",
+      },
+      {
+        name: "Toothslice Helm",
+        id: "44109",
+      },
+      {
+        name: "Mysterious Egg",
+        id: "39878",
+      },
+    ],
+    Exalted: [
+      {
+        name: "Oracle Talisman of Ablution",
+        id: "44074",
       },
     ],
   },
@@ -2466,10 +2815,6 @@ const rewards = {
       {
         name: "Spaulders of Frozen Knives",
         id: "44190",
-      },
-      {
-        name: "Arcanum of the Frosty Soul",
-        id: "44137",
       },
     ],
     Revered: [
