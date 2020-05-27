@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Expac from "./Expac";
+import UserContext from "../context/UserContext";
 
 const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [
@@ -63,7 +64,8 @@ const nobody = [
   2111,
 ];
 
-function RepLayout(props) {
+function RepLayout() {
+  let user = useContext(UserContext);
   const [vanilla, setVanilla] = useState([]);
   const [bc, setBC] = useState([]);
   const [wrath, setWrath] = useState([]);
@@ -76,7 +78,7 @@ function RepLayout(props) {
   const [horde, setHorde] = useState([]);
   // eslint-disable-next-line
   const [guild, setGuild] = useState([]);
-  let reps = props.reps;
+  let reps = user.reps;
 
   useEffect(() => {
     /*  Vanilla: 21-910
@@ -95,8 +97,8 @@ function RepLayout(props) {
         // seem to only serve the purpose of holding the other factions
         // Also a follower, and the Brawlers Guild
       } else if (
-        (props.isHorde && noAlli.includes(rep.faction.id)) ||
-        (props.isHorde && noHorde.includes(rep.faction.id))
+        (user.faction && noAlli.includes(rep.faction.id)) ||
+        (!user.faction && noHorde.includes(rep.faction.id))
       ) {
         //This filters out reputations only available to the other faction
       } else if (alli.includes(rep.faction.id)) {
@@ -149,83 +151,45 @@ function RepLayout(props) {
         setBFA((others) => [...others, rep]);
       }
     }
-  }, [reps, props.hideProgress, props.isHorde]);
+  }, [reps, user.faction]);
 
   return (
     <div>
-      {!props.isHorde && (
+      {user.faction && alliance.length > 0 && (
+        <Expac name="Alliance" cName="alliance" reps={alliance} />
+      )}
+      {!user.faction && horde.length > 0 && (
+        <Expac name="Horde" cName="horde" reps={horde} key="horde" />
+      )}
+      {vanilla.length > 0 && (
+        <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={"vanilla"} />
+      )}
+      {bc.length > 0 && (
+        <Expac name="Burning Crusade" cName="bc" reps={bc} key={"bc"} />
+      )}
+      {wrath.length > 0 && (
         <Expac
-          name="Alliance"
-          cName="alliance"
-          reps={alliance}
-          hideProgress={props.hideProgress}
+          name="Wrath of the Lich King"
+          cName="wrath"
+          reps={wrath}
+          key={"wrath"}
         />
       )}
-      {props.isHorde && (
-        <Expac
-          name="Horde"
-          cName="horde"
-          reps={horde}
-          key="horde"
-          hideProgress={props.hideProgress}
-        />
+      {cata.length > 0 && (
+        <Expac name="Cataclysm" cName="cata" reps={cata} key={"cata"} />
       )}
-      <Expac
-        name="Vanilla"
-        cName="vanilla"
-        reps={vanilla}
-        key={"vanilla"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Burning Crusade"
-        cName="bc"
-        reps={bc}
-        key={"bc"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Wrath of the Lich King"
-        cName="wrath"
-        reps={wrath}
-        key={"wrath"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Cataclysm"
-        cName="cata"
-        reps={cata}
-        key={"cata"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Mists of Pandaria"
-        cName="mop"
-        reps={mop}
-        key={"mop"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Warlords of Draenor"
-        cName="wod"
-        reps={wod}
-        key={"wod"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Legion"
-        cName="legion"
-        reps={legion}
-        key={"legion"}
-        hideProgress={props.hideProgress}
-      />
-      <Expac
-        name="Battle for Azeroth"
-        cName="bfa"
-        reps={bfa}
-        key={"bfa"}
-        hideProgress={props.hideProgress}
-      />
+      {mop.length > 0 && (
+        <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"mop"} />
+      )}
+      {wod.length > 0 && (
+        <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"wod"} />
+      )}
+      {legion.length > 0 && (
+        <Expac name="Legion" cName="legion" reps={legion} key={"legion"} />
+      )}
+      {bfa.length > 0 && (
+        <Expac name="Battle for Azeroth" cName="bfa" reps={bfa} key={"bfa"} />
+      )}
     </div>
   );
 }

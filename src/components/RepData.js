@@ -11,12 +11,13 @@ function RepData(props) {
     setVal({ value });
   }
   return (
-    <div>
+    <div id="detailsPanel">
       <Tabs
         value={value}
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
+        variant="fullWidth"
       >
         {rewardsCont[rep] && <Tab label="Rewards" />}
       </Tabs>

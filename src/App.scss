@@ -48,18 +48,57 @@ a {
   width: 90%;
   padding-bottom: 20px;
   margin: auto;
+  .user-input-wrapper {
+    max-width: 500px;
+    // height: auto;
+    // padding: 0 5px 5px 5px;
+    // transition: all 300ms;
+    margin-top: -40px;
+    .user-input-box {
+      background-color: whitesmoke;
+      padding: 10px;
+      border-radius: 5px;
+      &.popout {
+        // min-height: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        #selectionBoxes {
+          // height: 30%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          padding: 8px;
+          > div {
+            width: 100%;
+            // height: 45%;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
   .reputations {
     width: 100%;
+    .expacPanel {
+      .progress-carat {
+        width: 60%;
+        border: 1px solid whitesmoke;
+        border-radius: 8px;
+      }
+      #detailsPanel {
+        width: 100%;
+      }
+    }
   }
   #newSearch {
-    // align-self: flex-end;
     margin-top: 10px;
-  }
-}
-
-.expacPanel {
-  .progress-carat {
-    width: 60%;
   }
 }
 
@@ -72,10 +111,6 @@ a {
 .expacDetails {
   display: flex;
   flex-direction: column;
-}
-
-.user-input-wrapper {
-  max-width: 400px;
 }
 
 .characterCard {
@@ -213,14 +248,12 @@ a {
     flex-direction: row;
     padding: 0 20px;
   }
-  .characterCard {
-    margin: -40px 0 5px 0;
-  }
   #newSearch {
     align-self: flex-end;
   }
 }
 
 .hidden {
-  display: none;
+  height: 0px !important;
+  overflow: hidden;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory, useLocation } from "react-router-dom";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -8,45 +8,68 @@ import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
+import clsx from "clsx";
 
 import RealmsList from "./Realms";
 import Reputation from "./Reputation";
+import UserContext from "../context/UserContext";
 
 function Calc() {
+  const location = useLocation();
   let { region, realm, name } = useParams();
+  let history = useHistory();
+  //BNet token
   const [token, setToken] = useState("");
-  const [options, setOptions] = useState({
+  // const [reps, setReps] = useState([]);
+  const [user, setUser] = useState({
+    name: "",
+    region: "",
+    realm: "",
+    faction: true,
+    hideCompleted: false,
+    reps: [],
+  });
+  const [loading, setLoading] = useState(false);
+  const [inputFields, setFields] = useState({
+    showSearch: true,
     name: "",
     realm: "",
     region: "",
-    hideComplete: false,
-    isSubmitted: false,
-    isCompleted: false,
-    showSearch: true,
-    thumbnail: "",
-    formattedName: "",
-    formattedRealm: "",
-    submittedRegion: "",
-    submittedRealm: "",
-    submittedName: "",
-    completedCount: 0,
-    faction: true,
+    hideCompleted: false,
   });
-  const [reps, setReps] = useState([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [thumbnail, setThumbnail] = useState("");
+  const [formattedUser, setFormatted] = useState({ name: "", realm: "" });
+  const [completedCount, setCount] = useState(0);
 
   useEffect(() => {
-    if (region) {
-      setOptions((o) => ({
-        ...o,
-        submittedRegion: region,
-        submittedRealm: realm,
-        submittedName: name,
-        submittedisChecked: true,
-        isSubmitted: true,
-        showSearch: false,
+    if (
+      region !== user.region &&
+      realm !== user.realm &&
+      name !== user.name &&
+      region &&
+      realm &&
+      name
+    ) {
+      setLoading(true);
+      let hidden = new URLSearchParams(location.search).get("hide");
+      setUser((current) => ({
+        ...current,
+        name: name,
+        region: region.toLowerCase(),
+        realm: realm,
+        hideCompleted: hidden,
       }));
     }
-  }, [region, realm, name]);
+  }, [
+    region,
+    realm,
+    name,
+    user.region,
+    user.realm,
+    user.name,
+    location.search,
+  ]);
 
   useEffect(() => {
     fetch("/.netlify/functions/gettoken")
@@ -58,82 +81,63 @@ function Calc() {
   }, []);
 
   useEffect(() => {
-    let submittedName = options.submittedName;
-    let submittedRealm = options.submittedRealm;
-    let submittedRegion = options.submittedRegion;
-    if (submittedName && token && submittedRegion && submittedRealm) {
-      let regionFormat = submittedRegion.toLowerCase();
+    if (user.name && user.region && user.realm && token) {
+      let name = user.name;
+      let region = user.region;
+      let realm = user.realm;
       let lang;
-      if (regionFormat === "us") {
+      if (region === "us") {
         lang = "en_US";
       } else {
         lang = "en_GB";
       }
       fetch(
-        "https://" +
-          regionFormat +
-          ".api.blizzard.com/profile/wow/character/" +
-          submittedRealm +
-          "/" +
-          submittedName +
-          "/reputations?namespace=profile-" +
-          regionFormat +
-          "&locale=" +
-          lang +
-          "&access_token=" +
-          token
+        `https://${region}.api.blizzard.com/profile/wow/character/${realm}/${name}/reputations?namespace=profile-${region}&locale=${lang}&access_token=${token}`
       )
         .then((response) => response.json())
         .then((character) => {
-          let alliance = character.reputations[1].faction.id === 47;
-          let url =
-            "https://render-" +
-            regionFormat +
-            ".worldofwarcraft.com/character/" +
-            character.character.realm.slug +
-            "/" +
-            (character.character.id % 256) +
-            "/" +
-            character.character.id +
-            "-avatar.jpg";
-          setOptions((o) => ({
-            ...o,
-            thumbnail: url,
-            formattedRealm: character.character.realm.name,
-            formattedName: character.character.name,
-            faction: alliance,
+          let isAlliance = character.reputations[1].faction.id === 47;
+          let url = `https://render-${region}.worldofwarcraft.com/character/${
+            character.character.realm.slug
+          }/${character.character.id % 256}/${
+            character.character.id
+          }-avatar.jpg`;
+          setThumbnail(url);
+          setUser((current) => ({
+            ...current,
+            faction: isAlliance,
+            reps: character.reputations,
           }));
-          setReps(character.reputations);
-        });
+          setFormatted((current) => ({
+            ...current,
+            realm: character.character.realm.name,
+            name: character.character.name,
+          }));
+          setFields((fields) => ({ ...fields, showSearch: false }));
+          setSubmitted(true);
+        })
+        .then(setLoading(false));
     }
-  }, [
-    options.submittedName,
-    token,
-    options.submittedRegion,
-    options.submittedRealm,
-  ]);
+  }, [user.name, user.realm, user.region, token]);
 
   function setRealmData(realm, region) {
-    setOptions({
-      ...options,
+    setFields({
+      ...inputFields,
       realm: realm,
       region: region,
     });
   }
 
   function setCompletedCount(number) {
-    setOptions({
-      ...options,
-      completedCount: number,
-    });
+    setCount(number);
   }
 
   function showSearch() {
-    setOptions({ ...options, showSearch: !options.showSearch });
+    setFields({ ...inputFields, showSearch: !inputFields.showSearch });
   }
 
   let style = {};
-  if (options.isSubmitted) {
+  if (submitted) {
     style.height = 0;
   }
   function enterPressed(event) {
@@ -144,105 +148,121 @@ function Calc() {
     }
   }
   const handleChange = (event) => {
-    setOptions({ ...options, [event.target.name]: event.target.checked });
+    setFields({ ...inputFields, [event.target.name]: event.target.checked });
   };
   function showReputations(e) {
-    setOptions({
-      ...options,
-      isSubmitted: true,
-      showSearch: false,
-      submittedName: options.name,
-      submittedRealm: options.realm,
-      submittedRegion: options.region,
-      isCompleted: options.hideComplete,
-    });
+    if (inputFields.name && inputFields.realm && inputFields.region) {
+      setFields({ ...inputFields, showSearch: false });
+      setSubmitted(true);
+      setLoading(true);
+      if (inputFields.hideCompleted) {
+        history.push(
+          `/${inputFields.region.toLowerCase()}/${inputFields.realm}/${
+            inputFields.name
+          }?hide=true`
+        );
+      } else {
+        history.push(
+          `/${inputFields.region.toLowerCase()}/${inputFields.realm}/${
+            inputFields.name
+          }`
+        );
+      }
+    }
   }
+
   return (
     <div className="calc" id="calc">
-      <div id="newSearch">
-        {options.isSubmitted && (
-          <Button variant="contained" id="inputButton" onClick={showSearch}>
-            New Character Search
-          </Button>
-        )}
-      </div>
-      <div className="user-input-wrapper" onKeyPress={enterPressed}>
-        <Collapse
-          in={options.showSearch}
-          style={{ style }}
-          className="input-wrapper-collapse"
-        >
-          <div
-            className={`user-input-box paper ${
-              options.isSubmitted ? "" : "popout"
-            } `}
+      <UserContext.Provider value={user}>
+        <div id="newSearch">
+          {submitted && (
+            <Button variant="contained" id="inputButton" onClick={showSearch}>
+              New Character Search
+            </Button>
+          )}
+        </div>
+        <div className="user-input-wrapper" onKeyPress={enterPressed}>
+          <Collapse
+            in={inputFields.showSearch}
+            style={{ style }}
+            className="input-wrapper-collapse"
           >
-            <div id="selectionBoxes">
-              {token && (
-                <RealmsList realmSelection={setRealmData} token={token} />
+            <div
+              className={clsx("user-input-box paper", !submitted && "popout")}
+            >
+              {submitted ? (
+                ""
+              ) : (
+                <p>
+                  RepCalc is designed as a more user friendly way of tracking
+                  data about the repuations in World of Warcraft. Search your
+                  character below to see your standings.
+                </p>
               )}
-              <div id="name">
-                <TextField
-                  id="characterName"
-                  label="Character Name"
-                  variant="outlined"
-                  required={true}
-                  onChange={(e) =>
-                    setOptions({ ...options, name: e.target.value })
+              <div id="selectionBoxes">
+                {token && inputFields.showSearch && (
+                  <RealmsList realmSelection={setRealmData} token={token} />
+                )}
+                <div id="name">
+                  <TextField
+                    id="characterName"
+                    label="Character Name"
+                    required={true}
+                    onChange={(e) =>
+                      setFields({ ...inputFields, name: e.target.value })
+                    }
+                    value={inputFields.name}
+                    fullWidth
+                  />
+                </div>
+              </div>
+              <div id="hiddenTypes">
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={inputFields.hideCompleted}
+                      onChange={handleChange}
+                      name="hideComplete"
+                    />
                   }
-                  value={options.name}
-                  fullWidth
+                  label="Hide Completed Reputations"
                 />
               </div>
+              <Button
+                variant="contained"
+                id="submitButton"
+                onClick={showReputations}
+              >
+                Submit
+              </Button>
             </div>
-            <div id="hiddenTypes">
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={options.hideComplete}
-                    onChange={handleChange}
-                    name="hideComplete"
-                  />
-                }
-                label="Hide Completed Reputations"
+          </Collapse>
+        </div>
+        {user.reps.length > 0 && (
+          <Card className={clsx("characterCard")}>
+            <CardContent>
+              <h2>{formattedUser.name}</h2>
+              <h3>{formattedUser.realm}</h3>
+              <h3>
+                {completedCount > 0 &&
+                  completedCount + " Completed Reputations"}
+              </h3>
+            </CardContent>
+            {thumbnail && (
+              <Avatar
+                variant="rounded"
+                alt="character thumbnail"
+                src={thumbnail}
+                id="profileIcon"
               />
-            </div>
-            <Button
-              variant="contained"
-              id="submitButton"
-              onClick={showReputations}
-            >
-              Submit
-            </Button>
-          </div>
-        </Collapse>
-      </div>
-      <Card className={`characterCard ${options.isSubmitted ? "" : "hidden"}`}>
-        <CardContent>
-          <h2>{options.formattedName}</h2>
-          <h3>{options.formattedRealm}</h3>
-          <h3>
-            {options.completedCount &&
-              options.completedCount + " Completed Reputations"}
-          </h3>
-        </CardContent>
-        {options.thumbnail && (
-          <Avatar
-            variant="rounded"
-            alt="character thumbnail"
-            src={options.thumbnail}
-            id="profileIcon"
-          />
+            )}
+          </Card>
         )}
-      </Card>
-      {options.submittedName && options.submittedRealm && token && (
-        <Reputation
-          completed={options.isCompleted}
-          reps={reps}
-          faction={options.faction}
-          setCompletedCount={setCompletedCount}
-        />
-      )}
+        {loading ? "Loading..." : ""}
+        {user.reps.length > 0 && !loading && (
+          <Reputation setCompletedCount={setCompletedCount} />
+        )}
+      </UserContext.Provider>
     </div>
   );
 }

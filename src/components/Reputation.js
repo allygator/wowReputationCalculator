@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 import RepLayout from "./RepLayout";
+import UserContext from "../context/UserContext";
 
 function Repuation(props) {
-  let localreps = props.reps;
+  let user = useContext(UserContext);
+  let localreps = user.reps;
   let setCompletedCount = props.setCompletedCount;
   useEffect(() => {
     let complete = 0;
@@ -18,15 +20,27 @@ function Repuation(props) {
     // eslint-disable-next-line
   }, [localreps]);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src = "https://wow.zamimg.com/widgets/power.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+    window.whTooltips = {
+      colorLinks: true,
+      iconizeLinks: true,
+      renameLinks: true,
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="reputations" key="reputationPanel">
-      {props.reps.length > 1 && (
-        <RepLayout
-          reps={localreps}
-          isHorde={!props.faction}
-          hideProgress={props.completed}
-        />
-      )}
+      {user.reps.length > 1 && <RepLayout />}
     </div>
   );
 }

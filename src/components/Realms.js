@@ -17,51 +17,46 @@ function RealmList(props) {
   }
 
   useEffect(() => {
-    if (props.specificRealm) {
-      this.setState({
-        isLoaded: true,
-      });
-    } else {
-      fetch(
-        "https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=" +
-          props.token
+    fetch(
+      "https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=" +
+        props.token
+    )
+      .then(
+        (response) => response.json(),
+        (othererror) => console.log(othererror)
       )
-        .then(
-          (response) => response.json(),
-          (othererror) => console.log(othererror)
+      .then(
+        (realmList) => {
+          setOptions((o) => ({ ...o, isLoaded: true }));
+          setUS(realmList.realms);
+        },
+        (error) => {
+          setOptions((o) => ({ ...o, isLoaded: true, error: error }));
+        }
+      )
+      .then(
+        fetch(
+          "https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=" +
+            props.token
         )
-        .then(
-          (realmList) => {
-            setOptions((o) => ({ ...o, isLoaded: true }));
-            setUS(realmList.realms);
-          },
-          (error) => {
-            setOptions((o) => ({ ...o, isLoaded: true, error: error }));
-          }
-        )
-        .then(
-          fetch(
-            "https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=" +
-              props.token
+          .then(
+            (response) => response.json(),
+            (othererror) => console.log(othererror)
           )
-            .then(
-              (response) => response.json(),
-              (othererror) => console.log(othererror)
-            )
-            .then(
-              (realmList) => {
-                setOptions((o) => ({ ...o, isLoaded: true }));
-                setEU(realmList.realms);
-              },
-              (error) => {
-                setOptions((o) => ({ ...o, isLoaded: true, error: error }));
-              }
-            )
-        );
-    }
-  }, [props]);
+          .then(
+            (realmList) => {
+              setOptions((o) => ({ ...o, isLoaded: true }));
+              setEU(realmList.realms);
+            },
+            (error) => {
+              setOptions((o) => ({ ...o, isLoaded: true, error: error }));
+            }
+          )
+      )
+      .then(setOptions((current) => ({ ...current, isLoaded: true })));
+  }, [props.token]);
 
-  const portalTargetElement = document.getElementById("calc");
+  // const portalTargetElement = document.getElementById("calc");
   const { error, isLoaded } = options;
   var USOptions = [];
   var EUOptions = [];
@@ -103,7 +98,7 @@ function RealmList(props) {
         onChange={handleChange}
         options={groupedOptions}
         formatGroupLabel={formatGroupLabel}
-        menuPortalTarget={portalTargetElement}
+        placeholder="Realm"
       />
     );
   }
