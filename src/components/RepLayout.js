@@ -155,18 +155,23 @@ function RepLayout() {
 
   return (
     <div>
-      {user.faction && alliance.length > 0 && (
-        <Expac name="Alliance" cName="alliance" reps={alliance} />
+      {bfa.length > 0 && (
+        <Expac name="Battle for Azeroth" cName="bfa" reps={bfa} key={"bfa"} />
       )}
-      {!user.faction && horde.length > 0 && (
-        <Expac name="Horde" cName="horde" reps={horde} key="horde" />
+      {legion.length > 0 && (
+        <Expac name="Legion" cName="legion" reps={legion} key={"legion"} />
       )}
-      {vanilla.length > 0 && (
-        <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={"vanilla"} />
+
+      {wod.length > 0 && (
+        <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"wod"} />
       )}
-      {bc.length > 0 && (
-        <Expac name="Burning Crusade" cName="bc" reps={bc} key={"bc"} />
+      {mop.length > 0 && (
+        <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"mop"} />
       )}
+      {cata.length > 0 && (
+        <Expac name="Cataclysm" cName="cata" reps={cata} key={"cata"} />
+      )}
+
       {wrath.length > 0 && (
         <Expac
           name="Wrath of the Lich King"
@@ -175,20 +180,17 @@ function RepLayout() {
           key={"wrath"}
         />
       )}
-      {cata.length > 0 && (
-        <Expac name="Cataclysm" cName="cata" reps={cata} key={"cata"} />
+      {bc.length > 0 && (
+        <Expac name="Burning Crusade" cName="bc" reps={bc} key={"bc"} />
       )}
-      {mop.length > 0 && (
-        <Expac name="Mists of Pandaria" cName="mop" reps={mop} key={"mop"} />
+      {vanilla.length > 0 && (
+        <Expac name="Vanilla" cName="vanilla" reps={vanilla} key={"vanilla"} />
       )}
-      {wod.length > 0 && (
-        <Expac name="Warlords of Draenor" cName="wod" reps={wod} key={"wod"} />
+      {user.faction && alliance.length > 0 && (
+        <Expac name="Alliance" cName="alliance" reps={alliance} />
       )}
-      {legion.length > 0 && (
-        <Expac name="Legion" cName="legion" reps={legion} key={"legion"} />
-      )}
-      {bfa.length > 0 && (
-        <Expac name="Battle for Azeroth" cName="bfa" reps={bfa} key={"bfa"} />
+      {!user.faction && horde.length > 0 && (
+        <Expac name="Horde" cName="horde" reps={horde} key="horde" />
       )}
     </div>
   );

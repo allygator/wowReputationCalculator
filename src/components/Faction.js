@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RepData from "./RepData";
+import RepProgress from "./RepProgress";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -18,11 +19,12 @@ function Faction(props) {
         expandIcon={<ExpandMoreIcon />}
       >
         <h3>{rep.faction.name}</h3>
+
         <span className="status-carat">
+          <RepProgress rep={rep} />
           {rep.paragon ? (
             <p>
-              {rep.standing.name} - Paragon {rep.paragon.value}/
-              {rep.paragon.max}
+              Paragon {rep.paragon.value}/{rep.paragon.max}
             </p>
           ) : (
             <p>{rep.standing.name}</p>

@@ -7,8 +7,8 @@ import Tab from "@material-ui/core/Tab";
 function RepData(props) {
   const rep = props.rep;
   const [value, setVal] = useState(0);
-  function handleChange(value) {
-    setVal({ value });
+  function handleChange(event, value) {
+    setVal(value);
   }
   return (
     <div id="detailsPanel">

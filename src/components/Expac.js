@@ -11,9 +11,15 @@ import UserContext from "../context/UserContext";
 
 function Expac(props) {
   let user = useContext(UserContext);
+  let reps = props.reps;
+  if (user.hideCompleted) {
+    reps = reps.filter(function (rep) {
+      return rep.standing.max !== 0 || rep.paragon;
+    });
+  }
   const [hidden, setHidden] = useState(true);
   let { name, cName } = props;
-  const totalMaxReps = props.reps.reduce(countMaxReps, 0);
+  const totalMaxReps = reps.reduce(countMaxReps, 0);
   function showHidden() {
     setHidden(!hidden);
   }
@@ -41,15 +47,23 @@ function Expac(props) {
         <span className={user.hideCompleted ? "carat" : "progress-carat"}>
           <LinearProgress
             variant="determinate"
-            value={normalise(totalMaxReps, props.reps.length)}
+            value={normalise(totalMaxReps, reps.length)}
             className="expacProgress"
           />
         </span>
+        {user.hideCompleted && <p>{reps.length - totalMaxReps} Remaining</p>}
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="expacDetails">
-        {props.reps.map((rep) => (
-          <Faction rep={rep} key={rep.faction.name} />
-        ))}
+        {reps.length === 0 ? (
+          <p>
+            You have all factions at max in this expansion. Congratulations!
+          </p>
+        ) : (
+          ""
+        )}
+        {reps.map((rep, index, arr) => {
+          return <Faction rep={rep} key={rep.faction.name} />;
+        })}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

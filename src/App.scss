@@ -50,16 +50,13 @@ a {
   margin: auto;
   .user-input-wrapper {
     max-width: 500px;
-    // height: auto;
-    // padding: 0 5px 5px 5px;
-    // transition: all 300ms;
+
     margin-top: -40px;
     .user-input-box {
       background-color: whitesmoke;
       padding: 10px;
       border-radius: 5px;
       &.popout {
-        // min-height: 300px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -100,12 +97,187 @@ a {
   #newSearch {
     margin-top: 10px;
   }
-}
+  .expacPanel {
+    .MuiLinearProgress-root {
+      border-radius: 4px;
+      height: 6px;
+    }
+    .MuiLinearProgress-barColorPrimary {
+      border-radius: 4px;
+    }
+    .rep-progress {
+      width: 50%;
+      display: flex;
+      .MuiLinearProgress-root {
+        border-radius: 4px;
+        height: 4px;
+        margin: 0 0.5px;
+      }
+      .MuiLinearProgress-colorPrimary {
+        background-color: rgba(178, 179, 184, 0.342);
+        &.paragon {
+          // background-color: rgba(182, 188, 226, 0.4);
+          width: 100%;
+        }
+      }
+      .exalted {
+        width: 2%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #014db1;
+        }
+      }
+      .revered {
+        width: 25%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #0197b1;
+        }
+      }
+      .honored {
+        width: 14%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #01b159;
+        }
+      }
+      .friendly {
+        width: 6%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #55b101;
+        }
+      }
+      .neutral {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #d29d01;
+        }
+      }
+      .unfriendly {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #e62;
+        }
+      }
+      .hostile {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: red;
+        }
+      }
+      .hated {
+        width: 38%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #c22;
+        }
+      }
+    }
+    &.alliance {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $alliance, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $alliance;
+      }
+    }
 
-.MuiExpansionPanelSummary-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    &.horde {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $horde, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $horde;
+      }
+    }
+
+    &.vanilla {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $vanilla, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $vanilla;
+      }
+    }
+
+    &.bc {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $bc, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $bc;
+      }
+    }
+
+    &.wrath {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $wrath, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $wrath;
+      }
+    }
+
+    &.cata {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $cata, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $cata;
+      }
+    }
+
+    &.mop {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $mop, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $mop;
+      }
+    }
+
+    &.wod {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $wod, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $wod;
+      }
+    }
+
+    &.legion {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $legion, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $legion;
+      }
+    }
+
+    &.bfa {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $bfa, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $bfa;
+      }
+    }
+  }
+
+  .repDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .MuiExpansionPanelSummary-content {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .status-carat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 48%;
+  }
 }
 
 .expacDetails {
@@ -137,110 +309,6 @@ a {
     width: 70px;
     height: 70px;
   }
-}
-
-.progress-carat {
-  .MuiLinearProgress-root {
-    border-radius: 10px;
-    height: 6px;
-  }
-}
-
-.alliance {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $alliance, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $alliance;
-  }
-}
-
-.horde {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $horde, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $horde;
-  }
-}
-
-.vanilla {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $vanilla, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $vanilla;
-  }
-}
-
-.bc {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $bc, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $bc;
-  }
-}
-
-.wrath {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $wrath, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $wrath;
-  }
-}
-
-.cata {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $cata, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $cata;
-  }
-}
-
-.mop {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $mop, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $mop;
-  }
-}
-
-.wod {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $wod, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $wod;
-  }
-}
-
-.legion {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $legion, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $legion;
-  }
-}
-
-.bfa {
-  .MuiLinearProgress-colorPrimary {
-    background-color: adjust-color($color: $bfa, $alpha: -0.8);
-  }
-  .MuiLinearProgress-barColorPrimary {
-    background-color: $bfa;
-  }
-}
-
-.repDetails {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 @media screen and (min-width: 900px) {
