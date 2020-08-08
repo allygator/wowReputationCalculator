@@ -20,7 +20,6 @@ function Calc() {
   let history = useHistory();
   //BNet token
   const [token, setToken] = useState("");
-  // const [reps, setReps] = useState([]);
   const [user, setUser] = useState({
     name: "",
     region: "",
@@ -60,6 +59,17 @@ function Calc() {
         realm: realm,
         hideCompleted: hidden,
       }));
+    } else if (user.region && !region) {
+      setUser({
+        name: "",
+        region: "",
+        realm: "",
+        faction: true,
+        hideCompleted: false,
+        reps: [],
+      });
+      setSubmitted(false);
+      setFields((fields) => ({ ...fields, showSearch: true }));
     }
   }, [
     region,
@@ -171,6 +181,10 @@ function Calc() {
           }`
         );
       }
+      setFields({
+        ...inputFields,
+        name: "",
+      });
     }
   }
 
