@@ -28,7 +28,7 @@ function Repuation(props) {
 
     document.body.appendChild(script);
     window.whTooltips = {
-      colorLinks: true,
+      colorLinks: false,
       iconizeLinks: true,
       renameLinks: true,
     };
