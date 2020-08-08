@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import RepData from "./RepData";
 import RepProgress from "./RepProgress";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Faction(props) {
@@ -13,11 +13,8 @@ function Faction(props) {
     setHidden(!hidden);
   }
   return (
-    <ExpansionPanel className="repPanel" onChange={showHidden}>
-      <ExpansionPanelSummary
-        className="repName"
-        expandIcon={<ExpandMoreIcon />}
-      >
+    <Accordion className="repPanel" onChange={showHidden}>
+      <AccordionSummary className="repName" expandIcon={<ExpandMoreIcon />}>
         <h3>{rep.faction.name}</h3>
 
         <span className="status-carat">
@@ -30,14 +27,14 @@ function Faction(props) {
             <p>{rep.standing.name}</p>
           )}
         </span>
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails className="repDetails">
+      </AccordionSummary>
+      <AccordionDetails className="repDetails">
         {rep.standing.max > 0
           ? rep.standing.value + "/" + rep.standing.max
           : ""}
         <RepData rep={rep.faction.id} />
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
+      </AccordionDetails>
+    </Accordion>
   );
 }
 export default Faction;

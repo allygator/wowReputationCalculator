@@ -152,7 +152,10 @@ function Calc() {
   };
   function showReputations(e) {
     if (inputFields.name && inputFields.realm && inputFields.region) {
-      setFields({ ...inputFields, showSearch: false });
+      setFields({
+        ...inputFields,
+        showSearch: false,
+      });
       setSubmitted(true);
       setLoading(true);
       if (inputFields.hideCompleted) {
@@ -209,7 +212,10 @@ function Calc() {
                     label="Character Name"
                     required={true}
                     onChange={(e) =>
-                      setFields({ ...inputFields, name: e.target.value })
+                      setFields({
+                        ...inputFields,
+                        name: e.target.value.toLowerCase(),
+                      })
                     }
                     value={inputFields.name}
                     fullWidth

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import Faction from "./Faction";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import clsx from "clsx";
 
@@ -38,11 +38,8 @@ function Expac(props) {
   }
 
   return (
-    <ExpansionPanel className={clsx("expacPanel", cName)} onChange={showHidden}>
-      <ExpansionPanelSummary
-        className="expacName"
-        expandIcon={<ExpandMoreIcon />}
-      >
+    <Accordion className={clsx("expacPanel", cName)} onChange={showHidden}>
+      <AccordionSummary className="expacName" expandIcon={<ExpandMoreIcon />}>
         <h2>{name[0].toUpperCase() + name.slice(1)}</h2>
         <span className={user.hideCompleted ? "carat" : "progress-carat"}>
           <LinearProgress
@@ -52,8 +49,8 @@ function Expac(props) {
           />
         </span>
         {user.hideCompleted && <p>{reps.length - totalMaxReps} Remaining</p>}
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails className="expacDetails">
+      </AccordionSummary>
+      <AccordionDetails className="expacDetails">
         {reps.length === 0 ? (
           <p>
             You have all factions at max in this expansion. Congratulations!
@@ -64,8 +61,8 @@ function Expac(props) {
         {reps.map((rep, index, arr) => {
           return <Faction rep={rep} key={rep.faction.name} />;
         })}
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
+      </AccordionDetails>
+    </Accordion>
   );
 }
 
