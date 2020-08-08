@@ -8,6 +8,8 @@ $mop: #8ed4a2;
 $wod: #761501;
 $legion: #7e58ad;
 $bfa: #860086;
+$lightwhite: whitesmoke;
+$lightgrey: #cccccc;
 
 .App {
   text-align: center;
@@ -22,15 +24,16 @@ $bfa: #860086;
 .App-header {
   grid-area: header;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+
   padding: 8px 0;
   background-color: rgb(53, 53, 53);
   .siteInfo {
     display: flex;
     align-items: center;
     color: white;
+    a {
+      color: inherit;
+    }
   }
   img {
     height: 60px;
@@ -50,8 +53,6 @@ a {
   margin: auto;
   .user-input-wrapper {
     max-width: 500px;
-
-    margin-top: -40px;
     .user-input-box {
       background-color: whitesmoke;
       padding: 10px;
@@ -96,8 +97,19 @@ a {
   }
   #newSearch {
     margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 5px;
   }
   .expacPanel {
+    h2,
+    h3 {
+      width: 20%;
+    }
+    h2,
+    h3 {
+      font-size: smaller;
+    }
     .MuiLinearProgress-root {
       border-radius: 4px;
       height: 6px;
@@ -106,7 +118,7 @@ a {
       border-radius: 4px;
     }
     .rep-progress {
-      width: 50%;
+      width: 60%;
       display: flex;
       .MuiLinearProgress-root {
         border-radius: 4px;
@@ -141,7 +153,7 @@ a {
       .friendly {
         width: 6%;
         .MuiLinearProgress-barColorPrimary {
-          background-color: #55b101;
+          background-color: #8ce211;
         }
       }
       .neutral {
@@ -265,6 +277,9 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    .MuiTab-wrapper {
+      font-size: 0.7em;
+    }
   }
   .MuiExpansionPanelSummary-content {
     margin: 5px 0;
@@ -276,7 +291,29 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 48%;
+    width: 60%;
+  }
+}
+
+.search {
+  width: 90%;
+  margin: auto;
+  background-color: $lightwhite;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  #fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px 0;
+    border-top: 1px solid $lightgrey;
+  }
+  #realmSelector {
+    min-width: 200px;
+    > div {
+      width: 100%;
+    }
   }
 }
 
@@ -288,10 +325,16 @@ a {
 .characterCard {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   margin: 5px 0;
+  width: 80%;
   .MuiCardContent-root {
+    width: 100%;
     padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   h2,
   h3 {
@@ -309,15 +352,46 @@ a {
     width: 70px;
     height: 70px;
   }
+  .MuiAvatar-root {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .App-header {
     flex-direction: row;
     padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
   }
-  #newSearch {
-    align-self: flex-end;
+
+  .calc {
+    #newSearch {
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+    .characterCard {
+      width: 250px;
+      .MuiCardContent-root {
+        flex-direction: column;
+      }
+      .MuiAvatar-root {
+        display: flex;
+      }
+    }
+    .expacPanel {
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.17em;
+      }
+      .repDetails {
+        .MuiTab-wrapper {
+          font-size: initial;
+        }
+      }
+    }
   }
 }
 

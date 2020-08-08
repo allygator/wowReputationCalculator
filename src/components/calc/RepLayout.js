@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Expac from "./Expac";
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 
 const alli = [47, 54, 69, 72, 930, 1134];
 const noAlli = [

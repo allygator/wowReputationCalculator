@@ -5,3 +5,4 @@ keys.js
 
 # Local Netlify folder
 .netlify
+*.code-workspace

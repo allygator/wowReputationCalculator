@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import rewardsCont from "../rewardsobj";
+import rewardsCont from "../../rewardsobj";
 import Rewards from "./Rewards";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Select from "react-select";
+import BnetContext from "../context/BnetContext";
 
 function RealmList(props) {
+  let token = useContext(BnetContext);
   const [options, setOptions] = useState({
     error: null,
     isLoaded: false,
@@ -17,47 +19,49 @@ function RealmList(props) {
   }
 
   useEffect(() => {
-    fetch(
-      "https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=" +
-        props.token
-    )
-      .then(
-        (response) => response.json(),
-        (othererror) => console.log(othererror)
+    if (token) {
+      fetch(
+        "https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=" +
+          token
       )
-      .then(
-        (realmList) => {
-          setOptions((o) => ({ ...o, isLoaded: true }));
-          setUS(realmList.realms);
-        },
-        (error) => {
-          setOptions((o) => ({ ...o, isLoaded: true, error: error }));
-        }
-      )
-      .then(
-        fetch(
-          "https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=" +
-            props.token
+        .then(
+          (response) => response.json(),
+          (othererror) => console.log(othererror)
         )
-          .then(
-            (response) => response.json(),
-            (othererror) => console.log(othererror)
+        .then(
+          (realmList) => {
+            setOptions((o) => ({ ...o, isLoaded: true }));
+            setUS(realmList.realms);
+          },
+          (error) => {
+            setOptions((o) => ({ ...o, isLoaded: true, error: error }));
+          }
+        )
+        .then(
+          fetch(
+            "https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=" +
+              token
           )
-          .then(
-            (realmList) => {
-              setOptions((o) => ({ ...o, isLoaded: true }));
-              setEU(realmList.realms);
-            },
-            (error) => {
-              setOptions((o) => ({ ...o, isLoaded: true, error: error }));
-            }
-          )
-      )
-      .then(setOptions((current) => ({ ...current, isLoaded: true })));
-  }, [props.token]);
+            .then(
+              (response) => response.json(),
+              (othererror) => console.log(othererror)
+            )
+            .then(
+              (realmList) => {
+                setOptions((o) => ({ ...o, isLoaded: true }));
+                setEU(realmList.realms);
+              },
+              (error) => {
+                setOptions((o) => ({ ...o, isLoaded: true, error: error }));
+              }
+            )
+        )
+        .then(setOptions((current) => ({ ...current, isLoaded: true })));
+    }
+  }, [token]);
 
   // const portalTargetElement = document.getElementById("calc");
-  const { error, isLoaded } = options;
+  // const { error, isLoaded } = options;
   var USOptions = [];
   var EUOptions = [];
   for (let realm of us) {
@@ -87,21 +91,21 @@ function RealmList(props) {
       <span>{data.label}</span>
     </div>
   );
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <Select
-        id="realmSelector"
-        onChange={handleChange}
-        options={groupedOptions}
-        formatGroupLabel={formatGroupLabel}
-        placeholder="Realm"
-      />
-    );
-  }
+  return (
+    <div id="realmSelector">
+      {options.error?.message && <div>Error: {options.error.message}</div>}
+      {!options.isLoaded && <div>Loading...</div>}
+      {token && options.isLoaded && !options.error && (
+        <Select
+          onChange={handleChange}
+          options={groupedOptions}
+          formatGroupLabel={formatGroupLabel}
+          placeholder="Realm"
+          fullWidth
+        />
+      )}
+    </div>
+  );
 }
 
 export default RealmList;

@@ -10,9 +10,9 @@ import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import clsx from "clsx";
 
-import RealmsList from "./Realms";
+import RealmsList from "../Realms";
 import Reputation from "./Reputation";
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 
 function Calc() {
   const location = useLocation();
@@ -177,7 +177,7 @@ function Calc() {
         <div id="newSearch">
           {submitted && (
             <Button variant="contained" id="inputButton" onClick={showSearch}>
-              New Character Search
+              New Search
             </Button>
           )}
         </div>
@@ -201,7 +201,7 @@ function Calc() {
               )}
               <div id="selectionBoxes">
                 {token && inputFields.showSearch && (
-                  <RealmsList realmSelection={setRealmData} token={token} />
+                  <RealmsList realmSelection={setRealmData} />
                 )}
                 <div id="name">
                   <TextField
@@ -243,10 +243,7 @@ function Calc() {
             <CardContent>
               <h2>{formattedUser.name}</h2>
               <h3>{formattedUser.realm}</h3>
-              <h3>
-                {completedCount > 0 &&
-                  completedCount + " Completed Reputations"}
-              </h3>
+              <h3>{completedCount > 0 && completedCount + " Completed"}</h3>
             </CardContent>
             {thumbnail && (
               <Avatar

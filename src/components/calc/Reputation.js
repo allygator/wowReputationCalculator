@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 
 import RepLayout from "./RepLayout";
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 
 function Repuation(props) {
   let user = useContext(UserContext);

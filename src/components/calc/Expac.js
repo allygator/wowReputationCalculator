@@ -7,7 +7,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import clsx from "clsx";
 
-import UserContext from "../context/UserContext";
+import UserContext from "../../context/UserContext";
 
 function Expac(props) {
   let user = useContext(UserContext);
