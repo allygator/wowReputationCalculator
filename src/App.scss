@@ -1,0 +1,401 @@
+$alliance: #10276b;
+$horde: #7f0302;
+$vanilla: #e5b46f;
+$bc: #536f44;
+$wrath: #5283bd;
+$cata: #f98a23;
+$mop: #8ed4a2;
+$wod: #761501;
+$legion: #7e58ad;
+$bfa: #860086;
+$lightwhite: whitesmoke;
+$lightgrey: #cccccc;
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas: "header" "content";
+  background-color: rgb(70, 70, 70);
+}
+
+.App-header {
+  grid-area: header;
+  display: flex;
+
+  padding: 8px 0;
+  background-color: rgb(53, 53, 53);
+  .siteInfo {
+    display: flex;
+    align-items: center;
+    color: white;
+    a {
+      color: inherit;
+    }
+  }
+  img {
+    height: 60px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+.calc {
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  padding-bottom: 20px;
+  margin: auto;
+  .user-input-wrapper {
+    max-width: 500px;
+    .user-input-box {
+      background-color: whitesmoke;
+      padding: 10px;
+      border-radius: 5px;
+      &.popout {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        #selectionBoxes {
+          // height: 30%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          padding: 8px;
+          > div {
+            width: 100%;
+            // height: 45%;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  .reputations {
+    width: 100%;
+    .expacPanel {
+      .progress-carat {
+        width: 60%;
+        border: 1px solid whitesmoke;
+        border-radius: 8px;
+      }
+      #detailsPanel {
+        width: 100%;
+      }
+    }
+  }
+  #newSearch {
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+  .expacPanel {
+    h2,
+    h3 {
+      width: 20%;
+    }
+    h2,
+    h3 {
+      font-size: smaller;
+    }
+    .MuiLinearProgress-root {
+      border-radius: 4px;
+      height: 6px;
+    }
+    .MuiLinearProgress-barColorPrimary {
+      border-radius: 4px;
+    }
+    .rep-progress {
+      width: 60%;
+      display: flex;
+      .MuiLinearProgress-root {
+        border-radius: 4px;
+        height: 4px;
+        margin: 0 0.5px;
+      }
+      .MuiLinearProgress-colorPrimary {
+        background-color: rgba(178, 179, 184, 0.342);
+        &.paragon {
+          // background-color: rgba(182, 188, 226, 0.4);
+          width: 100%;
+        }
+      }
+      .exalted {
+        width: 2%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #014db1;
+        }
+      }
+      .revered {
+        width: 25%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #0197b1;
+        }
+      }
+      .honored {
+        width: 14%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #01b159;
+        }
+      }
+      .friendly {
+        width: 6%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #8ce211;
+        }
+      }
+      .neutral {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #d29d01;
+        }
+      }
+      .unfriendly {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #e62;
+        }
+      }
+      .hostile {
+        width: 5%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: red;
+        }
+      }
+      .hated {
+        width: 38%;
+        .MuiLinearProgress-barColorPrimary {
+          background-color: #c22;
+        }
+      }
+    }
+    &.alliance {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $alliance, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $alliance;
+      }
+    }
+
+    &.horde {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $horde, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $horde;
+      }
+    }
+
+    &.vanilla {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $vanilla, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $vanilla;
+      }
+    }
+
+    &.bc {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $bc, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $bc;
+      }
+    }
+
+    &.wrath {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $wrath, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $wrath;
+      }
+    }
+
+    &.cata {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $cata, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $cata;
+      }
+    }
+
+    &.mop {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $mop, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $mop;
+      }
+    }
+
+    &.wod {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $wod, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $wod;
+      }
+    }
+
+    &.legion {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $legion, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $legion;
+      }
+    }
+
+    &.bfa {
+      .MuiLinearProgress-colorPrimary {
+        background-color: adjust-color($color: $bfa, $alpha: -0.8);
+      }
+      .MuiLinearProgress-barColorPrimary {
+        background-color: $bfa;
+      }
+    }
+  }
+
+  .repDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .MuiTab-wrapper {
+      font-size: 0.7em;
+    }
+  }
+  .MuiAccordionSummary-content {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .status-carat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+  }
+}
+
+.search {
+  width: 90%;
+  margin: auto;
+  background-color: $lightwhite;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  #fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px 0;
+    border-top: 1px solid $lightgrey;
+  }
+  #realmSelector {
+    min-width: 200px;
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+.expacDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.characterCard {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  width: 80%;
+  .MuiCardContent-root {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2,
+  h3 {
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #464646;
+  }
+  #profileIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .MuiAvatar-root {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .App-header {
+    flex-direction: row;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .calc {
+    #newSearch {
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+    .characterCard {
+      width: 250px;
+      .MuiCardContent-root {
+        flex-direction: column;
+      }
+      .MuiAvatar-root {
+        display: flex;
+      }
+    }
+    .expacPanel {
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.17em;
+      }
+      .repDetails {
+        .MuiTab-wrapper {
+          font-size: initial;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  height: 0px !important;
+  overflow: hidden;
+}

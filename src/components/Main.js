@@ -1,34 +1,29 @@
-import React, { Component } from 'react';
-import Calc from './Calc';
-import Blog from './Blog';
-import  { Route, Switch, Redirect } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Calc from "./calc/Calc";
+import BnetContext from "../context/BnetContext";
 
-export const characterData = {
-    region: '',
-    realm: '',
-    name: ''
-}
+function Main() {
+  const [token, setToken] = useState("");
 
-export const characterContext = React.createContext(
-    characterData
-);
+  useEffect(() => {
+    fetch("/.netlify/functions/gettoken")
+      .then((response) => response.json())
+      .then((json) => {
+        setToken(json.token);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
-class Main extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-
-    render() {
-        return (
-            <Switch>
-                <Route exact path='/' component={Calc}/>
-                <Redirect from="/example" to="/us/quel'dorei/elilla"/>
-                <Route path='/:region/:realm/:name' component={Calc}/>
-                <Route path='/blog' component={Blog}/>
-            </Switch>
-    );}
-
-
+  return (
+    <BnetContext.Provider value={token}>
+      <Switch>
+        <Redirect from="/example" to="/us/queldorei/elilla" />
+        <Route path="/:region/:realm/:name" component={Calc} />
+        <Route path="/" component={Calc} />
+      </Switch>
+    </BnetContext.Provider>
+  );
 }
 
 export default Main;
