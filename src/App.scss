@@ -16,7 +16,7 @@ $lightgrey: #cccccc;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 80px 1fr;
   grid-template-areas: "header" "content";
   background-color: rgb(70, 70, 70);
 }

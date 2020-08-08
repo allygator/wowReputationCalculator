@@ -42,14 +42,7 @@ function Calc() {
   const [completedCount, setCount] = useState(0);
 
   useEffect(() => {
-    if (
-      region !== user.region &&
-      realm !== user.realm &&
-      name !== user.name &&
-      region &&
-      realm &&
-      name
-    ) {
+    if (name !== user.name && region && realm && name) {
       setLoading(true);
       let hidden = new URLSearchParams(location.search).get("hide");
       setUser((current) => ({
@@ -58,6 +51,7 @@ function Calc() {
         region: region.toLowerCase(),
         realm: realm,
         hideCompleted: hidden,
+        reps: [],
       }));
     } else if (user.region && !region) {
       setUser({
@@ -96,6 +90,7 @@ function Calc() {
       let region = user.region;
       let realm = user.realm;
       let lang;
+
       if (region === "us") {
         lang = "en_US";
       } else {
