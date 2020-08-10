@@ -8,7 +8,12 @@ import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
 import clsx from "clsx";
+// import ReactCountryFlag from "react-country-flag";
 
 import RealmsList from "../Realms";
 import Reputation from "./Reputation";
@@ -40,6 +45,17 @@ function Calc() {
   const [thumbnail, setThumbnail] = useState("");
   const [formattedUser, setFormatted] = useState({ name: "", realm: "" });
   const [completedCount, setCount] = useState(0);
+  const eu_locales = ["gb", "pt", "de", "es", "fr", "it", "ru"];
+  const eu_emojis = [
+    "\u1630",
+    "\u1738",
+    "\u1607",
+    "\u1620",
+    "\u1628",
+    "\u1664",
+    "\u1745",
+  ];
+  const us_locales = ["us", "mx", "br"];
 
   useEffect(() => {
     if (name !== user.name && region && realm && name) {
@@ -83,6 +99,9 @@ function Calc() {
       })
       .catch((error) => console.log(error));
   }, []);
+  useEffect(() => {
+    console.log(inputFields);
+  }, [inputFields]);
 
   useEffect(() => {
     if (user.name && user.region && user.realm && token) {
@@ -214,6 +233,28 @@ function Calc() {
               <div id="selectionBoxes">
                 {token && inputFields.showSearch && (
                   <RealmsList realmSelection={setRealmData} />
+                )}
+                {inputFields.region === "EU" ? (
+                  <div>
+                    <FormControl component="fieldset">
+                      <FormLabel component="legend">Language</FormLabel>
+                      <RadioGroup aria-label="country" name="country">
+                        {eu_locales.map((region, index) => {
+                          return (
+                            <FormControlLabel
+                              value={region}
+                              control={<Radio />}
+                              label={eu_emojis[index]}
+                              key={region}
+                            />
+                          );
+                        })}
+                      </RadioGroup>
+                    </FormControl>
+                    Localization:{" "}
+                  </div>
+                ) : (
+                  ""
                 )}
                 <div id="name">
                   <TextField
