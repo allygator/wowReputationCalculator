@@ -7,24 +7,22 @@ const token_endpoint =
 	process.env.SECRET;
 const firebase_auth = process.env.FIREBASE_AUTH;
 const firebase_url = process.env.FIREBASE_URL;
-let firebase_endpoint = firebase_url;
 
 exports.handler = function (event, context, callback) {
-	var token;
+	let token;
+	let firebase_endpoint;
 	axios(token_endpoint)
 		.then((tokenResponse) => {
 			token = tokenResponse.data.access_token;
 			return axios.post(firebase_auth);
 		})
 		.then((authResponse) => {
-			var auth = authResponse.data.idToken;
-			firebase_endpoint = firebase_endpoint + "?auth=" + auth;
-			console.log(firebase_endpoint);
+			let auth = authResponse.data.idToken;
+			firebase_endpoint = firebase_url + "?auth=" + auth;
 			return axios(firebase_endpoint);
 		})
 		.then((databaseResponse) => {
-			var oldtoken = databaseResponse.data.token;
-			console.log(oldtoken);
+			let oldtoken = databaseResponse.data.token;
 			if (oldtoken !== token) {
 				console.log("Token updated");
 				axios
