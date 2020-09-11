@@ -19,10 +19,12 @@ exports.handler = function (event, context, callback) {
 		.then((authResponse) => {
 			var auth = authResponse.data.idToken;
 			firebase_endpoint = firebase_endpoint + "?auth=" + auth;
+			console.log(firebase_endpoint);
 			return axios(firebase_endpoint);
 		})
 		.then((databaseResponse) => {
 			var oldtoken = databaseResponse.data.token;
+			console.log(oldtoken);
 			if (oldtoken !== token) {
 				console.log("Token updated");
 				axios
