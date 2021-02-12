@@ -62,6 +62,7 @@ const nobody = [
   2010,
   2011,
   2111,
+  2135
 ];
 
 function RepLayout() {
@@ -74,6 +75,7 @@ function RepLayout() {
   const [wod, setWod] = useState([]);
   const [legion, setLegion] = useState([]);
   const [bfa, setBFA] = useState([]);
+  const [shadowlands, setSL] = useState([]);
   const [alliance, setAlli] = useState([]);
   const [horde, setHorde] = useState([]);
   // eslint-disable-next-line
@@ -146,15 +148,27 @@ function RepLayout() {
       ) {
         // Legion Reps
         setLegion((others) => [...others, rep]);
-      } else if (rep.faction.id >= 2103 && rep.faction.id !== 2135) {
+      } else if (rep.faction.id < 2407 && rep.faction.id !== 2135 ||
+        rep.faction.id === 2415 ||
+        rep.faction.id === 2417) {
         // Bfa Reps
         setBFA((others) => [...others, rep]);
+      } else if (rep.faction.id >= 2407) {
+        // Shadowlands Reps
+        setSL((others) => [...others, rep]);
       }
     }
   }, [reps, user.faction]);
 
+  // useEffect(() => {
+	// 	console.log(shadowlands);
+	// }, [shadowlands]);
+
   return (
     <div>
+      {shadowlands.length > 0 && (
+        <Expac name="Shadowlands" cName="sl" reps={shadowlands} key={"shadowlands"} />
+      )}
       {bfa.length > 0 && (
         <Expac name="Battle for Azeroth" cName="bfa" reps={bfa} key={"bfa"} />
       )}
