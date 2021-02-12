@@ -19,10 +19,12 @@ function RealmList(props) {
   }
 
   useEffect(() => {
+    const abortController1 = new AbortController();
+    const abortController2 = new AbortController();
     if (token) {
       fetch(
         "https://us.api.blizzard.com/data/wow/realm/index?namespace=dynamic-us&locale=en_US&access_token=" +
-          token
+          token, { signal: abortController1.signal }
       )
         .then(
           (response) => response.json(),
@@ -37,10 +39,9 @@ function RealmList(props) {
             setOptions((o) => ({ ...o, isLoaded: true, error: error }));
           }
         )
-        .then(
-          fetch(
+      fetch(
             "https://eu.api.blizzard.com/data/wow/realm/index?namespace=dynamic-eu&locale=en_GB&access_token=" +
-              token
+              token, { signal: abortController2.signal }
           )
             .then(
               (response) => response.json(),
@@ -55,8 +56,11 @@ function RealmList(props) {
                 setOptions((o) => ({ ...o, isLoaded: true, error: error }));
               }
             )
-        )
         .then(setOptions((current) => ({ ...current, isLoaded: true })));
+        return () => {
+          abortController1.abort();
+          abortController2.abort();
+        };
     }
   }, [token]);
 
