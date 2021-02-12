@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RepData from "./RepData";
 import RepProgress from "./RepProgress";
 import Accordion from "@material-ui/core/Accordion";
@@ -8,6 +8,12 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Faction(props) {
   let rep = props.rep;
+  useEffect(() => {
+		if(rep.faction.id==2464) {
+      //Blizzard for SOME REASON has the Court of Night rep at tier-3 what it should be. This fixes that.
+      rep.standing.tier= rep.standing.tier+3;
+    }
+	}, []);
   const [hidden, setHidden] = useState(true);
   function showHidden() {
     setHidden(!hidden);
