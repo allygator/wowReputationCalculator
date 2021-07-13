@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams, useHistory, useLocation } from "react-router-dom";
 import Collapse from "@material-ui/core/Collapse";
 import TextField from "@material-ui/core/TextField";
@@ -13,13 +13,13 @@ import clsx from "clsx";
 import RealmsList from "../Realms";
 import Reputation from "./Reputation";
 import UserContext from "../../context/UserContext";
+import BnetContext from "../../context/BnetContext";
 
 function Calc() {
 	const location = useLocation();
 	let { region, realm, name } = useParams();
 	let history = useHistory();
-	//BNet token
-	const [token, setToken] = useState("");
+	let token = useContext(BnetContext);
 	const [user, setUser] = useState({
 		name: "",
 		region: "",
@@ -74,16 +74,6 @@ function Calc() {
 		user.name,
 		location.search,
 	]);
-
-	useEffect(() => {
-		fetch("/.netlify/functions/gettoken")
-			.then((response) => response.json())
-			.then((json) => {
-				// console.log(json);
-				setToken(json.token);
-			})
-			.catch((error) => console.log(error));
-	}, []);
 
 	useEffect(() => {
 		if (user.name && user.region && user.realm && token) {

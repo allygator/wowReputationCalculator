@@ -133,50 +133,42 @@ a {
 					width: 100%;
 				}
 			}
-			.exalted {
-				width: 2%;
+			.exalted, .appreciative, .tier6 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #014db1;
 				}
 			}
-			.revered {
-				width: 25%;
+			.revered, .cordial, .tier5 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #0197b1;
 				}
 			}
-			.honored {
-				width: 14%;
+			.honored, .ambivalent, .tier4 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #01b159;
 				}
 			}
-			.friendly {
-				width: 6%;
+			.friendly, .tentative, .tier3 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #8ce211;
 				}
 			}
-			.neutral {
-				width: 5%;
+			.neutral, .apprehensive, .tier2 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #d29d01;
 				}
 			}
-			.unfriendly {
-				width: 5%;
+			.unfriendly, .dubious, .tier1 {
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #e62;
 				}
 			}
 			.hostile {
-				width: 5%;
 				.MuiLinearProgress-barColorPrimary {
 					background-color: red;
 				}
 			}
 			.hated {
-				width: 38%;
 				.MuiLinearProgress-barColorPrimary {
 					background-color: #c22;
 				}
